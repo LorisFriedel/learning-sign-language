@@ -21,18 +21,6 @@ public:
     MLPHand(int nb_of_hidden_layer = 0, int nb_of_neuron = 0);
 
     /**
-     * Read an yml file containing data for training.
-     * A field 'letter' must contains the response letter for the data.
-     * A field 'backproj_data' must contains a 16x16 flattened matrix of pixel.
-     *
-     * @param fs_data File storage where to read the data from.
-     * @param data_set_output Read data from file.
-     * @param letter_output Read letter from file.
-     * @return true if reading succeed, false otherwise.
-     */
-    static int read_data(const cv::FileStorage &fs_data, cv::Mat &data_set_output, int &letter_output);
-
-    /**
      * Teach the model from an existing classifier.
      *
      * @param classifier_file_name Path to the classifier file.

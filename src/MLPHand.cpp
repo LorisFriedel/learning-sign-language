@@ -2,6 +2,7 @@
 //  @author Loris Friedel
 //
 
+#include <chrono>
 #include "../inc/MLPHand.hpp"
 
 #include "opencv2/core.hpp"
@@ -14,18 +15,6 @@ namespace {
 
 MLPHand::MLPHand(const int nb_of_hidden_layer, const int nb_of_neuron)
         : _nb_of_hidden_layer(nb_of_hidden_layer), _nb_of_neuron(nb_of_neuron) {}
-
-int MLPHand::read_data(const cv::FileStorage &fs_data, cv::Mat &data_set_output, int &letter_output) {
-    if (fs_data.isOpened()) {
-        fs_data["letter"] >> letter_output;
-        fs_data["mat"] >> data_set_output;
-
-        return true;
-    } else {
-        LOG_E("ERROR: Could not read data");
-        return false;
-    }
-}
 
 int MLPHand::learn_from(const std::string classifier_file_name) {
     _model = cv::ml::StatModel::load<cv::ml::ANN_MLP>(classifier_file_name);
@@ -45,6 +34,13 @@ inline cv::TermCriteria MLPHand::TC(int iters, double eps) {
 }
 
 int MLPHand::learn_from(const cv::Mat &training_data, const cv::Mat &training_responses) {
+    using namespace std::chrono;
+    high_resolution_clock::time_point training_duration_start, training_duration_end;
+    double training_duration = 0;
+
+    // Start timer
+    training_duration_start = high_resolution_clock::now();;
+
     const int nb_of_letters = 26;
     int nb_of_samples = training_data.rows;
 
@@ -80,7 +76,12 @@ int MLPHand::learn_from(const cv::Mat &training_data, const cv::Mat &training_re
     _model->setTermCriteria(TC(max_iter, 0));
     _model->setTrainMethod(method, method_epsilon);
     _model->train(t_data);
-    LOG_I("Training done!");
+
+    // End timer
+    training_duration_end = high_resolution_clock::now();;
+
+    training_duration = duration_cast<nanoseconds>(training_duration_end - training_duration_start).count() / (1e6);
+    LOG_I("Training done! (" << training_duration << " ms)");
 
     return Code::SUCCESS;
 }

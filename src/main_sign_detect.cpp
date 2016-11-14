@@ -15,6 +15,7 @@
 #include "../inc/HandTracker.hpp"
 #include "../inc/MLPHand.hpp"
 #include "../inc/time.h"
+#include "../inc/DataYmlWriter.hpp"
 
 int run_camshift_track_hand(VideoStreamReader &vsr, const cv::CascadeClassifier &cascade,
                             const std::string model_path, const std::string image_out_path,
@@ -260,7 +261,7 @@ cv::Mat crop_resize_flatten(const cv::Mat &input, const cv::Rect &roi) {
     return result;
 }
 
-void save_images(const int key, const cv::Mat &img,
+void    save_images(const int key, const cv::Mat &img,
                  const CamshiftTracker &c_tracker, const cv::Rect h_rect,
                  const std::string image_out_path,
                  const std::string backproj_out_path) {
@@ -292,8 +293,6 @@ void save_images(const int key, const cv::Mat &img,
     std::stringstream data_file_path;
     data_file_path << backproj_out_path << file_name.str() << ".yml";
 
-    cv::FileStorage fs(data_file_path.str(), cv::FileStorage::WRITE);
-    fs << Default::KEY_LETTER << key;
-    fs << Default::KEY_MAT << small_backproj;
-    fs.release();
+    DataYmlWriter writer(data_file_path.str());
+    writer.write(small_backproj, key);
 }

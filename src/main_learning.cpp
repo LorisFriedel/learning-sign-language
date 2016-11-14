@@ -10,6 +10,8 @@
 #include "../inc/constant.h"
 #include "../inc/MLPHand.hpp"
 #include "../inc/time.h"
+#include "../inc/DataYmlReader.hpp"
+#include "../inc/DirectoryReader.hpp"
 
 int generate_MLP_model(const std::string model_path, const std::string data_dir, const std::string test_dir,
                        const int nb_of_layer, const int nb_of_neuron, const bool no_test);
@@ -159,34 +161,18 @@ double test_model(MLPHand &model, std::string input_dir) {
 }
 
 int aggregate_data_from(std::string directory, cv::Mat &mat_data, cv::Mat &mat_responses) {
-    DIR *dir;
-    struct dirent *ent;
-    if ((dir = opendir(directory.c_str())) != NULL) {
-        while ((ent = readdir(dir)) != NULL) {
-            if (ent->d_type == DT_REG) {
-                std::string file_path = ent->d_name;
+    DirectoryReader dirReader(directory);
+    return dirReader.foreachFile([&mat_data, &mat_responses](std::string filePath, std::string fileName) {
+        int letter_tmp;
+        cv::Mat letter_data_row;
 
-                int letter_tmp;
-                cv::Mat letter_data_row;
+        // If no error while reading data
+        DataYmlReader reader(filePath);
+        if(reader.read(letter_data_row, letter_tmp) != Code::SUCCESS) {
+            letter_data_row.convertTo(letter_data_row, CV_32FC1, 1.0 / 255.0); //TODO maybe not for HOG ?
 
-                std::stringstream full_path;
-                full_path << directory << "/" << file_path;
-                cv::FileStorage file(full_path.str(), cv::FileStorage::READ);
-
-                // If no error while reading data
-                if(MLPHand::read_data(file, letter_data_row, letter_tmp) != Code::SUCCESS) {
-                    letter_data_row.convertTo(letter_data_row, CV_32FC1, 1.0 / 255.0); //TODO maybe not for HOG ?
-                    file.release();
-
-                    mat_responses.push_back(letter_tmp);
-                    mat_data.push_back(letter_data_row);
-                }
-            }
+            mat_responses.push_back(letter_tmp);
+            mat_data.push_back(letter_data_row);
         }
-        closedir(dir);
-    } else {
-        // Could not open directory
-        return Code::ERROR;
-    }
-    return Code::SUCCESS;
+    });
 }
