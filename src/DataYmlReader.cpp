@@ -2,7 +2,6 @@
 // @author Loris Friedel
 //
 
-#include <cv.hpp>
 #include "../inc/DataYmlReader.hpp"
 #include "../inc/log.h"
 #include "../inc/constant.h"

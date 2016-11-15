@@ -8,6 +8,7 @@
 # User-specific stuff:
 .idea/workspace.xml
 .idea/tasks.xml
+.idea/
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
@@ -140,3 +141,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake

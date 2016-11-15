@@ -5,6 +5,7 @@
 #pragma once
 
 #include <string>
+#include <cv.hpp>
 
 class DataYmlWriter {
 public:
@@ -19,7 +20,7 @@ public:
      */
     int write(cv::Mat &data_input, int letter_input);
 
-    int write(std::vector<float> data_input, int letter_input);
+    int write(std::vector<float> &data_input, int letter_input);
 
 private:
     std::string filePath;

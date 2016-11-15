@@ -4,6 +4,9 @@
 
 #pragma once
 
+#include <cv.hpp>
+#include <string>
+
 class DataYmlReader {
 public:
     DataYmlReader(std::string filePath);

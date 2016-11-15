@@ -22,9 +22,9 @@ set(MAIN_IMG_CONVERT src/main_image_convert.cpp)
 
 set(SRC_FACEDETECT inc/constant.h src/ObjectDetector.cpp inc/ObjectDetector.hpp src/VideoStreamReader.cpp inc/VideoStreamReader.hpp inc/geo.h inc/log.h inc/code.h inc/colors.h inc/time.h src/ObjectDetectRunner.cpp inc/ObjectDetectRunner.hpp)
 set(SRC_CAMSHIFT inc/constant.h src/ObjectDetector.cpp inc/ObjectDetector.hpp src/VideoStreamReader.cpp inc/VideoStreamReader.hpp inc/geo.h inc/log.h inc/code.h src/CamshiftTracker.cpp inc/CamshiftTracker.hpp src/KeyInputHandler.cpp inc/KeyInputHandler.hpp src/CamshiftRunner.cpp inc/CamshiftRunner.hpp inc/colors.h src/HandTracker.cpp inc/HandTracker.hpp inc/time.h)
-set(SRC_SIGN_DETECT inc/constant.h src/ObjectDetector.cpp inc/ObjectDetector.hpp src/VideoStreamReader.cpp inc/VideoStreamReader.hpp inc/geo.h inc/log.h inc/code.h src/CamshiftTracker.cpp inc/CamshiftTracker.hpp src/KeyInputHandler.cpp inc/KeyInputHandler.hpp src/CamshiftRunner.cpp inc/CamshiftRunner.hpp inc/colors.h src/HandTracker.cpp inc/HandTracker.hpp inc/time.h src/MLPHand.cpp inc/MLPHand.hpp)
-set(SRC_LEARNING inc/constant.h inc/log.h inc/code.h  src/MLPHand.cpp inc/MLPHand.hpp src/DataYmlReader.cpp inc/DataYmlReader.hpp src/DataYmlWriter.cpp inc/DataYmlWriter.hpp src/DirectoryReader.cpp inc/DirectoryReader.hpp)
-set(SRC_IMG_CONVERT inc/constant.h inc/log.h inc/code.h src/DataYmlReader.cpp inc/DataYmlReader.hpp src/DataYmlWriter.cpp inc/DataYmlWriter.hpp src/DirectoryReader.cpp inc/DirectoryReader.hpp)
+set(SRC_SIGN_DETECT inc/constant.h src/ObjectDetector.cpp inc/ObjectDetector.hpp src/VideoStreamReader.cpp inc/VideoStreamReader.hpp inc/geo.h inc/log.h inc/code.h src/CamshiftTracker.cpp inc/CamshiftTracker.hpp src/KeyInputHandler.cpp inc/KeyInputHandler.hpp src/CamshiftRunner.cpp inc/CamshiftRunner.hpp inc/colors.h src/HandTracker.cpp inc/HandTracker.hpp inc/time.h src/MLPHand.cpp inc/MLPHand.hpp src/DataYmlWriter.cpp inc/DataYmlWriter.hpp src/Timer.cpp inc/Timer.hpp)
+set(SRC_LEARNING inc/constant.h inc/log.h inc/code.h  src/MLPHand.cpp inc/MLPHand.hpp src/DataYmlReader.cpp inc/DataYmlReader.hpp src/DataYmlWriter.cpp inc/DataYmlWriter.hpp src/DirectoryReader.cpp inc/DirectoryReader.hpp src/Timer.cpp inc/Timer.hpp)
+set(SRC_IMG_CONVERT inc/constant.h inc/log.h inc/code.h src/DataYmlReader.cpp inc/DataYmlReader.hpp src/DataYmlWriter.cpp inc/DataYmlWriter.hpp src/DirectoryReader.cpp inc/DirectoryReader.hpp src/Timer.cpp inc/Timer.hpp)
 
 set(EXECUTABLE_OUTPUT_PATH ./bin/)
 add_executable(${EXEC_FACEDETECT} ${MAIN_FACEDETECT} ${SRC_FACEDETECT})

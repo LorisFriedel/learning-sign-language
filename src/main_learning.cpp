@@ -12,6 +12,7 @@
 #include "../inc/time.h"
 #include "../inc/DataYmlReader.hpp"
 #include "../inc/DirectoryReader.hpp"
+#include "../inc/Timer.hpp"
 
 int generate_MLP_model(const std::string model_path, const std::string data_dir, const std::string test_dir,
                        const int nb_of_layer, const int nb_of_neuron, const bool no_test);
@@ -64,6 +65,10 @@ int main(int argc, const char **argv) {
                                          std::to_string(Default::NB_OF_NEURON),
                                          false, Default::NB_OF_NEURON, "POSITIVE_INTEGER", cmd);
 
+        TCLAP::ValueArg<std::string> networkPatternArg("p", "network-pattern",
+                                         "Define the network pattern. Example: '4 2 4' define a 3 layers network, with 4 neurons for the first one, 2 for the second and 3 for the last one.",
+                                         false, "64 64", "pattern", cmd);
+
         TCLAP::SwitchArg noTestArg("s", "no-test",
                                    "Skip the model test.",
                                    cmd, false);
@@ -97,6 +102,8 @@ int main(int argc, const char **argv) {
         } else { // Learning mode
             std::string model_out_path = modelOutputArg.getValue();
             std::string data_dir = dataDirArg.getValue();
+            std::string pattern = networkPatternArg.getValue();
+            // TODO use pattern if set (change MLPHand to support it)
             int nb_of_layer = nbLayerArg.getValue();
             int nb_of_neuron = nbNeuronArg.getValue();
             bool no_test = noTestArg.getValue();
@@ -119,13 +126,13 @@ int generate_MLP_model(const std::string model_path, const std::string data_dir,
     cv::Mat responses;
 
     if (aggregate_data_from(data_dir, data, responses) != Code::SUCCESS) {
-        LOG_E("Cant load training data");
+        LOG_E("Could not load training data");
         return Code::ERROR;
     };
 
     MLPHand model(nb_of_layer, nb_of_neuron);
 
-    if(model.learn_from(data, responses) == Code::SUCCESS) {
+    if (model.learn_from(data, responses) == Code::SUCCESS) {
         model.export_model_to(model_path);
 
         if (!no_test) {
@@ -143,9 +150,9 @@ int execute_test_model(std::string model_path, std::string test_dir) {
     MLPHand model;
     model.learn_from(model_path);
 
-    LOG_I("Testing model...");
+    std::cout << "Testing model...";
     double test_result = test_model(model, test_dir);
-    LOG_I("Test result: " << test_result * 100 << "% success");
+    std::cout << " done! " << std::endl << "Test result: " << test_result * 100 << "% success";
 }
 
 double test_model(MLPHand &model, std::string input_dir) {
@@ -153,7 +160,7 @@ double test_model(MLPHand &model, std::string input_dir) {
     cv::Mat responses_test;
 
     if (aggregate_data_from(input_dir, data_test, responses_test) != Code::SUCCESS) {
-        LOG_E("Cant load test data");
+        LOG_E("Could not load test data");
         return Code::ERROR;
     };
 
@@ -161,18 +168,26 @@ double test_model(MLPHand &model, std::string input_dir) {
 }
 
 int aggregate_data_from(std::string directory, cv::Mat &mat_data, cv::Mat &mat_responses) {
+    std::cout << " - Loading data...";
+    Timer timer;
+
+    timer.start();
     DirectoryReader dirReader(directory);
-    return dirReader.foreachFile([&mat_data, &mat_responses](std::string filePath, std::string fileName) {
+    int result = dirReader.foreachFile([&mat_data, &mat_responses](std::string filePath, std::string fileName) {
         int letter_tmp;
         cv::Mat letter_data_row;
 
         // If no error while reading data
         DataYmlReader reader(filePath);
-        if(reader.read(letter_data_row, letter_tmp) != Code::SUCCESS) {
-            letter_data_row.convertTo(letter_data_row, CV_32FC1, 1.0 / 255.0); //TODO maybe not for HOG ?
+        if (reader.read(letter_data_row, letter_tmp) != Code::SUCCESS) {
+            letter_data_row.convertTo(letter_data_row, CV_32FC1);
 
             mat_responses.push_back(letter_tmp);
             mat_data.push_back(letter_data_row);
         }
     });
+    timer.stop();
+
+    std::cout << " done! (" << timer.getDurationS() << " s)";
+    return result;
 }

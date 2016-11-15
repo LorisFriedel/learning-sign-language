@@ -10,12 +10,12 @@
 #include "../inc/ObjectDetector.hpp"
 #include "../inc/CamshiftRunner.hpp"
 #include "../inc/KeyInputHandler.hpp"
+#include "../inc/DataYmlWriter.hpp"
 #include "../inc/colors.h"
 #include "../inc/constant.h"
 #include "../inc/HandTracker.hpp"
 #include "../inc/MLPHand.hpp"
 #include "../inc/time.h"
-#include "../inc/DataYmlWriter.hpp"
 
 int run_camshift_track_hand(VideoStreamReader &vsr, const cv::CascadeClassifier &cascade,
                             const std::string model_path, const std::string image_out_path,

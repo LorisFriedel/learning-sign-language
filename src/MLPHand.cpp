@@ -8,6 +8,7 @@
 #include "opencv2/core.hpp"
 #include "../inc/log.h"
 #include "../inc/code.h"
+#include "../inc/Timer.hpp"
 
 namespace {
     const int BASE_LETTER = 'a';
@@ -24,6 +25,9 @@ int MLPHand::learn_from(const std::string classifier_file_name) {
         LOG_E("ERROR: Could not read the classifier : " << classifier_file_name);
         return Code::CASCADE_LOAD_ERROR;
     } else {
+        _nb_of_neuron = _model.get()->getLayerSizes().row(1).at<int>(0);
+        _nb_of_hidden_layer = _model.get()->getLayerSizes().rows - 2;
+
         LOG_I("Classifier " << classifier_file_name << " successfully loaded!");
         return Code::SUCCESS;
     }
@@ -34,17 +38,15 @@ inline cv::TermCriteria MLPHand::TC(int iters, double eps) {
 }
 
 int MLPHand::learn_from(const cv::Mat &training_data, const cv::Mat &training_responses) {
-    using namespace std::chrono;
-    high_resolution_clock::time_point training_duration_start, training_duration_end;
-    double training_duration = 0;
+    Timer timeMonitor;
 
     // Start timer
-    training_duration_start = high_resolution_clock::now();;
+    timeMonitor.start();
 
     const int nb_of_letters = 26;
     int nb_of_samples = training_data.rows;
 
-    cv::Mat formatted_responses = cv::Mat::zeros(nb_of_samples, nb_of_letters, CV_32F);
+    cv::Mat formatted_responses = cv::Mat::zeros(nb_of_samples, nb_of_letters, CV_32FC1);
 
     // Unrolling the responses
     LOG_I("Formatting responses...");
@@ -53,11 +55,11 @@ int MLPHand::learn_from(const cv::Mat &training_data, const cv::Mat &training_re
         formatted_responses.at<float>(i, cls_label) = 1.f;
     }
 
-    // Train classifier
+    // Create and configure layers
     int nb_of_layer = _nb_of_hidden_layer + 2;
     cv::Mat layer_sizes(nb_of_layer, 1, CV_16U);
     layer_sizes.row(0) = training_data.cols;
-    for(int i = 1; i < nb_of_layer - 1; i++) {
+    for (int i = 1; i < nb_of_layer - 1; i++) {
         layer_sizes.row(i) = _nb_of_neuron;
     }
     layer_sizes.row(nb_of_layer - 1) = nb_of_letters;
@@ -66,10 +68,12 @@ int MLPHand::learn_from(const cv::Mat &training_data, const cv::Mat &training_re
     double method_epsilon = 0.001;
     int max_iter = 128;
 
+    // Train classifier
     cv::Ptr<cv::ml::TrainData> t_data =
             cv::ml::TrainData::create(training_data, cv::ml::ROW_SAMPLE, formatted_responses);
 
-    LOG_I("Training the classifier - " << _nb_of_hidden_layer << " layer of " << _nb_of_neuron << " neurons (may take a few minutes)...");
+    LOG_I("Training the classifier - " << _nb_of_hidden_layer << " layer of " << _nb_of_neuron
+                                       << " neurons (may take a few minutes)...");
     _model = cv::ml::ANN_MLP::create();
     _model->setLayerSizes(layer_sizes);
     _model->setActivationFunction(cv::ml::ANN_MLP::SIGMOID_SYM);
@@ -78,10 +82,9 @@ int MLPHand::learn_from(const cv::Mat &training_data, const cv::Mat &training_re
     _model->train(t_data);
 
     // End timer
-    training_duration_end = high_resolution_clock::now();;
+    timeMonitor.stop();
 
-    training_duration = duration_cast<nanoseconds>(training_duration_end - training_duration_start).count() / (1e6);
-    LOG_I("Training done! (" << training_duration << " ms)");
+    LOG_I("Training done! (" << timeMonitor.getDurationS() << " s)");
 
     return Code::SUCCESS;
 }

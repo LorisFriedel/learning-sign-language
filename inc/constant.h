@@ -22,4 +22,9 @@ namespace Default {
 
     const int NB_OF_LAYER = 2;
     const int NB_OF_NEURON = 128;
+
+    const int HOG_IMG_SIZE = 256;
+    const int HOG_BLOCK_SIZE = 32;
+    const int HOG_BLOCK_STRIDE_SIZE = 16;
+    const int HOG_CELL_SIZE = 8;
 }
