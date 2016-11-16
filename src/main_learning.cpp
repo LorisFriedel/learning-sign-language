@@ -5,6 +5,7 @@
 #include <tclap/CmdLine.h>
 #include <cv.hpp>
 #include <dirent.h>
+#include <regex>
 #include "../inc/code.h"
 #include "../inc/log.h"
 #include "../inc/constant.h"
@@ -14,14 +15,16 @@
 #include "../inc/DirectoryReader.hpp"
 #include "../inc/Timer.hpp"
 
-int generate_MLP_model(const std::string model_path, const std::string data_dir, const std::string test_dir,
-                       const int nb_of_layer, const int nb_of_neuron, const bool no_test);
+int trainMLPModel(const std::string dataDir, const std::string testDir,
+                  MLPHand &model, const bool noTest);
 
-int aggregate_data_from(std::string directory, cv::Mat &mat_data, cv::Mat &mat_responses);
+int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matResponses);
 
-int execute_test_model(std::string model_path, std::string test_dir);
+int executeTestModel(std::string modelPath, std::string testDir);
 
-double test_model(MLPHand &model, std::string input_dir);
+double testModel(MLPHand &model, std::string inputDir);
+
+std::vector<int> parsePattern(std::string basic_string);
 
 int main(int argc, const char **argv) {
     try {
@@ -66,8 +69,8 @@ int main(int argc, const char **argv) {
                                          false, Default::NB_OF_NEURON, "POSITIVE_INTEGER", cmd);
 
         TCLAP::ValueArg<std::string> networkPatternArg("p", "network-pattern",
-                                         "Define the network pattern. Example: '4 2 4' define a 3 layers network, with 4 neurons for the first one, 2 for the second and 3 for the last one.",
-                                         false, "64 64", "pattern", cmd);
+                                                       "Define the network pattern. Example: '4 2 4' define a 3 layers network, with 4 neurons for the first one, 2 for the second and 3 for the last one.",
+                                                       false, "64 64", "pattern", cmd);
 
         TCLAP::SwitchArg noTestArg("s", "no-test",
                                    "Skip the model test.",
@@ -82,7 +85,7 @@ int main(int argc, const char **argv) {
 
         //// Get the value parsed by each arg and handle them
 
-        std::string test_dir = testDirArg.getValue();
+        std::string testDir = testDirArg.getValue();
 
         // Test mode
         if (testOnlyArg.isSet() || modelInputArg.isSet()) {
@@ -97,20 +100,35 @@ int main(int argc, const char **argv) {
 
             std::string model_to_test = modelInputArg.getValue();
 
-            return execute_test_model(model_to_test, test_dir);
+            return executeTestModel(model_to_test, testDir);
 
         } else { // Learning mode
-            std::string model_out_path = modelOutputArg.getValue();
-            std::string data_dir = dataDirArg.getValue();
-            std::string pattern = networkPatternArg.getValue();
-            // TODO use pattern if set (change MLPHand to support it)
-            int nb_of_layer = nbLayerArg.getValue();
-            int nb_of_neuron = nbNeuronArg.getValue();
-            bool no_test = noTestArg.getValue();
+            std::string modelOutPath = modelOutputArg.getValue();
+            std::string dataDir = dataDirArg.getValue();
+            bool noTest = noTestArg.getValue();
 
-            return generate_MLP_model(model_out_path, data_dir, test_dir, nb_of_layer, nb_of_neuron, no_test);
+            MLPHand model;
+
+            if (networkPatternArg.isSet()) {
+                std::string pattern = networkPatternArg.getValue();
+                std::vector<int> networkPattern = parsePattern(pattern);
+                if (networkPattern.empty()) {
+                    return Code::ERROR;
+                } else {
+                    model = MLPHand(networkPattern);
+                }
+            } else {
+                int nbOfLayer = nbLayerArg.getValue();
+                int nbOfNeuron = nbNeuronArg.getValue();
+                model = MLPHand(nbOfLayer, nbOfNeuron);
+            }
+
+            if (trainMLPModel(dataDir, testDir, model, noTest) == Code::SUCCESS) {
+                return model.exportModelTo(modelOutPath);
+            } else {
+                return Code::ERROR;
+            }
         }
-
     } catch (TCLAP::ArgException &e) {  // catch any exceptions
         LOG_E("error: " << e.error() << " for arg " << e.argId());
     }
@@ -119,75 +137,89 @@ int main(int argc, const char **argv) {
     return Code::ERROR;
 }
 
+std::vector<int> parsePattern(std::string pattern) {
+    std::vector<int> result;
 
-int generate_MLP_model(const std::string model_path, const std::string data_dir, const std::string test_dir,
-                       const int nb_of_layer, const int nb_of_neuron, const bool no_test) {
+    std::stringstream ss(pattern);
+    std::string tok;
+    char delimiter = ' ';
+
+    while (getline(ss, tok, delimiter)) {
+        result.push_back(std::stoi(tok));
+    }
+
+    return result;
+}
+
+
+int trainMLPModel(const std::string dataDir, const std::string testDir,
+                  MLPHand &model, const bool noTest) {
     cv::Mat data;
     cv::Mat responses;
 
-    if (aggregate_data_from(data_dir, data, responses) != Code::SUCCESS) {
+    LOG_I("Start training process..");
+    if (aggregateDataFrom(dataDir, data, responses) != Code::SUCCESS) {
         LOG_E("Could not load training data");
         return Code::ERROR;
     };
 
-    MLPHand model(nb_of_layer, nb_of_neuron);
-
-    if (model.learn_from(data, responses) == Code::SUCCESS) {
-        model.export_model_to(model_path);
-
-        if (!no_test) {
-            double test_result = test_model(model, test_dir);
-            LOG_I("Test MLP over test data set... : " << test_result * 100 << "% success");
+    if (model.learnFrom(data, responses) == Code::SUCCESS) {
+        if (!noTest) {
+            testModel(model, testDir);
         }
-
         return Code::SUCCESS;
     } else {
+        LOG_E("ERROR: model training failed");
         return Code::ERROR;
     }
 }
 
-int execute_test_model(std::string model_path, std::string test_dir) {
+int executeTestModel(std::string modelPath, std::string testDir) {
     MLPHand model;
-    model.learn_from(model_path);
+    model.learnFrom(modelPath);
 
-    std::cout << "Testing model...";
-    double test_result = test_model(model, test_dir);
-    std::cout << " done! " << std::endl << "Test result: " << test_result * 100 << "% success";
+    testModel(model, testDir);
 }
 
-double test_model(MLPHand &model, std::string input_dir) {
-    cv::Mat data_test;
-    cv::Mat responses_test;
+double testModel(MLPHand &model, std::string inputDir) {
+    LOG_I("Start testing process..");
 
-    if (aggregate_data_from(input_dir, data_test, responses_test) != Code::SUCCESS) {
+    cv::Mat dataTest;
+    cv::Mat responsesTest;
+
+    if (aggregateDataFrom(inputDir, dataTest, responsesTest) != Code::SUCCESS) {
         LOG_E("Could not load test data");
         return Code::ERROR;
     };
 
-    return model.test_on(data_test, responses_test);
+    std::cout << "Testing model...";
+    double result = model.testOn(dataTest, responsesTest);
+    LOG_I(" done! " << std::endl << "Test result: " << result * 100 << "% success");
+
+    return result;
 }
 
-int aggregate_data_from(std::string directory, cv::Mat &mat_data, cv::Mat &mat_responses) {
-    std::cout << " - Loading data...";
+int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matResponses) {
+    std::cout << "Loading data...";
     Timer timer;
 
     timer.start();
     DirectoryReader dirReader(directory);
-    int result = dirReader.foreachFile([&mat_data, &mat_responses](std::string filePath, std::string fileName) {
-        int letter_tmp;
-        cv::Mat letter_data_row;
+    int result = dirReader.foreachFile([&matData, &matResponses](std::string filePath, std::string fileName) {
+        int letterTmp;
+        cv::Mat letterDataRow;
 
         // If no error while reading data
         DataYmlReader reader(filePath);
-        if (reader.read(letter_data_row, letter_tmp) != Code::SUCCESS) {
-            letter_data_row.convertTo(letter_data_row, CV_32FC1);
+        if (reader.read(letterDataRow, letterTmp) != Code::SUCCESS) {
+            letterDataRow.convertTo(letterDataRow, CV_32FC1);
 
-            mat_responses.push_back(letter_tmp);
-            mat_data.push_back(letter_data_row);
+            matResponses.push_back(letterTmp);
+            matData.push_back(letterDataRow);
         }
     });
     timer.stop();
 
-    std::cout << " done! (" << timer.getDurationS() << " s)";
+    LOG_I(" done! (" << timer.getDurationS() << " s)");
     return result;
 }

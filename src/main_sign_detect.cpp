@@ -60,6 +60,9 @@ int main(int argc, const char **argv) {
         TCLAP::ValueArg<std::string> imageBackprojOutputArg("b", "backproj-output",
                                                             "Specify the path where to save backproj data (.yml) when the save image mode is enabled. Default value is " + Default::LETTERS_DATA_PATH,
                                                             false, Default::LETTERS_DATA_PATH, "DIRECTORY_PATH", cmd);
+        
+        // TODO : mode HOG for prediction
+
         //// Parse the argv array
         cmd.parse(argc, argv);
 
@@ -130,7 +133,7 @@ run_camshift_track_hand(VideoStreamReader &vsr, const cv::CascadeClassifier &cas
 
     // Load model
     MLPHand mlp_hand;
-    mlp_hand.learn_from(model_path);
+    mlp_hand.learnFrom(model_path);
 
     // Variables for hand tracking
     cv::RotatedRect hand_tracked;
