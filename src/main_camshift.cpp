@@ -13,7 +13,7 @@
 #include "../inc/colors.h"
 #include "../inc/constant.h"
 
-int run_camshift_track(VideoStreamReader &vsr, const cv::CascadeClassifier &cascade);
+int runCamshiftTrack(VideoStreamReader &vsr, const cv::CascadeClassifier &cascade);
 
 // Main
 int main(int argc, const char **argv) {
@@ -36,27 +36,27 @@ int main(int argc, const char **argv) {
 
         //// Get the value parsed by each arg
         // Load pre-trained cascade data
-        std::string cascade_name = cascadeArg.getValue();
+        std::string cascadeName = cascadeArg.getValue();
         cv::CascadeClassifier cascade;
-        if (!cascade.load(cascade_name)) {
+        if (!cascade.load(cascadeName)) {
             LOG_E("ERROR: Could not load classifier cascade");
             return Code::CASCADE_LOAD_ERROR;
         }
 
         // Get file to read image from for image detection
-        std::string input_filename = inputArg.getValue();
-        int webcam_id;
-        bool is_webcam = false;
-        if (input_filename.empty() || (isdigit(input_filename[0]) && input_filename.size() == 1)) {
-            webcam_id = input_filename.empty() ? 0 : input_filename[0] - '0';
-            is_webcam = true;
+        std::string inputFilename = inputArg.getValue();
+        int webcamId;
+        bool isWebcam = false;
+        if (inputFilename.empty() || (isdigit(inputFilename[0]) && inputFilename.size() == 1)) {
+            webcamId = inputFilename.empty() ? 0 : inputFilename[0] - '0';
+            isWebcam = true;
         }
 
 
         // Init video reader
         VideoStreamReader vsr;
-        int open_code_result = is_webcam ? vsr.openStream(webcam_id) : vsr.openStream(input_filename);
-        if (open_code_result == Code::ERROR) {
+        int openCodeResult = isWebcam ? vsr.openStream(webcamId) : vsr.openStream(inputFilename);
+        if (openCodeResult == Code::ERROR) {
             LOG_E("ERROR: Video capturing failed");
             return Code::ERROR;
         }
@@ -64,7 +64,7 @@ int main(int argc, const char **argv) {
         // If image capture has successfully started, start detecting objects regarding mode
         LOG_I("Video capturing has been started ...");
 
-        return run_camshift_track(vsr, cascade);
+        return runCamshiftTrack(vsr, cascade);
 
     } catch (TCLAP::ArgException &e) {  // catch any exceptions
         LOG_E("error: " << e.error() << " for arg " << e.argId());
@@ -77,58 +77,58 @@ int main(int argc, const char **argv) {
 /*
  * -------- Camshift track ---------
  */
-int run_camshift_track(VideoStreamReader &vsr, const cv::CascadeClassifier &cascade) {
-    ObjectDetector object_detector(cascade);
-    CamshiftRunner c_runner(vsr, object_detector);
+int runCamshiftTrack(VideoStreamReader &vsr, const cv::CascadeClassifier &cascade) {
+    ObjectDetector objectDetector(cascade);
+    CamshiftRunner cRunner(vsr, objectDetector);
 
     // Init slider to tweak thresholds..
     cv::namedWindow("CamShift", 0);
-    cv::createTrackbar("Vmin", "CamShift", &c_runner.c_tracker.v_min, 256, 0);
-    cv::createTrackbar("Vmax", "CamShift", &c_runner.c_tracker.v_max, 256, 0);
-    cv::createTrackbar("Smin", "CamShift", &c_runner.c_tracker.s_min, 256, 0);
-    cv::createTrackbar("Brutal threshold", "CamShift", &c_runner.c_tracker.threshold, 256, 0);
+    cv::createTrackbar("Vmin", "CamShift", &cRunner.cTracker.vMin, 256, 0);
+    cv::createTrackbar("Vmax", "CamShift", &cRunner.cTracker.vMax, 256, 0);
+    cv::createTrackbar("Smin", "CamShift", &cRunner.cTracker.sMin, 256, 0);
+    cv::createTrackbar("Brutal threshold", "CamShift", &cRunner.cTracker.threshold, 256, 0);
 
     // Control variables
-    bool backproj_display = false;
+    bool backprojDisplay = false;
 
     // Bind shortcuts
-    KeyInputHandler key_handler;
+    KeyInputHandler keyHandler;
 
-    std::function<void(const int &)> action_stop([&c_runner](const int &k) {
-        c_runner.stop();
+    std::function<void(const int &)> actionStop([&cRunner](const int &k) {
+        cRunner.stop();
     });
-    key_handler.bind('$', &action_stop);
+    keyHandler.bind('$', &actionStop);
 
-    std::function<void(const int &)> action_recalibrate([&c_runner](const int &k) {
-        c_runner.recalibrate();
+    std::function<void(const int &)> actionRecalibrate([&cRunner](const int &k) {
+        cRunner.recalibrate();
         LOG_I("Ask for recalibration");
     });
-    key_handler.bind('!', &action_recalibrate);
+    keyHandler.bind('!', &actionRecalibrate);
 
-    std::function<void(const int &)> action_backproj_display([&backproj_display](const int &k) {
-        backproj_display = !backproj_display;
-        LOG_I("Backproj display " << (backproj_display ? "enabled" : "disabled"));
+    std::function<void(const int &)> actionBackprojDisplay([&backprojDisplay](const int &k) {
+        backprojDisplay = !backprojDisplay;
+        LOG_I("Backproj display " << (backprojDisplay ? "enabled" : "disabled"));
     });
-    key_handler.bind('*', &action_backproj_display);
+    keyHandler.bind('*', &actionBackprojDisplay);
 
     const std::function<void(CamshiftTracker &, const cv::Mat &, const cv::RotatedRect &, const bool)>
-    track_callback([&key_handler, &backproj_display]
-                                (CamshiftTracker &c_tracker, const cv::Mat &img,
-                                 const cv::RotatedRect &object_tracked, const bool object_found) {
+    track_callback([&keyHandler, &backprojDisplay]
+                                (CamshiftTracker &cTracker, const cv::Mat &img,
+                                 const cv::RotatedRect &objectTracked, const bool objectFound) {
         // Read input key
         int key = cv::waitKey(1);
-        key_handler.apply(key);
+        keyHandler.apply(key);
 
         // Drawings and display
-        if (backproj_display) {
-            cv::cvtColor(c_tracker.get_backproj(), img, cv::COLOR_GRAY2BGR);
+        if (backprojDisplay) {
+            cv::cvtColor(cTracker.getBackproj(), img, cv::COLOR_GRAY2BGR);
         }
 
-        if (object_found) {
-            cv::ellipse(img, object_tracked, Color::GREEN, 2, CV_AA);
+        if (objectFound) {
+            cv::ellipse(img, objectTracked, Color::GREEN, 2, CV_AA);
         }
         cv::imshow("CamShift", img);
     });
 
-    return c_runner.run_tracking(&track_callback);
+    return cRunner.runTracking(&track_callback);
 }

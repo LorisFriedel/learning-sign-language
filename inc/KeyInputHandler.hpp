@@ -17,5 +17,5 @@ public:
     void apply(int key);
 
 private:
-    std::map<int, std::vector<std::function<void(const int &)> *>> m_key_binding;
+    std::map<int, std::vector<std::function<void(const int &)> *>> keyBinding;
 };

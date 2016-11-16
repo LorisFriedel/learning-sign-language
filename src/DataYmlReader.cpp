@@ -8,12 +8,12 @@
 
 DataYmlReader::DataYmlReader(std::string filePath) : filePath(filePath) {}
 
-int DataYmlReader::read(cv::Mat &data_output, int &letter_output) {
+int DataYmlReader::read(cv::Mat &dataOutput, int &letterOutput) {
     cv::FileStorage fs(filePath, cv::FileStorage::READ);
 
     if (fs.isOpened()) {
-        fs[Default::KEY_LETTER] >> letter_output;
-        fs[Default::KEY_MAT] >> data_output;
+        fs[Default::KEY_LETTER] >> letterOutput;
+        fs[Default::KEY_MAT] >> dataOutput;
         fs.release();
         return true;
     } else {

@@ -12,11 +12,11 @@ class ObjectDetectRunner {
 public:
     ObjectDetectRunner(VideoStreamReader &vsr, const cv::CascadeClassifier &cascade);
 
-    int run_detection();
+    int runDetection();
 
 private:
-    ObjectDetector _object_detector;
-    VideoStreamReader &_vsr;
+    ObjectDetector objectDetector;
+    VideoStreamReader &vsr;
 
     void drawResult(cv::Mat &img, cv::Rect &roi, const bool detected);
 };

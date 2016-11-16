@@ -19,11 +19,11 @@ namespace {
 }
 
 ObjectDetector::ObjectDetector(const cv::CascadeClassifier &cascade)
-        : _cascade(cascade) {
+        : cascade(cascade) {
 }
 
 const std::tuple<bool, double, cv::Rect>
-ObjectDetector::detect_in(const cv::Mat &img) {
+ObjectDetector::detectIn(const cv::Mat &img) {
     cv::Mat gray, smallImg;
 
     // Convert to grayscale and resize image for performance improvements
@@ -36,7 +36,7 @@ ObjectDetector::detect_in(const cv::Mat &img) {
 
     // Object detection (by opencv)
     double t = (double) cvGetTickCount();
-    _cascade.detectMultiScale(smallImg, objects,
+    cascade.detectMultiScale(smallImg, objects,
                               1.1, 2, 0
                                       //|CASCADE_FIND_BIGGEST_OBJECT|CASCADE_DO_ROUGH_SEARCH
                                       | cv::CASCADE_SCALE_IMAGE,
@@ -61,7 +61,7 @@ const std::tuple<bool, double, cv::Rect>
 ObjectDetector::detect(const cv::Mat &img, const cv::Rect &roi) {
     cv::Mat imgClone(img.clone(), roi);
 
-    std::tuple<bool, double, cv::Rect> result = detect_in(imgClone);
+    std::tuple<bool, double, cv::Rect> result = detectIn(imgClone);
     cv::Rect &detectedRect = std::get<2>(result);
 
     if (std::get<1>(result)) {
@@ -83,31 +83,31 @@ const bool shouldIgnoreMove(const cv::Rect &oldRect, const cv::Rect &newRect) {
            && abs(oldRect.height - newRect.height) < MARGIN_IGNORE_MOVE;
 }
 
-void ObjectDetector::loop_detect(VideoStreamReader &vsr,
-                                 const std::function<void(cv::Mat, bool, double, cv::Rect)> &callback,
-                                 const bool stabilized) {
+void ObjectDetector::loopDetect(VideoStreamReader &vsr,
+                                const std::function<void(cv::Mat, bool, double, cv::Rect)> &callback,
+                                const bool stabilized) {
     cv::Mat img;
     cv::Rect roi = Geo::NULL_RECT;
-    cv::Rect roi_augmented;
+    cv::Rect roiAugmented;
 
     img = vsr.readFrame(); // Read the first image (sometimes it's a flipped image..) to init default values
-    const cv::Rect roi_default(0, 0, img.cols, img.rows);
+    const cv::Rect roiDefault(0, 0, img.cols, img.rows);
 
-    _loop_active = true;
-    while (_loop_active) {
+    loopActive = true;
+    while (loopActive) {
         img = vsr.readFrame();
 
         if (roi.area() != 0) {
             // Augment the given region of interest to improve performance
             // (start detection in a smaller area defined by the previous match and only a bit larger)
-            const int aug_x = roi.x - MARGIN_DETECT, aug_y = roi.y - MARGIN_DETECT;
-            const int aug_width = roi.width + (2 * MARGIN_DETECT), aug_height = roi.height + (2 * MARGIN_DETECT);
-            roi_augmented = cv::Rect(aug_x, aug_y, aug_width, aug_height) & cv::Rect(0, 0, img.cols, img.rows);
+            const int augX = roi.x - MARGIN_DETECT, augY = roi.y - MARGIN_DETECT;
+            const int augWidth = roi.width + (2 * MARGIN_DETECT), augHeight = roi.height + (2 * MARGIN_DETECT);
+            roiAugmented = cv::Rect(augX, augY, augWidth, augHeight) & cv::Rect(0, 0, img.cols, img.rows);
         } else {
-            roi_augmented = roi_default;
+            roiAugmented = roiDefault;
         }
 
-        std::tuple<bool, double, cv::Rect> result = detect(img, roi_augmented);
+        std::tuple<bool, double, cv::Rect> result = detect(img, roiAugmented);
         if (stabilized && shouldIgnoreMove(roi, std::get<2>(result))) {
             // Small move
             // Do nothing
@@ -119,6 +119,6 @@ void ObjectDetector::loop_detect(VideoStreamReader &vsr,
     }
 }
 
-void ObjectDetector::stop_loop_detect() {
-    _loop_active = false;
+void ObjectDetector::stopLoopDetect() {
+    loopActive = false;
 }

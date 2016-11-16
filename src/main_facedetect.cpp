@@ -29,27 +29,27 @@ int main(int argc, const char **argv) {
 
         //// Get the value parsed by each arg
         // Load pre-trained cascade data
-        std::string cascade_name = cascadeArg.getValue();
+        std::string cascadeName = cascadeArg.getValue();
         cv::CascadeClassifier cascade;
-        if (!cascade.load(cascade_name)) {
+        if (!cascade.load(cascadeName)) {
             LOG_E("ERROR: Could not load classifier cascade");
             return Code::CASCADE_LOAD_ERROR;
         }
 
         // Get file to read image from for image detection
-        std::string input_filename = inputArg.getValue();
-        int webcam_id;
-        bool is_webcam = false;
-        if (input_filename.empty() || (isdigit(input_filename[0]) && input_filename.size() == 1)) {
-            webcam_id = input_filename.empty() ? 0 : input_filename[0] - '0';
-            is_webcam = true;
+        std::string inputFilename = inputArg.getValue();
+        int webcamId;
+        bool isWebcam = false;
+        if (inputFilename.empty() || (isdigit(inputFilename[0]) && inputFilename.size() == 1)) {
+            webcamId = inputFilename.empty() ? 0 : inputFilename[0] - '0';
+            isWebcam = true;
         }
 
         // Handling mode
         // Init video reader
         VideoStreamReader vsr;
-        int open_code_result = is_webcam ? vsr.openStream(webcam_id) : vsr.openStream(input_filename);
-        if (open_code_result == Code::ERROR) {
+        int openCodeResult = isWebcam ? vsr.openStream(webcamId) : vsr.openStream(inputFilename);
+        if (openCodeResult == Code::ERROR) {
             LOG_E("ERROR: Video capturing failed");
             return Code::ERROR;
         }
@@ -58,8 +58,8 @@ int main(int argc, const char **argv) {
         LOG_I("Video capturing has been started ...");
 
         // q pour quitter
-        ObjectDetectRunner detector_runner(vsr, cascade);
-        return detector_runner.run_detection();
+        ObjectDetectRunner detectorRunner(vsr, cascade);
+        return detectorRunner.runDetection();
     } catch (TCLAP::ArgException &e) {  // catch any exceptions
         LOG_E("error: " << e.error() << " for arg " << e.argId());
     }

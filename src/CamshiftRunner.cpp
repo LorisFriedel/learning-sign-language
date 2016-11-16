@@ -9,13 +9,13 @@
 #include "../inc/code.h"
 #include "../inc/log.h"
 
-CamshiftRunner::CamshiftRunner(VideoStreamReader &vsr, ObjectDetector &object_detector)
-        : _vsr(vsr), _object_detector(object_detector), c_tracker(),
+CamshiftRunner::CamshiftRunner(VideoStreamReader &vsr, ObjectDetector &objectDetector)
+        : _vsr(vsr), _object_detector(objectDetector), cTracker(),
           _stop(false), _recalibrate(false) {}
 
-int CamshiftRunner::run_tracking(
+int CamshiftRunner::runTracking(
         const std::function<void(CamshiftTracker &, const cv::Mat &, const cv::RotatedRect &,
-                                 const bool)> *success_callback) {
+                                 const bool)> *successCallback) {
     // Init necessary stuff to detect the object from scratch
     cv::Mat img;
     cv::Rect detected_object;
@@ -26,7 +26,7 @@ int CamshiftRunner::run_tracking(
     bool face_detected = false;
     while (!face_detected) {
         img = _vsr.readFrame();
-        detection_result = _object_detector.detect_in(img);
+        detection_result = _object_detector.detectIn(img);
         if (std::get<0>(detection_result)) {
             face_detected = true;
             detected_object = std::get<2>(detection_result);
@@ -34,7 +34,7 @@ int CamshiftRunner::run_tracking(
     }
 
     // Create the camshift tracker and init it with the previously detected object
-    c_tracker.recalibrate(img, detected_object);
+    cTracker.recalibrate(img, detected_object);
 
     // Current result for face tracking
     cv::RotatedRect object_tracked;
@@ -46,18 +46,18 @@ int CamshiftRunner::run_tracking(
         // Recalibrate if needed
         if (_recalibrate) {
             LOG_I("Recalibrating tracker...");
-            detection_result = _object_detector.detect_in(img);
-            c_tracker.recalibrate(img, std::get<2>(detection_result));
+            detection_result = _object_detector.detectIn(img);
+            cTracker.recalibrate(img, std::get<2>(detection_result));
             _recalibrate = !_recalibrate;
         }
 
         // Tracking
-        object_tracked = c_tracker.track_obj(img);
+        object_tracked = cTracker.trackObj(img);
         object_found = object_tracked.boundingRect().area() > 1;
 
         // Tracked object is detected : we execute the callback
-        if (success_callback != nullptr) {
-            (*success_callback)(c_tracker, img, object_tracked, object_found);
+        if (successCallback != nullptr) {
+            (*successCallback)(cTracker, img, object_tracked, object_found);
         }
 
         // Check for recalibration

@@ -13,16 +13,16 @@ class ObjectDetector;
 
 class CamshiftRunner {
 public:
-    CamshiftRunner(VideoStreamReader &vsr, ObjectDetector &object_detector);
+    CamshiftRunner(VideoStreamReader &vsr, ObjectDetector &objectDetector);
 
-    int run_tracking(const std::function<void(CamshiftTracker &, const cv::Mat &,
-                                              const cv::RotatedRect &, const bool)> *success_callback = nullptr);
+    int runTracking(const std::function<void(CamshiftTracker &, const cv::Mat &,
+                                             const cv::RotatedRect &, const bool)> *successCallback = nullptr);
 
     void stop();
 
     void recalibrate();
 
-    CamshiftTracker c_tracker;
+    CamshiftTracker cTracker;
 
 private:
     VideoStreamReader &_vsr;

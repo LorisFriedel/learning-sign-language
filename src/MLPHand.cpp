@@ -61,8 +61,8 @@ int MLPHand::learnFrom(const cv::Mat &trainingData, const cv::Mat &trainingRespo
     // Unrolling the responses
     std::cout << "Formatting responses...";
     for (int i = 0; i < nbOfSamples; i++) {
-        int cls_label = trainingResponses.at<int>(i) - BASE_LETTER;
-        formattedResponses.at<float>(i, cls_label) = 1.f;
+        int clsLabel = trainingResponses.at<int>(i) - BASE_LETTER;
+        formattedResponses.at<float>(i, clsLabel) = 1.f;
     }
     LOG_I(" done!");
 
@@ -119,14 +119,17 @@ int MLPHand::exportModelTo(const std::string xml_file_name) {
         LOG_I("Exporting model to " + xml_file_name);
         model->save(xml_file_name);
         LOG_I("Model successfully exported");
-    } else {
-        LOG_I("Error: model not exported");
-        return Code::ERROR;
+        return Code::SUCCESS;
     }
+
+    LOG_E("ERROR: model not exported");
+    return Code::ERROR;
 }
 
 double MLPHand::testOn(const cv::Mat &test_data, const cv::Mat &test_responses) {
     assert(model->isTrained());
+
+    // TODO better analytics
 
     int nb_of_samples = test_data.rows;
     double total_success = 0;

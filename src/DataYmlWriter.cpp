@@ -9,12 +9,12 @@
 DataYmlWriter::DataYmlWriter(std::string filePath)
         : filePath(filePath) {}
 
-int DataYmlWriter::write(cv::Mat &data_input, int letter_input) {
+int DataYmlWriter::write(cv::Mat &dataInput, int letterInput) {
     cv::FileStorage fs(filePath, cv::FileStorage::WRITE);
 
     if (fs.isOpened()) {
-        fs << Default::KEY_LETTER << letter_input;
-        fs << Default::KEY_MAT << data_input;
+        fs << Default::KEY_LETTER << letterInput;
+        fs << Default::KEY_MAT << dataInput;
         fs.release();
         return true;
     } else {
@@ -23,10 +23,10 @@ int DataYmlWriter::write(cv::Mat &data_input, int letter_input) {
     }
 }
 
-int DataYmlWriter::write(std::vector<float> &data_input, int letter_input) {
-    cv::Mat mat_data(cv::Size((int) data_input.size(), 1), CV_32FC1);
-    for(int i = 0; i < data_input.size(); i++) {
-        mat_data.at<float>(i) = data_input[i];
+int DataYmlWriter::write(std::vector<float> &dataInput, int letterInput) {
+    cv::Mat matData(cv::Size((int) dataInput.size(), 1), CV_32FC1);
+    for(int i = 0; i < dataInput.size(); i++) {
+        matData.at<float>(i) = dataInput[i];
     }
-    return write(mat_data, letter_input);
+    return write(matData, letterInput);
 }

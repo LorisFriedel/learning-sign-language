@@ -14,11 +14,11 @@ public:
     /**
      * Read an yml file containing data for training.
      *
-     * @param data_output Read data from file. Must be an array.
-     * @param letter_output Read letter from file. Must be the ASCII code.
+     * @param dataOutput Read data from file. Must be an array.
+     * @param letterOutput Read letter from file. Must be the ASCII code.
      * @return true if reading succeed, false otherwise.
      */
-    int read(cv::Mat &data_output, int &letter_output);
+    int read(cv::Mat &dataOutput, int &letterOutput);
 
 private:
     std::string filePath;

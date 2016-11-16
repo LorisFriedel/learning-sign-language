@@ -9,11 +9,11 @@
 #include "../inc/colors.h"
 
 ObjectDetectRunner::ObjectDetectRunner(VideoStreamReader &vsr, const cv::CascadeClassifier &cascade)
-        : _vsr(vsr), _object_detector(cascade) {}
+        : vsr(vsr), objectDetector(cascade) {}
 
-int ObjectDetectRunner::run_detection() {
+int ObjectDetectRunner::runDetection() {
     cv::namedWindow("webcam_window");
-    std::function<void(cv::Mat, bool, double, cv::Rect)> F_handle_result =
+    std::function<void(cv::Mat, bool, double, cv::Rect)> callback =
             [this](cv::Mat img, bool detected,
                                     double timeMs, cv::Rect roi) {
                 LOG_I("Detection performed in " << timeMs << "ms");
@@ -27,13 +27,13 @@ int ObjectDetectRunner::run_detection() {
                 // Wait for windows update and maybe catch a quit action
                 int c = cv::waitKey(1);
                 if (c == 27 || c == 'q' || c == 'Q') {
-                    this->_object_detector.stop_loop_detect();
+                    this->objectDetector.stopLoopDetect();
                 }
             };
 
-    _object_detector.loop_detect(_vsr, F_handle_result);
+    objectDetector.loopDetect(vsr, callback);
 
-    _vsr.closeStream();
+    vsr.closeStream();
 
     return Code::SUCCESS;
 }

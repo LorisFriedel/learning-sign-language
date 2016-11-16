@@ -17,6 +17,6 @@ public:
     void closeStream();
 
 private:
-    cv::VideoCapture m_capture;
-    cv::Mat m_frame;
+    cv::VideoCapture capture;
+    cv::Mat frame;
 };

@@ -12,7 +12,7 @@
 using namespace cv;
 
 int VideoStreamReader::openStream(const int input) {
-    if (m_capture.open(input)) {
+    if (capture.open(input)) {
         LOG_I("Capture from camera #" << input << " successful");
         return Code::SUCCESS;
     } else {
@@ -22,7 +22,7 @@ int VideoStreamReader::openStream(const int input) {
 }
 
 int VideoStreamReader::openStream(const std::string filename) {
-    if (m_capture.open(filename)) {
+    if (capture.open(filename)) {
         LOG_I("Capture from camera #" << filename << " successful");
         return Code::SUCCESS;
     } else {
@@ -32,15 +32,15 @@ int VideoStreamReader::openStream(const std::string filename) {
 }
 
 Mat VideoStreamReader::readFrame() {
-    if (m_capture.isOpened()) {
-        m_capture >> m_frame;
-        return m_frame;
+    if (capture.isOpened()) {
+        capture >> frame;
+        return frame;
     } else {
         return Geo::NULL_MAT;
     }
 }
 
 void VideoStreamReader::closeStream() {
-    m_capture.release();
+    capture.release();
     LOG_I("Capture stopped");
 }

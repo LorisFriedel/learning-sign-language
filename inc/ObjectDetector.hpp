@@ -21,7 +21,7 @@ public:
      * @return A tuple <0> true if face detected, false otherwise; <1> detection duration in ms; <2> rectangle of the face area if detected, empty rectangle otherwise
      */
     const std::tuple<bool, double, cv::Rect>
-    detect_in(const cv::Mat &img);
+    detectIn(const cv::Mat &img);
 
     /**
      * Detect a face in the given image restricted to the given region of interest
@@ -42,16 +42,16 @@ public:
      * @param callback Method to be called with face detection results after each detection performed
      * @param stabilized True if the detection result should be stabilized, false otherwise
      */
-    void loop_detect(VideoStreamReader &vsr,
-                     const std::function<void(cv::Mat, bool, double, cv::Rect)> &callback,
-                     const bool stabilized = true);
+    void loopDetect(VideoStreamReader &vsr,
+                    const std::function<void(cv::Mat, bool, double, cv::Rect)> &callback,
+                    const bool stabilized = true);
 
     /**
      * Stop a previously started loop detection
      */
-    void stop_loop_detect();
+    void stopLoopDetect();
 
 private:
-    cv::CascadeClassifier _cascade;
-    bool _loop_active = false;
+    cv::CascadeClassifier cascade;
+    bool loopActive = false;
 };

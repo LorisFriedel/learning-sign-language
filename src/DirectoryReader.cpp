@@ -19,10 +19,10 @@ int DirectoryReader::foreachFile(const std::function<void(std::string, std::stri
             if (ent->d_type == DT_REG) {
                 std::string fileName = ent->d_name;
 
-                std::stringstream full_path;
-                full_path << directory << "/" << fileName;
+                std::stringstream fullPath;
+                fullPath << directory << "/" << fileName;
 
-                callback(full_path.str(), fileName);
+                callback(fullPath.str(), fileName);
             }
         }
         closedir(dir);
