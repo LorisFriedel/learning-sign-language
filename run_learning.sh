@@ -1,7 +1,9 @@
 #!/bin/sh
 
-if [ ! -f ./build/bin/learning.exe ]; then
+BIN_PATH=./build/bin
+
+if [ ! -f $BIN_PATH/learning.exe ]; then
     ./build.sh
 fi
 
-./build/bin/learning.exe "$@"
+$BIN_PATH/learning.exe "$@"

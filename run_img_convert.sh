@@ -1,7 +1,9 @@
 #!/bin/sh
 
-if [ ! -f ./build/bin/img_convert.exe ]; then
+BIN_PATH=./build/bin
+
+if [ ! -f $BIN_PATH/img_convert.exe ]; then
     ./build.sh
 fi
 
-./build/bin/img_convert.exe "$@"
+$BIN_PATH/img_convert.exe "$@"

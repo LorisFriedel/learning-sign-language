@@ -22,7 +22,7 @@ int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matRespo
 
 int executeTestModel(std::string modelPath, std::string testDir);
 
-double testModel(MLPHand &model, std::string inputDir);
+int testModel(MLPHand &model, std::string inputDir);
 
 std::vector<int> parsePattern(std::string basic_string);
 
@@ -165,7 +165,7 @@ int trainMLPModel(const std::string dataDir, const std::string testDir,
 
     if (model.learnFrom(data, responses) == Code::SUCCESS) {
         if (!noTest) {
-            testModel(model, testDir);
+            return testModel(model, testDir);
         }
         return Code::SUCCESS;
     } else {
@@ -178,10 +178,10 @@ int executeTestModel(std::string modelPath, std::string testDir) {
     MLPHand model;
     model.learnFrom(modelPath);
 
-    testModel(model, testDir);
+    return testModel(model, testDir);
 }
 
-double testModel(MLPHand &model, std::string inputDir) {
+int testModel(MLPHand &model, std::string inputDir) {
     LOG_I("Start testing process..");
 
     cv::Mat dataTest;
@@ -193,10 +193,18 @@ double testModel(MLPHand &model, std::string inputDir) {
     };
 
     std::cout << "Testing model..."; std::cout.flush();
-    double result = model.testOn(dataTest, responsesTest);
-    LOG_I(" done! " << std::endl << "Test result: " << result * 100 << "% success");
+    std::pair<double, std::map<int, StatPredict>> result = model.testOn(dataTest, responsesTest);
+    LOG_I(" done! " << std::endl << "Test result: " << result.first * 100 << "% success");
 
-    return result;
+    typedef std::map<int, StatPredict>::const_iterator it_type;
+    for(it_type it = result.second.begin(); it != result.second.end(); ++it) {
+        int letterCode = it->first;
+        StatPredict stat = it->second;
+
+
+    }
+    // TODO display details about test
+    return Code::SUCCESS;
 }
 
 int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matResponses) {

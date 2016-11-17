@@ -6,11 +6,11 @@
 
 #include <opencv2/core/mat.hpp>
 #include <ml.h>
+#include "StatPredict.hpp"
 
 class MLPHand {
 
 public:
-
     /**
      * Instantiate a MLP hand learner.
      *
@@ -57,19 +57,20 @@ public:
     /**
      * Test the given data set on the current model.
      *
-     * @param test_data Data to test.
-     * @param test_responses Responses for the data set.
-     * @return The average of success between [0, 1]. 0 mean no prediction success, 1 mean no prediction error.
+     * @param testData Data to test.
+     * @param testResponses Responses for the data set.
+     * @return The average of success between [0, 1]. 0 mean no prediction success, 1 mean no prediction error,
+     * plus a map with details about the test and prediction
      */
-    double testOn(const cv::Mat &test_data, const cv::Mat &test_responses);
+    std::pair<double, std::map<int, StatPredict>> testOn(const cv::Mat &testData, const cv::Mat &testResponses);
 
     /**
      * Export the current model to a file.
      *
-     * @param xml_file_name Path to the file where to export the data model as xml.
+     * @param xmlFileName Path to the file where to export the data model as xml.
      * @return success code
      */
-    int exportModelTo(const std::string xml_file_name);
+    int exportModelTo(const std::string xmlFileName);
 
 private:
     std::vector<int> networkPattern;

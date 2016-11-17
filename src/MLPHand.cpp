@@ -105,17 +105,17 @@ int MLPHand::learnFrom(const cv::Mat &trainingData, const cv::Mat &trainingRespo
 std::pair<int, float> MLPHand::predict(cv::Mat &img) {
     assert(model->isTrained());
 
-    cv::Mat output;
+    std::vector<float> output;
     int result = (int) model->predict(img, output);
-    return std::pair<int, float>(result, output.at<float>(0, result));
+    return std::pair<int, float>(result, output[result]);
 }
 
-int MLPHand::exportModelTo(const std::string xml_file_name) {
+int MLPHand::exportModelTo(const std::string xmlFileName) {
     assert(model->isTrained());
 
-    if (!xml_file_name.empty()) {
-        LOG_I("Exporting model to " + xml_file_name);
-        model->save(xml_file_name);
+    if (!xmlFileName.empty()) {
+        LOG_I("Exporting model to " + xmlFileName);
+        model->save(xmlFileName);
         LOG_I("Model successfully exported");
         return Code::SUCCESS;
     }
@@ -124,23 +124,38 @@ int MLPHand::exportModelTo(const std::string xml_file_name) {
     return Code::ERROR;
 }
 
-double MLPHand::testOn(const cv::Mat &test_data, const cv::Mat &test_responses) {
+std::pair<double, std::map<int, StatPredict>> MLPHand::testOn(const cv::Mat &testData, const cv::Mat &testResponses) {
     assert(model->isTrained());
 
-    // TODO better analytics
+    std::map<int, StatPredict> statMap;
 
-    int nb_of_samples = test_data.rows;
-    double total_success = 0;
+    int nbOfSamples = testData.rows;
+    int totalSuccess = 0;
 
     // Compute prediction error on test data
     // We count the number of prediction success
-    for (int i = 0; i < nb_of_samples; i++) {
-        total_success +=
-                std::abs(model->predict(test_data.row(i)) + BASE_LETTER - test_responses.at<int>(i))
-                <= FLT_EPSILON ? 1.f : 0.f;
+    for (int i = 0; i < nbOfSamples; i++) {
+        // Get response
+        int response = testResponses.at<int>(i);
+
+        // Predict output
+        std::vector<float> predictOutput;
+        int prediction = (int) model->predict(testData.row(i), predictOutput);
+        float trustPercentage = predictOutput[prediction];
+
+        // Check if already in the stat map
+        if(statMap.find(response) != statMap.end()) {
+            statMap[response] = StatPredict(response);
+        }
+
+        // Add computed data to whatever we are calculating
+        bool success = std::abs(BASE_LETTER + prediction - response) <= FLT_EPSILON;
+        totalSuccess +=  success ? 1 : 0;
+
+        statMap[response].addStat(success, BASE_LETTER + prediction, trustPercentage, predictOutput);
     }
 
-    double distance_average = total_success / nb_of_samples;
+    double distanceAverage = totalSuccess / nbOfSamples;
 
-    return distance_average;
+    return std::pair<double, std::map<int, StatPredict>>(distanceAverage, statMap);
 }

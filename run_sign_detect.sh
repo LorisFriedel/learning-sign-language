@@ -1,7 +1,9 @@
 #!/bin/sh
 
-if [ ! -f ./build/bin/sign_detect.exe ]; then
+BIN_PATH=./build/bin
+
+if [ ! -f $BIN_PATH/sign_detect.exe ]; then
     ./build.sh
 fi
 
-./build/bin/sign_detect.exe "$@"
+$BIN_PATH/sign_detect.exe "$@"
