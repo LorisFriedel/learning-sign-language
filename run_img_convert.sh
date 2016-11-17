@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if [ ! -f ./bin/img_convert.exe ]; then
+if [ ! -f ./build/bin/img_convert.exe ]; then
     ./build.sh
 fi
 
-./bin/img_convert.exe "$@"
+./build/bin/img_convert.exe "$@"

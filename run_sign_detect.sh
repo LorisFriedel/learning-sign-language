@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if [ ! -f ./bin/sign_detect.exe ]; then
+if [ ! -f ./build/bin/sign_detect.exe ]; then
     ./build.sh
 fi
 
-./bin/sign_detect.exe "$@"
+./build/bin/sign_detect.exe "$@"

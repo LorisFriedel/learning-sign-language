@@ -5,8 +5,6 @@
 #include <chrono>
 #include <iterator>
 #include "../inc/MLPHand.hpp"
-
-#include "opencv2/core.hpp"
 #include "../inc/log.h"
 #include "../inc/code.h"
 #include "../inc/Timer.hpp"
@@ -59,7 +57,7 @@ int MLPHand::learnFrom(const cv::Mat &trainingData, const cv::Mat &trainingRespo
     cv::Mat formattedResponses = cv::Mat::zeros(nbOfSamples, nbOfLetters, CV_32FC1);
 
     // Unrolling the responses
-    std::cout << "Formatting responses...";
+    std::cout << "Formatting responses..."; std::cout.flush();
     for (int i = 0; i < nbOfSamples; i++) {
         int clsLabel = trainingResponses.at<int>(i) - BASE_LETTER;
         formattedResponses.at<float>(i, clsLabel) = 1.f;

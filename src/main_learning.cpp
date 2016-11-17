@@ -192,7 +192,7 @@ double testModel(MLPHand &model, std::string inputDir) {
         return Code::ERROR;
     };
 
-    std::cout << "Testing model...";
+    std::cout << "Testing model..."; std::cout.flush();
     double result = model.testOn(dataTest, responsesTest);
     LOG_I(" done! " << std::endl << "Test result: " << result * 100 << "% success");
 
@@ -200,7 +200,7 @@ double testModel(MLPHand &model, std::string inputDir) {
 }
 
 int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matResponses) {
-    std::cout << "Loading data...";
+    std::cout << "Loading data..."; std::cout.flush();
     Timer timer;
 
     timer.start();

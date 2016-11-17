@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if [ ! -f ./bin/facedetect.exe ]; then
+if [ ! -f ./build/bin/facedetect.exe ]; then
     ./build.sh
 fi
 
-./bin/facedetect.exe "$@"
+./build/bin/facedetect.exe "$@"

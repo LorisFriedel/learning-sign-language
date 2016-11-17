@@ -1,4 +1,4 @@
 #!/bin/sh
 
-rm -Rf bin/ CMakeCache.txt CMakeFiles cmake_install.cmake Makefile
+rm -Rf build/
 echo "Clean done."

@@ -26,7 +26,7 @@ set(SRC_SIGN_DETECT inc/constant.h src/ObjectDetector.cpp inc/ObjectDetector.hpp
 set(SRC_LEARNING inc/constant.h inc/log.h inc/code.h  src/MLPHand.cpp inc/MLPHand.hpp src/DataYmlReader.cpp inc/DataYmlReader.hpp src/DataYmlWriter.cpp inc/DataYmlWriter.hpp src/DirectoryReader.cpp inc/DirectoryReader.hpp src/Timer.cpp inc/Timer.hpp)
 set(SRC_IMG_CONVERT inc/constant.h inc/log.h inc/code.h src/DataYmlReader.cpp inc/DataYmlReader.hpp src/DataYmlWriter.cpp inc/DataYmlWriter.hpp src/DirectoryReader.cpp inc/DirectoryReader.hpp src/Timer.cpp inc/Timer.hpp)
 
-set(EXECUTABLE_OUTPUT_PATH ./bin/)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 add_executable(${EXEC_FACEDETECT} ${MAIN_FACEDETECT} ${SRC_FACEDETECT})
 add_executable(${EXEC_CAMSHIFT} ${MAIN_CAMSHIFT} ${SRC_CAMSHIFT})
 add_executable(${EXEC_SIGN_DETECT} ${MAIN_SIGN_DETECT} ${SRC_SIGN_DETECT})
