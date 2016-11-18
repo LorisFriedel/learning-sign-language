@@ -58,11 +58,24 @@ int MLPHand::learnFrom(const cv::Mat &trainingData, const cv::Mat &trainingRespo
 
     // Unrolling the responses
     std::cout << "Formatting responses..."; std::cout.flush();
+    std::map<int, int> lettersCountMap;
     for (int i = 0; i < nbOfSamples; i++) {
-        int clsLabel = trainingResponses.at<int>(i) - BASE_LETTER;
+        int responseLetter = trainingResponses.at<int>(i);
+        int clsLabel =  responseLetter - BASE_LETTER;
         formattedResponses.at<float>(i, clsLabel) = 1.f;
+
+        if(lettersCountMap.find(responseLetter) == lettersCountMap.end()) {
+            lettersCountMap[responseLetter] = 0;
+        }
+        lettersCountMap[responseLetter]++;
     }
     LOG_I(" done!");
+
+    LOG_I("Training samples composition: ");
+    for (auto it = lettersCountMap.begin(); it != lettersCountMap.end(); ++it) {
+        LOG_I(" - " << std::string(1, it->first) << " * " << it->second);
+    }
+    LOG_I("");
 
     // Create and configure layers
     std::vector<int> layerSizes;
@@ -85,7 +98,8 @@ int MLPHand::learnFrom(const cv::Mat &trainingData, const cv::Mat &trainingRespo
     patternStr << "[";
     std::copy(layerSizes.begin(), layerSizes.end() - 1, std::ostream_iterator<int>(patternStr, ":"));
     patternStr << layerSizes.back() << "]";
-    LOG_I("Training the classifier - layer pattern: " << patternStr.str() << " (may take a few minutes)...");
+    LOG_I("Training the classifier (" << nbOfSamples << " samples) - layer pattern: " << patternStr.str()
+                                      << " (may take a few minutes)...");
 
     model = cv::ml::ANN_MLP::create();
     model->setLayerSizes(layerSizes);
@@ -107,7 +121,7 @@ std::pair<int, float> MLPHand::predict(cv::Mat &img) {
 
     std::vector<float> output;
     int result = (int) model->predict(img, output);
-    return std::pair<int, float>(result, output[result]);
+    return {result, output[result]};
 }
 
 int MLPHand::exportModelTo(const std::string xmlFileName) {
@@ -124,17 +138,17 @@ int MLPHand::exportModelTo(const std::string xmlFileName) {
     return Code::ERROR;
 }
 
-std::pair<double, std::map<int, StatPredict>> MLPHand::testOn(const cv::Mat &testData, const cv::Mat &testResponses) {
+std::pair<double, std::map<int, StatPredict *>> MLPHand::testOn(const cv::Mat &testData, const cv::Mat &testResponses) {
     assert(model->isTrained());
 
-    std::map<int, StatPredict> statMap;
+    std::map<int, StatPredict *> statMap;
 
-    int nbOfSamples = testData.rows;
-    int totalSuccess = 0;
+    double nbOfSamples = testData.rows;
+    double totalSuccess = 0.0;
 
     // Compute prediction error on test data
     // We count the number of prediction success
-    for (int i = 0; i < nbOfSamples; i++) {
+    for (int i = 0; i < nbOfSamples; ++i) {
         // Get response
         int response = testResponses.at<int>(i);
 
@@ -144,18 +158,18 @@ std::pair<double, std::map<int, StatPredict>> MLPHand::testOn(const cv::Mat &tes
         float trustPercentage = predictOutput[prediction];
 
         // Check if already in the stat map
-        if(statMap.find(response) != statMap.end()) {
-            statMap[response] = StatPredict(response);
+        if (statMap.find(response) == statMap.end()) {
+            statMap[response] = new StatPredict(response);
         }
 
         // Add computed data to whatever we are calculating
         bool success = std::abs(BASE_LETTER + prediction - response) <= FLT_EPSILON;
-        totalSuccess +=  success ? 1 : 0;
+        totalSuccess += success ? 1 : 0;
 
-        statMap[response].addStat(success, BASE_LETTER + prediction, trustPercentage, predictOutput);
+        statMap[response]->pushStat(success, BASE_LETTER + prediction, trustPercentage, predictOutput);
     }
 
-    double distanceAverage = totalSuccess / nbOfSamples;
+    double successRate = totalSuccess / nbOfSamples;
 
-    return std::pair<double, std::map<int, StatPredict>>(distanceAverage, statMap);
+    return {successRate, statMap};
 }

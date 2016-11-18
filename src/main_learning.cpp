@@ -192,23 +192,48 @@ int testModel(MLPHand &model, std::string inputDir) {
         return Code::ERROR;
     };
 
-    std::cout << "Testing model..."; std::cout.flush();
-    std::pair<double, std::map<int, StatPredict>> result = model.testOn(dataTest, responsesTest);
-    LOG_I(" done! " << std::endl << "Test result: " << result.first * 100 << "% success");
+    std::cout << "Testing model (" << dataTest.rows << " samples)...";
+    std::cout.flush();
+    std::pair<double, std::map<int, StatPredict *>> result = model.testOn(dataTest, responsesTest);
+    LOG_I(" done! " << std::endl << "Test result: " << result.first * 100 << "% success" << std::endl);
 
-    typedef std::map<int, StatPredict>::const_iterator it_type;
-    for(it_type it = result.second.begin(); it != result.second.end(); ++it) {
+    for (auto it = result.second.begin(); it != result.second.end(); ++it) {
         int letterCode = it->first;
-        StatPredict stat = it->second;
+        StatPredict &stat = *(it->second);
 
+        std::pair<int, int> successFailure = stat.successAndFailure();
+        std::pair<int, int> confuseLetter = stat.confuseLetter();
+        std::tuple<double, double, double> trustValues = stat.trustWhenSuccess();
+        LOG_I("Letter: " << std::string(1, letterCode));
+        LOG_I(" - Success: " << successFailure.first << "/" << stat.stats.size()
+                             << " (" << (((double) successFailure.first / (double) stat.stats.size()) * 100)
+                             << "% success rate)");
+        LOG_I(" - Error: " << successFailure.second << "/" << stat.stats.size()
+                             << " (" << (((double) successFailure.second / (double) stat.stats.size()) * 100)
+                             << "% error rate)");
+        if(confuseLetter.first != 0) {
+            LOG_I(" - Most of the time confused with: " << std::string(1, confuseLetter.first)
+                                                        << " ("
+                                                        << (((double) confuseLetter.second / (double) stat.stats.size()) * 100)
+                                                        << "% of the time)");
+        } else {
+            LOG_I(" - No confusion with other letters");
+        }
 
+        LOG_I(" - Trust rate when success: ");
+        LOG_I(" --> Minimum: " << std::get<0>(trustValues)*100 << "%");
+        LOG_I(" --> Average: " << std::get<1>(trustValues)*100 << "%");
+        LOG_I(" --> Maximum: " << std::get<2>(trustValues)*100 << "%");
+        LOG_I("");
+
+        delete it->second;
     }
-    // TODO display details about test
     return Code::SUCCESS;
 }
 
 int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matResponses) {
-    std::cout << "Loading data..."; std::cout.flush();
+    std::cout << "Loading data...";
+    std::cout.flush();
     Timer timer;
 
     timer.start();

@@ -5,31 +5,28 @@
 #pragma once
 
 #include <vector>
+#include <map>
+#include "TupleStat.hpp"
 
 class StatPredict {
 public:
-    StatPredict(int letterCode) : letterCode(letterCode) {}
+    const int letterCode;
+    std::vector<TupleStat *> stats;
 
-    void addStat(bool success, int predictedLetter, float trustPercentage, std::vector<float> predictOutput) {
-        //stats.push_back(std::tuple<bool, int, float, std::vector<float>>(success, predictedLetter, trustPercentage, predictOutput));
-    }
+    StatPredict(int letterCode);
 
-    // pourcentage de succes sur cette lettre
-    std::pair<int, int> succesAndFailed() {
+    ~StatPredict();
 
-    };
+    // Ajoute un test au total des informations  de resultat des prédictions
+    void pushStat(const bool success, const int predictedLetter,
+                  const float trustPercentage, const std::vector<float> predictOutput);
 
-    // La lettre la plus confondu (+ pourcentage de fois confondu au total)
-    std::pair<int, double> confuseLetter() {
+    // <0> nombre de succes, <1> nombre d'échec
+    const std::pair<int, int> successAndFailure() const;
 
-    };
+    // <0> La lettre la plus confondu (0 si aucune confusion), <1> nombre de fois confondu au total
+    const std::pair<int, int> confuseLetter() const;
 
-    // le taux de confiance min/moyen/max quand on reconnait bien la lettre
-    std::tuple<double, double, double> trustWhenSucces() {
-
-    };
-
-private:
-    int letterCode;
-    std::vector<std::tuple<bool, int, float, std::vector<float>>> stats;
+    // le taux de confiance min (0) / moyen (1) / max (2) pour les fois ou la lettre est correctement reconnue
+    const std::tuple<double, double, double> trustWhenSuccess() const;
 };
