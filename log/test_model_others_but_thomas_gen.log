@@ -1,0 +1,2651 @@
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_4_4_4.xml successfully loaded!
+Start testing process..
+Loading data... done! (5.9544 s)
+Testing model (1434 samples)... done! 
+Test result: 61.0181% success
+
+Letter: a
+ - Success: 181/181 (100% success rate)
+ - Error: 0/181 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 86.553%
+ --> Average: 93.2825%
+ --> Maximum: 104.156%
+
+Letter: b
+ - Success: 165/165 (100% success rate)
+ - Error: 0/165 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 90.7874%
+ --> Average: 92.9449%
+ --> Maximum: 94.3306%
+
+Letter: c
+ - Success: 161/161 (100% success rate)
+ - Error: 0/161 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 90.0813%
+ --> Average: 92.0446%
+ --> Maximum: 93.4106%
+
+Letter: d
+ - Success: 0/36 (0% success rate)
+ - Error: 36/36 (100% error rate)
+ - Most of the time confused with: l (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 0/70 (0% success rate)
+ - Error: 70/70 (100% error rate)
+ - Most of the time confused with: l (57.1429% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: f
+ - Success: 0/37 (0% success rate)
+ - Error: 37/37 (100% error rate)
+ - Most of the time confused with: l (78.3784% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: g
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: l (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: h
+ - Success: 0/43 (0% success rate)
+ - Error: 43/43 (100% error rate)
+ - Most of the time confused with: l (76.7442% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: i
+ - Success: 104/104 (100% success rate)
+ - Error: 0/104 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 59.7538%
+ --> Average: 63.4657%
+ --> Maximum: 66.0605%
+
+Letter: j
+ - Success: 0/9 (0% success rate)
+ - Error: 9/9 (100% error rate)
+ - Most of the time confused with: l (88.8889% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: k
+ - Success: 0/40 (0% success rate)
+ - Error: 40/40 (100% error rate)
+ - Most of the time confused with: l (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: l
+ - Success: 71/71 (100% success rate)
+ - Error: 0/71 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 8.006%
+ --> Average: 8.32312%
+ --> Maximum: 8.52601%
+
+Letter: m
+ - Success: 60/60 (100% success rate)
+ - Error: 0/60 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 76.0178%
+ --> Average: 77.0202%
+ --> Maximum: 77.5352%
+
+Letter: n
+ - Success: 0/8 (0% success rate)
+ - Error: 8/8 (100% error rate)
+ - Most of the time confused with: l (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: o
+ - Success: 0/70 (0% success rate)
+ - Error: 70/70 (100% error rate)
+ - Most of the time confused with: i (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: p
+ - Success: 0/43 (0% success rate)
+ - Error: 43/43 (100% error rate)
+ - Most of the time confused with: s (93.0233% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: q
+ - Success: 0/13 (0% success rate)
+ - Error: 13/13 (100% error rate)
+ - Most of the time confused with: l (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: r
+ - Success: 0/39 (0% success rate)
+ - Error: 39/39 (100% error rate)
+ - Most of the time confused with: i (30.7692% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: s
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 7.24097%
+ --> Average: 8.08608%
+ --> Maximum: 9.55395%
+
+Letter: t
+ - Success: 0/22 (0% success rate)
+ - Error: 22/22 (100% error rate)
+ - Most of the time confused with: l (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: u
+ - Success: 0/17 (0% success rate)
+ - Error: 17/17 (100% error rate)
+ - Most of the time confused with: s (47.0588% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: v
+ - Success: 0/41 (0% success rate)
+ - Error: 41/41 (100% error rate)
+ - Most of the time confused with: l (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: w
+ - Success: 93/93 (100% success rate)
+ - Error: 0/93 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 85.9413%
+ --> Average: 87.0016%
+ --> Maximum: 88.1345%
+
+Letter: x
+ - Success: 0/18 (0% success rate)
+ - Error: 18/18 (100% error rate)
+ - Most of the time confused with: a (27.7778% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: y
+ - Success: 0/29 (0% success rate)
+ - Error: 29/29 (100% error rate)
+ - Most of the time confused with: l (72.4138% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: z
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: l (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_4_4_4_4.xml successfully loaded!
+Start testing process..
+Loading data... done! (5.97012 s)
+Testing model (1434 samples)... done! 
+Test result: 57.2524% success
+
+Letter: a
+ - Success: 181/181 (100% success rate)
+ - Error: 0/181 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 92.3338%
+ --> Average: 94.7074%
+ --> Maximum: 96.0407%
+
+Letter: b
+ - Success: 165/165 (100% success rate)
+ - Error: 0/165 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 93.0523%
+ --> Average: 95.7748%
+ --> Maximum: 100.571%
+
+Letter: c
+ - Success: 161/161 (100% success rate)
+ - Error: 0/161 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.4993%
+ --> Average: 93.4308%
+ --> Maximum: 96.5656%
+
+Letter: d
+ - Success: 0/36 (0% success rate)
+ - Error: 36/36 (100% error rate)
+ - Most of the time confused with: w (72.2222% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 42/70 (60% success rate)
+ - Error: 28/70 (40% error rate)
+ - Most of the time confused with: p (17.1429% of the time)
+ - Trust rate when success: 
+ --> Minimum: 10.8978%
+ --> Average: 11.4649%
+ --> Maximum: 11.7602%
+
+Letter: f
+ - Success: 0/37 (0% success rate)
+ - Error: 37/37 (100% error rate)
+ - Most of the time confused with: e (48.6486% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: g
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: e (66.6667% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: h
+ - Success: 0/43 (0% success rate)
+ - Error: 43/43 (100% error rate)
+ - Most of the time confused with: e (74.4186% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: i
+ - Success: 104/104 (100% success rate)
+ - Error: 0/104 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 87.8059%
+ --> Average: 89.16%
+ --> Maximum: 89.7871%
+
+Letter: j
+ - Success: 0/9 (0% success rate)
+ - Error: 9/9 (100% error rate)
+ - Most of the time confused with: e (55.5556% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: k
+ - Success: 0/40 (0% success rate)
+ - Error: 40/40 (100% error rate)
+ - Most of the time confused with: p (45% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: l
+ - Success: 63/71 (88.7324% success rate)
+ - Error: 8/71 (11.2676% error rate)
+ - Most of the time confused with: w (9.85915% of the time)
+ - Trust rate when success: 
+ --> Minimum: 8.19728%
+ --> Average: 8.46023%
+ --> Maximum: 8.70707%
+
+Letter: m
+ - Success: 0/60 (0% success rate)
+ - Error: 60/60 (100% error rate)
+ - Most of the time confused with: l (91.6667% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: n
+ - Success: 0/8 (0% success rate)
+ - Error: 8/8 (100% error rate)
+ - Most of the time confused with: e (62.5% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: o
+ - Success: 0/70 (0% success rate)
+ - Error: 70/70 (100% error rate)
+ - Most of the time confused with: w (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: p
+ - Success: 14/43 (32.5581% success rate)
+ - Error: 29/43 (67.4419% error rate)
+ - Most of the time confused with: e (58.1395% of the time)
+ - Trust rate when success: 
+ --> Minimum: 8.75888%
+ --> Average: 9.15431%
+ --> Maximum: 9.52416%
+
+Letter: q
+ - Success: 0/13 (0% success rate)
+ - Error: 13/13 (100% error rate)
+ - Most of the time confused with: e (30.7692% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: r
+ - Success: 0/39 (0% success rate)
+ - Error: 39/39 (100% error rate)
+ - Most of the time confused with: w (61.5385% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: s
+ - Success: 0/40 (0% success rate)
+ - Error: 40/40 (100% error rate)
+ - Most of the time confused with: w (95% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: t
+ - Success: 0/22 (0% success rate)
+ - Error: 22/22 (100% error rate)
+ - Most of the time confused with: l (81.8182% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: u
+ - Success: 0/17 (0% success rate)
+ - Error: 17/17 (100% error rate)
+ - Most of the time confused with: e (52.9412% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: v
+ - Success: 0/41 (0% success rate)
+ - Error: 41/41 (100% error rate)
+ - Most of the time confused with: e (65.8537% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: w
+ - Success: 91/93 (97.8495% success rate)
+ - Error: 2/93 (2.15054% error rate)
+ - Most of the time confused with: a (1.07527% of the time)
+ - Trust rate when success: 
+ --> Minimum: 9.02616%
+ --> Average: 12.4838%
+ --> Maximum: 12.9823%
+
+Letter: x
+ - Success: 0/18 (0% success rate)
+ - Error: 18/18 (100% error rate)
+ - Most of the time confused with: e (61.1111% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: y
+ - Success: 0/29 (0% success rate)
+ - Error: 29/29 (100% error rate)
+ - Most of the time confused with: e (48.2759% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: z
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: w (58.3333% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_8_8.xml successfully loaded!
+Start testing process..
+Loading data... done! (5.9546 s)
+Testing model (1434 samples)... done! 
+Test result: 86.053% success
+
+Letter: a
+ - Success: 181/181 (100% success rate)
+ - Error: 0/181 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 89.9265%
+ --> Average: 95.1404%
+ --> Maximum: 100.731%
+
+Letter: b
+ - Success: 165/165 (100% success rate)
+ - Error: 0/165 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 88.2482%
+ --> Average: 95.6491%
+ --> Maximum: 102.573%
+
+Letter: c
+ - Success: 161/161 (100% success rate)
+ - Error: 0/161 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.4569%
+ --> Average: 94.9732%
+ --> Maximum: 107.737%
+
+Letter: d
+ - Success: 0/36 (0% success rate)
+ - Error: 36/36 (100% error rate)
+ - Most of the time confused with: p (58.3333% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 81.2532%
+ --> Average: 82.7369%
+ --> Maximum: 84.6449%
+
+Letter: f
+ - Success: 37/37 (100% success rate)
+ - Error: 0/37 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 42.5724%
+ --> Average: 49.3785%
+ --> Maximum: 52.1666%
+
+Letter: g
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: f (33.3333% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: h
+ - Success: 32/43 (74.4186% success rate)
+ - Error: 11/43 (25.5814% error rate)
+ - Most of the time confused with: f (20.9302% of the time)
+ - Trust rate when success: 
+ --> Minimum: 24.0699%
+ --> Average: 26.8792%
+ --> Maximum: 28.0914%
+
+Letter: i
+ - Success: 104/104 (100% success rate)
+ - Error: 0/104 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 80.9021%
+ --> Average: 92.8622%
+ --> Maximum: 95.9544%
+
+Letter: j
+ - Success: 0/9 (0% success rate)
+ - Error: 9/9 (100% error rate)
+ - Most of the time confused with: o (33.3333% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: k
+ - Success: 11/40 (27.5% success rate)
+ - Error: 29/40 (72.5% error rate)
+ - Most of the time confused with: p (72.5% of the time)
+ - Trust rate when success: 
+ --> Minimum: 23.0553%
+ --> Average: 24.2395%
+ --> Maximum: 24.828%
+
+Letter: l
+ - Success: 71/71 (100% success rate)
+ - Error: 0/71 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 74.6895%
+ --> Average: 84.9507%
+ --> Maximum: 86.3962%
+
+Letter: m
+ - Success: 60/60 (100% success rate)
+ - Error: 0/60 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 78.9748%
+ --> Average: 83.1979%
+ --> Maximum: 84.2566%
+
+Letter: n
+ - Success: 0/8 (0% success rate)
+ - Error: 8/8 (100% error rate)
+ - Most of the time confused with: f (62.5% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: o
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 80.5826%
+ --> Average: 81.9463%
+ --> Maximum: 83.0553%
+
+Letter: p
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 48.3802%
+ --> Average: 49.4515%
+ --> Maximum: 51.315%
+
+Letter: q
+ - Success: 0/13 (0% success rate)
+ - Error: 13/13 (100% error rate)
+ - Most of the time confused with: u (92.3077% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: r
+ - Success: 39/39 (100% success rate)
+ - Error: 0/39 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 32.467%
+ --> Average: 48.051%
+ --> Maximum: 50.9664%
+
+Letter: s
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 50.3118%
+ --> Average: 66.9474%
+ --> Maximum: 69.5763%
+
+Letter: t
+ - Success: 0/22 (0% success rate)
+ - Error: 22/22 (100% error rate)
+ - Most of the time confused with: p (27.2727% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: u
+ - Success: 17/17 (100% success rate)
+ - Error: 0/17 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 37.1575%
+ --> Average: 38.4235%
+ --> Maximum: 39.2953%
+
+Letter: v
+ - Success: 40/41 (97.561% success rate)
+ - Error: 1/41 (2.43902% error rate)
+ - Most of the time confused with: f (2.43902% of the time)
+ - Trust rate when success: 
+ --> Minimum: 20.6392%
+ --> Average: 28.1609%
+ --> Maximum: 34.1106%
+
+Letter: w
+ - Success: 93/93 (100% success rate)
+ - Error: 0/93 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 78.3457%
+ --> Average: 86.2783%
+ --> Maximum: 87.1448%
+
+Letter: x
+ - Success: 0/18 (0% success rate)
+ - Error: 18/18 (100% error rate)
+ - Most of the time confused with: v (61.1111% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: y
+ - Success: 0/29 (0% success rate)
+ - Error: 29/29 (100% error rate)
+ - Most of the time confused with: r (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: z
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: f (50% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_8_8_8.xml successfully loaded!
+Start testing process..
+Loading data... done! (5.98654 s)
+Testing model (1434 samples)... done! 
+Test result: 86.1925% success
+
+Letter: a
+ - Success: 181/181 (100% success rate)
+ - Error: 0/181 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 89.7164%
+ --> Average: 95.2791%
+ --> Maximum: 97.4949%
+
+Letter: b
+ - Success: 165/165 (100% success rate)
+ - Error: 0/165 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 90.6538%
+ --> Average: 96.3148%
+ --> Maximum: 101.408%
+
+Letter: c
+ - Success: 161/161 (100% success rate)
+ - Error: 0/161 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.3325%
+ --> Average: 95.7253%
+ --> Maximum: 99.6091%
+
+Letter: d
+ - Success: 0/36 (0% success rate)
+ - Error: 36/36 (100% error rate)
+ - Most of the time confused with: v (66.6667% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 75.8823%
+ --> Average: 78.4968%
+ --> Maximum: 81.0364%
+
+Letter: f
+ - Success: 15/37 (40.5405% success rate)
+ - Error: 22/37 (59.4595% error rate)
+ - Most of the time confused with: l (59.4595% of the time)
+ - Trust rate when success: 
+ --> Minimum: 36.1325%
+ --> Average: 40.3654%
+ --> Maximum: 46.3696%
+
+Letter: g
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: k (58.3333% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: h
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 67.412%
+ --> Average: 71.4838%
+ --> Maximum: 76.6374%
+
+Letter: i
+ - Success: 104/104 (100% success rate)
+ - Error: 0/104 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.168%
+ --> Average: 94.5109%
+ --> Maximum: 98.2072%
+
+Letter: j
+ - Success: 0/9 (0% success rate)
+ - Error: 9/9 (100% error rate)
+ - Most of the time confused with: b (33.3333% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: k
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 34.082%
+ --> Average: 35.0884%
+ --> Maximum: 36.1987%
+
+Letter: l
+ - Success: 71/71 (100% success rate)
+ - Error: 0/71 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 52.9734%
+ --> Average: 59.294%
+ --> Maximum: 64.7122%
+
+Letter: m
+ - Success: 60/60 (100% success rate)
+ - Error: 0/60 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 79.6466%
+ --> Average: 82.3165%
+ --> Maximum: 88.1543%
+
+Letter: n
+ - Success: 0/8 (0% success rate)
+ - Error: 8/8 (100% error rate)
+ - Most of the time confused with: b (37.5% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: o
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 86.4871%
+ --> Average: 88.4984%
+ --> Maximum: 89.6333%
+
+Letter: p
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 75.4758%
+ --> Average: 75.9884%
+ --> Maximum: 76.4936%
+
+Letter: q
+ - Success: 0/13 (0% success rate)
+ - Error: 13/13 (100% error rate)
+ - Most of the time confused with: v (76.9231% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: r
+ - Success: 39/39 (100% success rate)
+ - Error: 0/39 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 61.4014%
+ --> Average: 63.2188%
+ --> Maximum: 64.4174%
+
+Letter: s
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 52.1375%
+ --> Average: 57.8819%
+ --> Maximum: 63.2939%
+
+Letter: t
+ - Success: 0/22 (0% success rate)
+ - Error: 22/22 (100% error rate)
+ - Most of the time confused with: a (36.3636% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: u
+ - Success: 0/17 (0% success rate)
+ - Error: 17/17 (100% error rate)
+ - Most of the time confused with: k (76.4706% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: v
+ - Success: 41/41 (100% success rate)
+ - Error: 0/41 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 20.7623%
+ --> Average: 22.3398%
+ --> Maximum: 25.3697%
+
+Letter: w
+ - Success: 93/93 (100% success rate)
+ - Error: 0/93 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 85.4367%
+ --> Average: 87.6929%
+ --> Maximum: 88.4931%
+
+Letter: x
+ - Success: 0/18 (0% success rate)
+ - Error: 18/18 (100% error rate)
+ - Most of the time confused with: h (61.1111% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: y
+ - Success: 0/29 (0% success rate)
+ - Error: 29/29 (100% error rate)
+ - Most of the time confused with: a (44.8276% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: z
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: v (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_16_16.xml successfully loaded!
+Start testing process..
+Loading data... done! (6.01053 s)
+Testing model (1434 samples)... done! 
+Test result: 100% success
+
+Letter: a
+ - Success: 181/181 (100% success rate)
+ - Error: 0/181 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 97.5734%
+ --> Average: 99.6221%
+ --> Maximum: 101.913%
+
+Letter: b
+ - Success: 165/165 (100% success rate)
+ - Error: 0/165 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 87.1555%
+ --> Average: 98.3671%
+ --> Maximum: 119.975%
+
+Letter: c
+ - Success: 161/161 (100% success rate)
+ - Error: 0/161 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 97.2425%
+ --> Average: 99.585%
+ --> Maximum: 102.459%
+
+Letter: d
+ - Success: 36/36 (100% success rate)
+ - Error: 0/36 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 82.2853%
+ --> Average: 85.9906%
+ --> Maximum: 88.8126%
+
+Letter: e
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 92.1153%
+ --> Average: 94.8031%
+ --> Maximum: 98.4587%
+
+Letter: f
+ - Success: 37/37 (100% success rate)
+ - Error: 0/37 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 76.3841%
+ --> Average: 81.2673%
+ --> Maximum: 83.071%
+
+Letter: g
+ - Success: 12/12 (100% success rate)
+ - Error: 0/12 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 62.0615%
+ --> Average: 67.0783%
+ --> Maximum: 69.2803%
+
+Letter: h
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.2615%
+ --> Average: 92.8024%
+ --> Maximum: 94.1197%
+
+Letter: i
+ - Success: 104/104 (100% success rate)
+ - Error: 0/104 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 89.6162%
+ --> Average: 95.3709%
+ --> Maximum: 103.868%
+
+Letter: j
+ - Success: 9/9 (100% success rate)
+ - Error: 0/9 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 57.212%
+ --> Average: 59.8018%
+ --> Maximum: 62.7272%
+
+Letter: k
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 77.5865%
+ --> Average: 79.4582%
+ --> Maximum: 81.4235%
+
+Letter: l
+ - Success: 71/71 (100% success rate)
+ - Error: 0/71 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 86.1263%
+ --> Average: 89.716%
+ --> Maximum: 91.7783%
+
+Letter: m
+ - Success: 60/60 (100% success rate)
+ - Error: 0/60 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 92.507%
+ --> Average: 95.7301%
+ --> Maximum: 97.3821%
+
+Letter: n
+ - Success: 8/8 (100% success rate)
+ - Error: 0/8 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 76.7837%
+ --> Average: 79.0309%
+ --> Maximum: 81.0774%
+
+Letter: o
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 93.1337%
+ --> Average: 94.4175%
+ --> Maximum: 97.059%
+
+Letter: p
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 92.6423%
+ --> Average: 94.6239%
+ --> Maximum: 96.9339%
+
+Letter: q
+ - Success: 13/13 (100% success rate)
+ - Error: 0/13 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 81.5525%
+ --> Average: 83.2066%
+ --> Maximum: 86.5209%
+
+Letter: r
+ - Success: 39/39 (100% success rate)
+ - Error: 0/39 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 89.2649%
+ --> Average: 92.86%
+ --> Maximum: 97.3391%
+
+Letter: s
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 89.9246%
+ --> Average: 92.163%
+ --> Maximum: 95.4499%
+
+Letter: t
+ - Success: 22/22 (100% success rate)
+ - Error: 0/22 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 88.8275%
+ --> Average: 90.3536%
+ --> Maximum: 94.1387%
+
+Letter: u
+ - Success: 17/17 (100% success rate)
+ - Error: 0/17 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 55.6432%
+ --> Average: 58.8516%
+ --> Maximum: 61.9561%
+
+Letter: v
+ - Success: 41/41 (100% success rate)
+ - Error: 0/41 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 90.6166%
+ --> Average: 92.46%
+ --> Maximum: 95.278%
+
+Letter: w
+ - Success: 93/93 (100% success rate)
+ - Error: 0/93 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 94.1559%
+ --> Average: 96.0864%
+ --> Maximum: 98.9919%
+
+Letter: x
+ - Success: 18/18 (100% success rate)
+ - Error: 0/18 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 60.6958%
+ --> Average: 62.4104%
+ --> Maximum: 64.7415%
+
+Letter: y
+ - Success: 29/29 (100% success rate)
+ - Error: 0/29 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 85.5339%
+ --> Average: 88.7589%
+ --> Maximum: 91.3906%
+
+Letter: z
+ - Success: 12/12 (100% success rate)
+ - Error: 0/12 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 43.9971%
+ --> Average: 45.4376%
+ --> Maximum: 46.2943%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_8_16_32.xml successfully loaded!
+Start testing process..
+Loading data... done! (5.96186 s)
+Testing model (1434 samples)... done! 
+Test result: 91.7713% success
+
+Letter: a
+ - Success: 181/181 (100% success rate)
+ - Error: 0/181 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.2516%
+ --> Average: 97.5997%
+ --> Maximum: 104.366%
+
+Letter: b
+ - Success: 165/165 (100% success rate)
+ - Error: 0/165 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 93.5842%
+ --> Average: 96.5668%
+ --> Maximum: 99.0262%
+
+Letter: c
+ - Success: 161/161 (100% success rate)
+ - Error: 0/161 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 87.3792%
+ --> Average: 95.1579%
+ --> Maximum: 102.402%
+
+Letter: d
+ - Success: 36/36 (100% success rate)
+ - Error: 0/36 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 52.728%
+ --> Average: 55.4082%
+ --> Maximum: 57.8603%
+
+Letter: e
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 80.413%
+ --> Average: 81.5263%
+ --> Maximum: 82.419%
+
+Letter: f
+ - Success: 37/37 (100% success rate)
+ - Error: 0/37 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 66.6098%
+ --> Average: 68.8379%
+ --> Maximum: 71.12%
+
+Letter: g
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: h (41.6667% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: h
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 42.5412%
+ --> Average: 51.3979%
+ --> Maximum: 56.1404%
+
+Letter: i
+ - Success: 104/104 (100% success rate)
+ - Error: 0/104 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 92.9794%
+ --> Average: 96.2047%
+ --> Maximum: 98.5964%
+
+Letter: j
+ - Success: 0/9 (0% success rate)
+ - Error: 9/9 (100% error rate)
+ - Most of the time confused with: h (55.5556% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: k
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 83.908%
+ --> Average: 85.986%
+ --> Maximum: 86.8014%
+
+Letter: l
+ - Success: 71/71 (100% success rate)
+ - Error: 0/71 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.3091%
+ --> Average: 93.6663%
+ --> Maximum: 95.5954%
+
+Letter: m
+ - Success: 60/60 (100% success rate)
+ - Error: 0/60 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 86.5661%
+ --> Average: 88.5027%
+ --> Maximum: 89.3716%
+
+Letter: n
+ - Success: 0/8 (0% success rate)
+ - Error: 8/8 (100% error rate)
+ - Most of the time confused with: h (37.5% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: o
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 88.8089%
+ --> Average: 90.6819%
+ --> Maximum: 91.8799%
+
+Letter: p
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 43.5516%
+ --> Average: 71.2812%
+ --> Maximum: 73.3726%
+
+Letter: q
+ - Success: 0/13 (0% success rate)
+ - Error: 13/13 (100% error rate)
+ - Most of the time confused with: h (38.4615% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: r
+ - Success: 39/39 (100% success rate)
+ - Error: 0/39 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 66.2296%
+ --> Average: 67.0208%
+ --> Maximum: 67.5016%
+
+Letter: s
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 82.0974%
+ --> Average: 83.44%
+ --> Maximum: 84.342%
+
+Letter: t
+ - Success: 22/22 (100% success rate)
+ - Error: 0/22 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 57.3837%
+ --> Average: 59.7763%
+ --> Maximum: 60.6467%
+
+Letter: u
+ - Success: 0/17 (0% success rate)
+ - Error: 17/17 (100% error rate)
+ - Most of the time confused with: h (41.1765% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: v
+ - Success: 41/41 (100% success rate)
+ - Error: 0/41 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 79.4952%
+ --> Average: 80.7419%
+ --> Maximum: 82.1955%
+
+Letter: w
+ - Success: 93/93 (100% success rate)
+ - Error: 0/93 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 90.9071%
+ --> Average: 93.6641%
+ --> Maximum: 95.5686%
+
+Letter: x
+ - Success: 0/18 (0% success rate)
+ - Error: 18/18 (100% error rate)
+ - Most of the time confused with: h (33.3333% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: y
+ - Success: 0/29 (0% success rate)
+ - Error: 29/29 (100% error rate)
+ - Most of the time confused with: d (51.7241% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: z
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: t (25% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_32_16_8.xml successfully loaded!
+Start testing process..
+Loading data... done! (5.95324 s)
+Testing model (1434 samples)... done! 
+Test result: 87.3082% success
+
+Letter: a
+ - Success: 181/181 (100% success rate)
+ - Error: 0/181 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.1202%
+ --> Average: 94.7865%
+ --> Maximum: 99.4899%
+
+Letter: b
+ - Success: 165/165 (100% success rate)
+ - Error: 0/165 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.424%
+ --> Average: 94.6704%
+ --> Maximum: 97.2529%
+
+Letter: c
+ - Success: 161/161 (100% success rate)
+ - Error: 0/161 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 85.8019%
+ --> Average: 95.4423%
+ --> Maximum: 103.864%
+
+Letter: d
+ - Success: 36/36 (100% success rate)
+ - Error: 0/36 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 28.1888%
+ --> Average: 29.2185%
+ --> Maximum: 31.0371%
+
+Letter: e
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 90.6874%
+ --> Average: 92.7615%
+ --> Maximum: 94.4263%
+
+Letter: f
+ - Success: 37/37 (100% success rate)
+ - Error: 0/37 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 73.0982%
+ --> Average: 76.0917%
+ --> Maximum: 77.6478%
+
+Letter: g
+ - Success: 1/12 (8.33333% success rate)
+ - Error: 11/12 (91.6667% error rate)
+ - Most of the time confused with: b (25% of the time)
+ - Trust rate when success: 
+ --> Minimum: 8.12515%
+ --> Average: 8.12515%
+ --> Maximum: 8.12515%
+
+Letter: h
+ - Success: 0/43 (0% success rate)
+ - Error: 43/43 (100% error rate)
+ - Most of the time confused with: v (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: i
+ - Success: 104/104 (100% success rate)
+ - Error: 0/104 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.3212%
+ --> Average: 94.8736%
+ --> Maximum: 99.5495%
+
+Letter: j
+ - Success: 0/9 (0% success rate)
+ - Error: 9/9 (100% error rate)
+ - Most of the time confused with: b (55.5556% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: k
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 40.532%
+ --> Average: 41.8711%
+ --> Maximum: 43.2648%
+
+Letter: l
+ - Success: 71/71 (100% success rate)
+ - Error: 0/71 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 88.8129%
+ --> Average: 89.8145%
+ --> Maximum: 91.3885%
+
+Letter: m
+ - Success: 60/60 (100% success rate)
+ - Error: 0/60 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 84.5965%
+ --> Average: 86.0123%
+ --> Maximum: 87.3351%
+
+Letter: n
+ - Success: 0/8 (0% success rate)
+ - Error: 8/8 (100% error rate)
+ - Most of the time confused with: b (37.5% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: o
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 89.1919%
+ --> Average: 91.0019%
+ --> Maximum: 93.3711%
+
+Letter: p
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 71.5316%
+ --> Average: 73.6792%
+ --> Maximum: 75.5902%
+
+Letter: q
+ - Success: 0/13 (0% success rate)
+ - Error: 13/13 (100% error rate)
+ - Most of the time confused with: a (30.7692% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: r
+ - Success: 39/39 (100% success rate)
+ - Error: 0/39 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 74.4113%
+ --> Average: 75.468%
+ --> Maximum: 76.714%
+
+Letter: s
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 43.2119%
+ --> Average: 45.6869%
+ --> Maximum: 47.5242%
+
+Letter: t
+ - Success: 0/22 (0% success rate)
+ - Error: 22/22 (100% error rate)
+ - Most of the time confused with: r (27.2727% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: u
+ - Success: 0/17 (0% success rate)
+ - Error: 17/17 (100% error rate)
+ - Most of the time confused with: e (23.5294% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: v
+ - Success: 41/41 (100% success rate)
+ - Error: 0/41 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 77.2573%
+ --> Average: 79.1541%
+ --> Maximum: 80.7432%
+
+Letter: w
+ - Success: 93/93 (100% success rate)
+ - Error: 0/93 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 89.4314%
+ --> Average: 92.2377%
+ --> Maximum: 94.0855%
+
+Letter: x
+ - Success: 0/18 (0% success rate)
+ - Error: 18/18 (100% error rate)
+ - Most of the time confused with: b (44.4444% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: y
+ - Success: 0/29 (0% success rate)
+ - Error: 29/29 (100% error rate)
+ - Most of the time confused with: p (100% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: z
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: b (25% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_32.xml successfully loaded!
+Start testing process..
+Loading data... done! (5.97254 s)
+Testing model (1434 samples)... done! 
+Test result: 71.4086% success
+
+Letter: a
+ - Success: 176/181 (97.2376% success rate)
+ - Error: 5/181 (2.76243% error rate)
+ - Most of the time confused with: c (1.10497% of the time)
+ - Trust rate when success: 
+ --> Minimum: 11.7672%
+ --> Average: 76.2662%
+ --> Maximum: 124.444%
+
+Letter: b
+ - Success: 154/165 (93.3333% success rate)
+ - Error: 11/165 (6.66667% error rate)
+ - Most of the time confused with: a (5.45455% of the time)
+ - Trust rate when success: 
+ --> Minimum: 32.3057%
+ --> Average: 80.7143%
+ --> Maximum: 114.775%
+
+Letter: c
+ - Success: 116/161 (72.0497% success rate)
+ - Error: 45/161 (27.9503% error rate)
+ - Most of the time confused with: w (14.2857% of the time)
+ - Trust rate when success: 
+ --> Minimum: 13.5345%
+ --> Average: 85.1849%
+ --> Maximum: 107.15%
+
+Letter: d
+ - Success: 2/36 (5.55556% success rate)
+ - Error: 34/36 (94.4444% error rate)
+ - Most of the time confused with: a (38.8889% of the time)
+ - Trust rate when success: 
+ --> Minimum: 22.6642%
+ --> Average: 23.6357%
+ --> Maximum: 24.6073%
+
+Letter: e
+ - Success: 58/70 (82.8571% success rate)
+ - Error: 12/70 (17.1429% error rate)
+ - Most of the time confused with: a (11.4286% of the time)
+ - Trust rate when success: 
+ --> Minimum: 34.7115%
+ --> Average: 70.0202%
+ --> Maximum: 95.5849%
+
+Letter: f
+ - Success: 19/37 (51.3514% success rate)
+ - Error: 18/37 (48.6486% error rate)
+ - Most of the time confused with: a (24.3243% of the time)
+ - Trust rate when success: 
+ --> Minimum: 20.6986%
+ --> Average: 58.6665%
+ --> Maximum: 82.8789%
+
+Letter: g
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: w (25% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: h
+ - Success: 27/43 (62.7907% success rate)
+ - Error: 16/43 (37.2093% error rate)
+ - Most of the time confused with: c (25.5814% of the time)
+ - Trust rate when success: 
+ --> Minimum: 27.4181%
+ --> Average: 55.6707%
+ --> Maximum: 77.7777%
+
+Letter: i
+ - Success: 86/104 (82.6923% success rate)
+ - Error: 18/104 (17.3077% error rate)
+ - Most of the time confused with: a (10.5769% of the time)
+ - Trust rate when success: 
+ --> Minimum: 34.1197%
+ --> Average: 84.2842%
+ --> Maximum: 113.921%
+
+Letter: j
+ - Success: 1/9 (11.1111% success rate)
+ - Error: 8/9 (88.8889% error rate)
+ - Most of the time confused with: d (33.3333% of the time)
+ - Trust rate when success: 
+ --> Minimum: 37.1048%
+ --> Average: 37.1048%
+ --> Maximum: 37.1048%
+
+Letter: k
+ - Success: 20/40 (50% success rate)
+ - Error: 20/40 (50% error rate)
+ - Most of the time confused with: w (17.5% of the time)
+ - Trust rate when success: 
+ --> Minimum: 29.2934%
+ --> Average: 58.4826%
+ --> Maximum: 86.6496%
+
+Letter: l
+ - Success: 55/71 (77.4648% success rate)
+ - Error: 16/71 (22.5352% error rate)
+ - Most of the time confused with: a (16.9014% of the time)
+ - Trust rate when success: 
+ --> Minimum: 30.9582%
+ --> Average: 68.7186%
+ --> Maximum: 90.2945%
+
+Letter: m
+ - Success: 50/60 (83.3333% success rate)
+ - Error: 10/60 (16.6667% error rate)
+ - Most of the time confused with: a (6.66667% of the time)
+ - Trust rate when success: 
+ --> Minimum: 28.4902%
+ --> Average: 68.4285%
+ --> Maximum: 73.1544%
+
+Letter: n
+ - Success: 0/8 (0% success rate)
+ - Error: 8/8 (100% error rate)
+ - Most of the time confused with: i (25% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: o
+ - Success: 9/70 (12.8571% success rate)
+ - Error: 61/70 (87.1429% error rate)
+ - Most of the time confused with: w (67.1429% of the time)
+ - Trust rate when success: 
+ --> Minimum: 35.6854%
+ --> Average: 46.9451%
+ --> Maximum: 65.4776%
+
+Letter: p
+ - Success: 36/43 (83.7209% success rate)
+ - Error: 7/43 (16.2791% error rate)
+ - Most of the time confused with: w (6.97674% of the time)
+ - Trust rate when success: 
+ --> Minimum: 23.675%
+ --> Average: 68.0597%
+ --> Maximum: 96.2699%
+
+Letter: q
+ - Success: 4/13 (30.7692% success rate)
+ - Error: 9/13 (69.2308% error rate)
+ - Most of the time confused with: a (23.0769% of the time)
+ - Trust rate when success: 
+ --> Minimum: 20.3561%
+ --> Average: 31.1806%
+ --> Maximum: 36.1695%
+
+Letter: r
+ - Success: 35/39 (89.7436% success rate)
+ - Error: 4/39 (10.2564% error rate)
+ - Most of the time confused with: a (7.69231% of the time)
+ - Trust rate when success: 
+ --> Minimum: 48.4658%
+ --> Average: 70.1441%
+ --> Maximum: 87.4516%
+
+Letter: s
+ - Success: 27/40 (67.5% success rate)
+ - Error: 13/40 (32.5% error rate)
+ - Most of the time confused with: a (30% of the time)
+ - Trust rate when success: 
+ --> Minimum: 22.9617%
+ --> Average: 52.9215%
+ --> Maximum: 79.8311%
+
+Letter: t
+ - Success: 16/22 (72.7273% success rate)
+ - Error: 6/22 (27.2727% error rate)
+ - Most of the time confused with: a (13.6364% of the time)
+ - Trust rate when success: 
+ --> Minimum: 32.2894%
+ --> Average: 49.7243%
+ --> Maximum: 56.1366%
+
+Letter: u
+ - Success: 5/17 (29.4118% success rate)
+ - Error: 12/17 (70.5882% error rate)
+ - Most of the time confused with: a (41.1765% of the time)
+ - Trust rate when success: 
+ --> Minimum: 11.4687%
+ --> Average: 21.9281%
+ --> Maximum: 26.0769%
+
+Letter: v
+ - Success: 23/41 (56.0976% success rate)
+ - Error: 18/41 (43.9024% error rate)
+ - Most of the time confused with: l (21.9512% of the time)
+ - Trust rate when success: 
+ --> Minimum: 22.4022%
+ --> Average: 56.7634%
+ --> Maximum: 72.9019%
+
+Letter: w
+ - Success: 79/93 (84.9462% success rate)
+ - Error: 14/93 (15.0538% error rate)
+ - Most of the time confused with: b (7.52688% of the time)
+ - Trust rate when success: 
+ --> Minimum: 20.6952%
+ --> Average: 29.0812%
+ --> Maximum: 81.8092%
+
+Letter: x
+ - Success: 11/18 (61.1111% success rate)
+ - Error: 7/18 (38.8889% error rate)
+ - Most of the time confused with: c (11.1111% of the time)
+ - Trust rate when success: 
+ --> Minimum: 15.0273%
+ --> Average: 35.5748%
+ --> Maximum: 48.0687%
+
+Letter: y
+ - Success: 13/29 (44.8276% success rate)
+ - Error: 16/29 (55.1724% error rate)
+ - Most of the time confused with: w (24.1379% of the time)
+ - Trust rate when success: 
+ --> Minimum: 24.9936%
+ --> Average: 39.6977%
+ --> Maximum: 50.916%
+
+Letter: z
+ - Success: 2/12 (16.6667% success rate)
+ - Error: 10/12 (83.3333% error rate)
+ - Most of the time confused with: a (50% of the time)
+ - Trust rate when success: 
+ --> Minimum: 17.9686%
+ --> Average: 18.4109%
+ --> Maximum: 18.8533%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_32_32.xml successfully loaded!
+Start testing process..
+Loading data... done! (5.95506 s)
+Testing model (1434 samples)... done! 
+Test result: 100% success
+
+Letter: a
+ - Success: 181/181 (100% success rate)
+ - Error: 0/181 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.7188%
+ --> Average: 99.9876%
+ --> Maximum: 100.76%
+
+Letter: b
+ - Success: 165/165 (100% success rate)
+ - Error: 0/165 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.4909%
+ --> Average: 100.013%
+ --> Maximum: 100.611%
+
+Letter: c
+ - Success: 161/161 (100% success rate)
+ - Error: 0/161 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.4426%
+ --> Average: 99.9927%
+ --> Maximum: 100.984%
+
+Letter: d
+ - Success: 36/36 (100% success rate)
+ - Error: 0/36 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 98.9826%
+ --> Average: 99.9782%
+ --> Maximum: 100.381%
+
+Letter: e
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.4362%
+ --> Average: 100.001%
+ --> Maximum: 100.566%
+
+Letter: f
+ - Success: 37/37 (100% success rate)
+ - Error: 0/37 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 98.4945%
+ --> Average: 99.9562%
+ --> Maximum: 100.465%
+
+Letter: g
+ - Success: 12/12 (100% success rate)
+ - Error: 0/12 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.2983%
+ --> Average: 99.8979%
+ --> Maximum: 100.555%
+
+Letter: h
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.7525%
+ --> Average: 100.002%
+ --> Maximum: 100.4%
+
+Letter: i
+ - Success: 104/104 (100% success rate)
+ - Error: 0/104 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.3579%
+ --> Average: 99.9996%
+ --> Maximum: 101.193%
+
+Letter: j
+ - Success: 9/9 (100% success rate)
+ - Error: 0/9 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 97.9809%
+ --> Average: 98.6335%
+ --> Maximum: 99.5027%
+
+Letter: k
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.5914%
+ --> Average: 99.9887%
+ --> Maximum: 100.511%
+
+Letter: l
+ - Success: 71/71 (100% success rate)
+ - Error: 0/71 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.5712%
+ --> Average: 99.994%
+ --> Maximum: 100.922%
+
+Letter: m
+ - Success: 60/60 (100% success rate)
+ - Error: 0/60 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.1722%
+ --> Average: 99.9732%
+ --> Maximum: 100.649%
+
+Letter: n
+ - Success: 8/8 (100% success rate)
+ - Error: 0/8 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 97.8013%
+ --> Average: 98.8484%
+ --> Maximum: 99.72%
+
+Letter: o
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.6874%
+ --> Average: 99.9963%
+ --> Maximum: 100.409%
+
+Letter: p
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 98.9709%
+ --> Average: 100.012%
+ --> Maximum: 101.24%
+
+Letter: q
+ - Success: 13/13 (100% success rate)
+ - Error: 0/13 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 98.8205%
+ --> Average: 99.7753%
+ --> Maximum: 100.277%
+
+Letter: r
+ - Success: 39/39 (100% success rate)
+ - Error: 0/39 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.7409%
+ --> Average: 99.9748%
+ --> Maximum: 100.308%
+
+Letter: s
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.1985%
+ --> Average: 99.9944%
+ --> Maximum: 101.2%
+
+Letter: t
+ - Success: 22/22 (100% success rate)
+ - Error: 0/22 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.1848%
+ --> Average: 99.8834%
+ --> Maximum: 101.578%
+
+Letter: u
+ - Success: 17/17 (100% success rate)
+ - Error: 0/17 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 98.2321%
+ --> Average: 99.8007%
+ --> Maximum: 101.375%
+
+Letter: v
+ - Success: 41/41 (100% success rate)
+ - Error: 0/41 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.3548%
+ --> Average: 99.9779%
+ --> Maximum: 100.3%
+
+Letter: w
+ - Success: 93/93 (100% success rate)
+ - Error: 0/93 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.218%
+ --> Average: 99.9921%
+ --> Maximum: 101.128%
+
+Letter: x
+ - Success: 18/18 (100% success rate)
+ - Error: 0/18 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.3399%
+ --> Average: 99.9564%
+ --> Maximum: 100.46%
+
+Letter: y
+ - Success: 29/29 (100% success rate)
+ - Error: 0/29 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.2984%
+ --> Average: 99.9462%
+ --> Maximum: 100.706%
+
+Letter: z
+ - Success: 12/12 (100% success rate)
+ - Error: 0/12 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 97.0334%
+ --> Average: 99.8608%
+ --> Maximum: 100.699%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_32_32_32.xml successfully loaded!
+Start testing process..
+Loading data... done! (5.97191 s)
+Testing model (1434 samples)... done! 
+Test result: 100% success
+
+Letter: a
+ - Success: 181/181 (100% success rate)
+ - Error: 0/181 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.3684%
+ --> Average: 100.004%
+ --> Maximum: 101.089%
+
+Letter: b
+ - Success: 165/165 (100% success rate)
+ - Error: 0/165 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.1687%
+ --> Average: 100.011%
+ --> Maximum: 101.362%
+
+Letter: c
+ - Success: 161/161 (100% success rate)
+ - Error: 0/161 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 98.9912%
+ --> Average: 99.9893%
+ --> Maximum: 102.295%
+
+Letter: d
+ - Success: 36/36 (100% success rate)
+ - Error: 0/36 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 92.586%
+ --> Average: 95.7657%
+ --> Maximum: 97.619%
+
+Letter: e
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.0794%
+ --> Average: 100.02%
+ --> Maximum: 101.185%
+
+Letter: f
+ - Success: 37/37 (100% success rate)
+ - Error: 0/37 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 93.6065%
+ --> Average: 94.452%
+ --> Maximum: 95.1086%
+
+Letter: g
+ - Success: 12/12 (100% success rate)
+ - Error: 0/12 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 79.9606%
+ --> Average: 81.0583%
+ --> Maximum: 81.8476%
+
+Letter: h
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 93.2917%
+ --> Average: 94.0261%
+ --> Maximum: 94.7173%
+
+Letter: i
+ - Success: 104/104 (100% success rate)
+ - Error: 0/104 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 98.361%
+ --> Average: 100.043%
+ --> Maximum: 101.29%
+
+Letter: j
+ - Success: 9/9 (100% success rate)
+ - Error: 0/9 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 76.0393%
+ --> Average: 77.191%
+ --> Maximum: 78.2852%
+
+Letter: k
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 95.8722%
+ --> Average: 97.0777%
+ --> Maximum: 97.9472%
+
+Letter: l
+ - Success: 71/71 (100% success rate)
+ - Error: 0/71 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 98.3459%
+ --> Average: 99.9487%
+ --> Maximum: 102.743%
+
+Letter: m
+ - Success: 60/60 (100% success rate)
+ - Error: 0/60 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 97.2602%
+ --> Average: 99.687%
+ --> Maximum: 101.968%
+
+Letter: n
+ - Success: 8/8 (100% success rate)
+ - Error: 0/8 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 68.6291%
+ --> Average: 69.6227%
+ --> Maximum: 70.8062%
+
+Letter: o
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 98.5237%
+ --> Average: 99.8277%
+ --> Maximum: 100.829%
+
+Letter: p
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 94.9681%
+ --> Average: 95.8424%
+ --> Maximum: 97.0073%
+
+Letter: q
+ - Success: 13/13 (100% success rate)
+ - Error: 0/13 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 88.6488%
+ --> Average: 90.989%
+ --> Maximum: 92.268%
+
+Letter: r
+ - Success: 39/39 (100% success rate)
+ - Error: 0/39 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 94.797%
+ --> Average: 95.6057%
+ --> Maximum: 96.5136%
+
+Letter: s
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.0518%
+ --> Average: 93.5956%
+ --> Maximum: 95.8262%
+
+Letter: t
+ - Success: 22/22 (100% success rate)
+ - Error: 0/22 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.6545%
+ --> Average: 93.4218%
+ --> Maximum: 94.9221%
+
+Letter: u
+ - Success: 17/17 (100% success rate)
+ - Error: 0/17 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 95.3975%
+ --> Average: 96.839%
+ --> Maximum: 98.2569%
+
+Letter: v
+ - Success: 41/41 (100% success rate)
+ - Error: 0/41 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 92.4913%
+ --> Average: 94.243%
+ --> Maximum: 95.3666%
+
+Letter: w
+ - Success: 93/93 (100% success rate)
+ - Error: 0/93 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 91.6359%
+ --> Average: 96.3631%
+ --> Maximum: 103.142%
+
+Letter: x
+ - Success: 18/18 (100% success rate)
+ - Error: 0/18 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 87.5342%
+ --> Average: 89.765%
+ --> Maximum: 91.4645%
+
+Letter: y
+ - Success: 29/29 (100% success rate)
+ - Error: 0/29 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 97.2931%
+ --> Average: 99.0909%
+ --> Maximum: 100.739%
+
+Letter: z
+ - Success: 12/12 (100% success rate)
+ - Error: 0/12 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 77.5102%
+ --> Average: 78.427%
+ --> Maximum: 79.2376%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_64_64.xml successfully loaded!
+Start testing process..
+Loading data... done! (5.96219 s)
+Testing model (1434 samples)... done! 
+Test result: 100% success
+
+Letter: a
+ - Success: 181/181 (100% success rate)
+ - Error: 0/181 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.925%
+ --> Average: 99.997%
+ --> Maximum: 100.05%
+
+Letter: b
+ - Success: 165/165 (100% success rate)
+ - Error: 0/165 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.8958%
+ --> Average: 99.9999%
+ --> Maximum: 100.122%
+
+Letter: c
+ - Success: 161/161 (100% success rate)
+ - Error: 0/161 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9193%
+ --> Average: 99.9951%
+ --> Maximum: 100.097%
+
+Letter: d
+ - Success: 36/36 (100% success rate)
+ - Error: 0/36 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.8785%
+ --> Average: 99.9944%
+ --> Maximum: 100.18%
+
+Letter: e
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9266%
+ --> Average: 100%
+ --> Maximum: 100.124%
+
+Letter: f
+ - Success: 37/37 (100% success rate)
+ - Error: 0/37 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.8841%
+ --> Average: 99.9952%
+ --> Maximum: 100.131%
+
+Letter: g
+ - Success: 12/12 (100% success rate)
+ - Error: 0/12 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9598%
+ --> Average: 99.996%
+ --> Maximum: 100.023%
+
+Letter: h
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9557%
+ --> Average: 99.999%
+ --> Maximum: 100.026%
+
+Letter: i
+ - Success: 104/104 (100% success rate)
+ - Error: 0/104 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.8731%
+ --> Average: 100.001%
+ --> Maximum: 100.116%
+
+Letter: j
+ - Success: 9/9 (100% success rate)
+ - Error: 0/9 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9634%
+ --> Average: 99.9923%
+ --> Maximum: 100.027%
+
+Letter: k
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9796%
+ --> Average: 100.003%
+ --> Maximum: 100.034%
+
+Letter: l
+ - Success: 71/71 (100% success rate)
+ - Error: 0/71 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9076%
+ --> Average: 99.9976%
+ --> Maximum: 100.178%
+
+Letter: m
+ - Success: 60/60 (100% success rate)
+ - Error: 0/60 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.834%
+ --> Average: 100.002%
+ --> Maximum: 100.165%
+
+Letter: n
+ - Success: 8/8 (100% success rate)
+ - Error: 0/8 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9464%
+ --> Average: 99.9946%
+ --> Maximum: 100.028%
+
+Letter: o
+ - Success: 70/70 (100% success rate)
+ - Error: 0/70 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9641%
+ --> Average: 100.002%
+ --> Maximum: 100.038%
+
+Letter: p
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9581%
+ --> Average: 99.9978%
+ --> Maximum: 100.057%
+
+Letter: q
+ - Success: 13/13 (100% success rate)
+ - Error: 0/13 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9595%
+ --> Average: 99.9936%
+ --> Maximum: 100.026%
+
+Letter: r
+ - Success: 39/39 (100% success rate)
+ - Error: 0/39 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9582%
+ --> Average: 99.9954%
+ --> Maximum: 100.039%
+
+Letter: s
+ - Success: 40/40 (100% success rate)
+ - Error: 0/40 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.8338%
+ --> Average: 99.998%
+ --> Maximum: 100.153%
+
+Letter: t
+ - Success: 22/22 (100% success rate)
+ - Error: 0/22 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9618%
+ --> Average: 99.996%
+ --> Maximum: 100.021%
+
+Letter: u
+ - Success: 17/17 (100% success rate)
+ - Error: 0/17 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9609%
+ --> Average: 99.9952%
+ --> Maximum: 100.062%
+
+Letter: v
+ - Success: 41/41 (100% success rate)
+ - Error: 0/41 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9581%
+ --> Average: 99.9954%
+ --> Maximum: 100.045%
+
+Letter: w
+ - Success: 93/93 (100% success rate)
+ - Error: 0/93 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.8884%
+ --> Average: 99.996%
+ --> Maximum: 100.18%
+
+Letter: x
+ - Success: 18/18 (100% success rate)
+ - Error: 0/18 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9804%
+ --> Average: 100.001%
+ --> Maximum: 100.038%
+
+Letter: y
+ - Success: 29/29 (100% success rate)
+ - Error: 0/29 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.9672%
+ --> Average: 99.9997%
+ --> Maximum: 100.031%
+
+Letter: z
+ - Success: 12/12 (100% success rate)
+ - Error: 0/12 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 99.965%
+ --> Average: 99.9987%
+ --> Maximum: 100.04%
+
