@@ -1,0 +1,165 @@
+Start training process..
+Loading data... done! (4.66119 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 200
+ - b * 164
+ - c * 168
+ - d * 183
+ - e * 124
+ - f * 174
+
+Training the classifier (1013 samples) - layer pattern: [32400:4:4:4:26] (may take a few minutes)...
+Training done! (40.2569 s)
+Exporting model to ./generated_models/model_loris_4_4_4_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (4.47851 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 200
+ - b * 164
+ - c * 168
+ - d * 183
+ - e * 124
+ - f * 174
+
+Training the classifier (1013 samples) - layer pattern: [32400:4:4:4:4:26] (may take a few minutes)...
+Training done! (39.6187 s)
+Exporting model to ./generated_models/model_loris_4_4_4_4_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (4.44315 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 200
+ - b * 164
+ - c * 168
+ - d * 183
+ - e * 124
+ - f * 174
+
+Training the classifier (1013 samples) - layer pattern: [32400:8:8:26] (may take a few minutes)...
+Training done! (71.4805 s)
+Exporting model to ./generated_models/model_loris_8_8_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (4.89504 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 200
+ - b * 164
+ - c * 168
+ - d * 183
+ - e * 124
+ - f * 174
+
+Training the classifier (1013 samples) - layer pattern: [32400:8:8:8:26] (may take a few minutes)...
+Training done! (72.8298 s)
+Exporting model to ./generated_models/model_loris_8_8_8_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (4.42413 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 200
+ - b * 164
+ - c * 168
+ - d * 183
+ - e * 124
+ - f * 174
+
+Training the classifier (1013 samples) - layer pattern: [32400:16:16:26] (may take a few minutes)...
+Training done! (146.831 s)
+Exporting model to ./generated_models/model_loris_16_16_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (4.42107 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 200
+ - b * 164
+ - c * 168
+ - d * 183
+ - e * 124
+ - f * 174
+
+Training the classifier (1013 samples) - layer pattern: [32400:8:16:32:26] (may take a few minutes)...
+Training done! (45.2422 s)
+Exporting model to ./generated_models/model_loris_8_16_32_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (4.48073 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 200
+ - b * 164
+ - c * 168
+ - d * 183
+ - e * 124
+ - f * 174
+
+Training the classifier (1013 samples) - layer pattern: [32400:32:16:8:26] (may take a few minutes)...
+Training done! (304.851 s)
+Exporting model to ./generated_models/model_loris_32_16_8_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (4.37473 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 200
+ - b * 164
+ - c * 168
+ - d * 183
+ - e * 124
+ - f * 174
+
+Training the classifier (1013 samples) - layer pattern: [32400:32:26] (may take a few minutes)...
+Training done! (305.589 s)
+Exporting model to ./generated_models/model_loris_32_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (4.40655 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 200
+ - b * 164
+ - c * 168
+ - d * 183
+ - e * 124
+ - f * 174
+
+Training the classifier (1013 samples) - layer pattern: [32400:32:32:26] (may take a few minutes)...
+Training done! (303.59 s)
+Exporting model to ./generated_models/model_loris_32_32_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (4.37966 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 200
+ - b * 164
+ - c * 168
+ - d * 183
+ - e * 124
+ - f * 174
+
+Training the classifier (1013 samples) - layer pattern: [32400:32:32:32:26] (may take a few minutes)...
+Training done! (320.344 s)
+Exporting model to ./generated_models/model_loris_32_32_32_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (4.37061 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 200
+ - b * 164
+ - c * 168
+ - d * 183
+ - e * 124
+ - f * 174
+
+Training the classifier (1013 samples) - layer pattern: [32400:64:64:26] (may take a few minutes)...
+Training done! (656.115 s)
+Exporting model to ./generated_models/model_loris_64_64_HOG.xml
+Model successfully exported

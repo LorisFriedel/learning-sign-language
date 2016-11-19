@@ -1,0 +1,572 @@
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_4_4_4_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.167403 s)
+Testing model (11044 samples)... done! 
+Test result: 35.2046% success
+
+Letter: a
+ - Success: 1198/2844 (42.1238% success rate)
+ - Error: 1646/2844 (57.8762% error rate)
+ - Most of the time confused with: m (32.6301% of the time)
+ - Trust rate when success: 
+ --> Minimum: 10.7003%
+ --> Average: 12.0691%
+ --> Maximum: 13.0961%
+
+Letter: b
+ - Success: 469/2021 (23.2063% success rate)
+ - Error: 1552/2021 (76.7937% error rate)
+ - Most of the time confused with: c (67.6893% of the time)
+ - Trust rate when success: 
+ --> Minimum: 12.0175%
+ --> Average: 24.7504%
+ --> Maximum: 39.7872%
+
+Letter: c
+ - Success: 2221/3525 (63.0071% success rate)
+ - Error: 1304/3525 (36.9929% error rate)
+ - Most of the time confused with: b (19.8582% of the time)
+ - Trust rate when success: 
+ --> Minimum: 10.8199%
+ --> Average: 37.2843%
+ --> Maximum: 78.144%
+
+Letter: d
+ - Success: 0/1570 (0% success rate)
+ - Error: 1570/1570 (100% error rate)
+ - Most of the time confused with: c (45.2866% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 0/1084 (0% success rate)
+ - Error: 1084/1084 (100% error rate)
+ - Most of the time confused with: b (47.8782% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_4_4_4_4_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.168781 s)
+Testing model (11044 samples)... done! 
+Test result: 19.6758% success
+
+Letter: a
+ - Success: 321/2844 (11.2869% success rate)
+ - Error: 2523/2844 (88.7131% error rate)
+ - Most of the time confused with: b (49.1561% of the time)
+ - Trust rate when success: 
+ --> Minimum: 10.8772%
+ --> Average: 11.3317%
+ --> Maximum: 11.7608%
+
+Letter: b
+ - Success: 1845/2021 (91.2914% success rate)
+ - Error: 176/2021 (8.70856% error rate)
+ - Most of the time confused with: o (4.65116% of the time)
+ - Trust rate when success: 
+ --> Minimum: 11.8016%
+ --> Average: 39.4088%
+ --> Maximum: 68.0024%
+
+Letter: c
+ - Success: 7/3525 (0.198582% success rate)
+ - Error: 3518/3525 (99.8014% error rate)
+ - Most of the time confused with: b (75.9716% of the time)
+ - Trust rate when success: 
+ --> Minimum: 11.7771%
+ --> Average: 12.0235%
+ --> Maximum: 12.3074%
+
+Letter: d
+ - Success: 0/1570 (0% success rate)
+ - Error: 1570/1570 (100% error rate)
+ - Most of the time confused with: b (72.9299% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 0/1084 (0% success rate)
+ - Error: 1084/1084 (100% error rate)
+ - Most of the time confused with: b (76.2915% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_8_8_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.165886 s)
+Testing model (11044 samples)... done! 
+Test result: 37.586% success
+
+Letter: a
+ - Success: 2211/2844 (77.7426% success rate)
+ - Error: 633/2844 (22.2574% error rate)
+ - Most of the time confused with: m (8.40366% of the time)
+ - Trust rate when success: 
+ --> Minimum: 18.0294%
+ --> Average: 73.9617%
+ --> Maximum: 114.536%
+
+Letter: b
+ - Success: 964/2021 (47.6992% success rate)
+ - Error: 1057/2021 (52.3008% error rate)
+ - Most of the time confused with: c (43.7902% of the time)
+ - Trust rate when success: 
+ --> Minimum: 19.0265%
+ --> Average: 74.3355%
+ --> Maximum: 113.785%
+
+Letter: c
+ - Success: 973/3525 (27.6028% success rate)
+ - Error: 2552/3525 (72.3972% error rate)
+ - Most of the time confused with: b (26.3262% of the time)
+ - Trust rate when success: 
+ --> Minimum: 15.1139%
+ --> Average: 55.533%
+ --> Maximum: 102.369%
+
+Letter: d
+ - Success: 0/1570 (0% success rate)
+ - Error: 1570/1570 (100% error rate)
+ - Most of the time confused with: b (37.0064% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 3/1084 (0.276753% success rate)
+ - Error: 1081/1084 (99.7232% error rate)
+ - Most of the time confused with: b (44.0037% of the time)
+ - Trust rate when success: 
+ --> Minimum: 7.08241%
+ --> Average: 13.2189%
+ --> Maximum: 22.4528%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_8_8_8_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.166409 s)
+Testing model (11044 samples)... done! 
+Test result: 44.8932% success
+
+Letter: a
+ - Success: 2301/2844 (80.9072% success rate)
+ - Error: 543/2844 (19.0928% error rate)
+ - Most of the time confused with: m (11.9902% of the time)
+ - Trust rate when success: 
+ --> Minimum: 9.50546%
+ --> Average: 61.3807%
+ --> Maximum: 101.293%
+
+Letter: b
+ - Success: 1010/2021 (49.9753% success rate)
+ - Error: 1011/2021 (50.0247% error rate)
+ - Most of the time confused with: c (43.6912% of the time)
+ - Trust rate when success: 
+ --> Minimum: 11.5247%
+ --> Average: 65.5278%
+ --> Maximum: 98.6164%
+
+Letter: c
+ - Success: 1647/3525 (46.7234% success rate)
+ - Error: 1878/3525 (53.2766% error rate)
+ - Most of the time confused with: b (41.1348% of the time)
+ - Trust rate when success: 
+ --> Minimum: 8.72802%
+ --> Average: 49.7305%
+ --> Maximum: 96.1116%
+
+Letter: d
+ - Success: 0/1570 (0% success rate)
+ - Error: 1570/1570 (100% error rate)
+ - Most of the time confused with: b (43.121% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 0/1084 (0% success rate)
+ - Error: 1084/1084 (100% error rate)
+ - Most of the time confused with: b (45.0185% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_16_16_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.167472 s)
+Testing model (11044 samples)... done! 
+Test result: 36.1373% success
+
+Letter: a
+ - Success: 2221/2844 (78.0942% success rate)
+ - Error: 623/2844 (21.9058% error rate)
+ - Most of the time confused with: m (8.05204% of the time)
+ - Trust rate when success: 
+ --> Minimum: 17.2867%
+ --> Average: 76.1549%
+ --> Maximum: 119.741%
+
+Letter: b
+ - Success: 890/2021 (44.0376% success rate)
+ - Error: 1131/2021 (55.9624% error rate)
+ - Most of the time confused with: c (45.6705% of the time)
+ - Trust rate when success: 
+ --> Minimum: 19.3194%
+ --> Average: 80.3608%
+ --> Maximum: 126.085%
+
+Letter: c
+ - Success: 874/3525 (24.7943% success rate)
+ - Error: 2651/3525 (75.2057% error rate)
+ - Most of the time confused with: w (35.9716% of the time)
+ - Trust rate when success: 
+ --> Minimum: 20.2784%
+ --> Average: 64.9428%
+ --> Maximum: 121.095%
+
+Letter: d
+ - Success: 0/1570 (0% success rate)
+ - Error: 1570/1570 (100% error rate)
+ - Most of the time confused with: a (28.9809% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 6/1084 (0.553506% success rate)
+ - Error: 1078/1084 (99.4465% error rate)
+ - Most of the time confused with: c (26.6605% of the time)
+ - Trust rate when success: 
+ --> Minimum: 20.8887%
+ --> Average: 27.5123%
+ --> Maximum: 37.437%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_8_16_32_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.166574 s)
+Testing model (11044 samples)... done! 
+Test result: 37.5951% success
+
+Letter: a
+ - Success: 2292/2844 (80.5907% success rate)
+ - Error: 552/2844 (19.4093% error rate)
+ - Most of the time confused with: m (6.8917% of the time)
+ - Trust rate when success: 
+ --> Minimum: 8.83934%
+ --> Average: 69.6707%
+ --> Maximum: 116.542%
+
+Letter: b
+ - Success: 941/2021 (46.5611% success rate)
+ - Error: 1080/2021 (53.4389% error rate)
+ - Most of the time confused with: c (44.186% of the time)
+ - Trust rate when success: 
+ --> Minimum: 21.8144%
+ --> Average: 84.4189%
+ --> Maximum: 121.453%
+
+Letter: c
+ - Success: 911/3525 (25.844% success rate)
+ - Error: 2614/3525 (74.156% error rate)
+ - Most of the time confused with: b (28.2553% of the time)
+ - Trust rate when success: 
+ --> Minimum: 16.4574%
+ --> Average: 69.3389%
+ --> Maximum: 110.283%
+
+Letter: d
+ - Success: 0/1570 (0% success rate)
+ - Error: 1570/1570 (100% error rate)
+ - Most of the time confused with: c (28.8535% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 8/1084 (0.738007% success rate)
+ - Error: 1076/1084 (99.262% error rate)
+ - Most of the time confused with: c (23.0627% of the time)
+ - Trust rate when success: 
+ --> Minimum: 24.1598%
+ --> Average: 27.4661%
+ --> Maximum: 30.3793%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_32_16_8_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.175505 s)
+Testing model (11044 samples)... done! 
+Test result: 41.5339% success
+
+Letter: a
+ - Success: 2394/2844 (84.1772% success rate)
+ - Error: 450/2844 (15.8228% error rate)
+ - Most of the time confused with: m (10.7947% of the time)
+ - Trust rate when success: 
+ --> Minimum: 10.6999%
+ --> Average: 62.5917%
+ --> Maximum: 115.245%
+
+Letter: b
+ - Success: 810/2021 (40.0792% success rate)
+ - Error: 1211/2021 (59.9208% error rate)
+ - Most of the time confused with: c (53.0925% of the time)
+ - Trust rate when success: 
+ --> Minimum: 12.7947%
+ --> Average: 59.9256%
+ --> Maximum: 92.3715%
+
+Letter: c
+ - Success: 1383/3525 (39.234% success rate)
+ - Error: 2142/3525 (60.766% error rate)
+ - Most of the time confused with: b (42.6667% of the time)
+ - Trust rate when success: 
+ --> Minimum: 9.15772%
+ --> Average: 38.7543%
+ --> Maximum: 87.165%
+
+Letter: d
+ - Success: 0/1570 (0% success rate)
+ - Error: 1570/1570 (100% error rate)
+ - Most of the time confused with: a (36.1146% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 0/1084 (0% success rate)
+ - Error: 1084/1084 (100% error rate)
+ - Most of the time confused with: c (31.9188% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_32_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.166452 s)
+Testing model (11044 samples)... done! 
+Test result: 33.0587% success
+
+Letter: a
+ - Success: 2065/2844 (72.609% success rate)
+ - Error: 779/2844 (27.391% error rate)
+ - Most of the time confused with: i (11.0056% of the time)
+ - Trust rate when success: 
+ --> Minimum: 18.1353%
+ --> Average: 86.6789%
+ --> Maximum: 133.624%
+
+Letter: b
+ - Success: 844/2021 (41.7615% success rate)
+ - Error: 1177/2021 (58.2385% error rate)
+ - Most of the time confused with: c (41.5636% of the time)
+ - Trust rate when success: 
+ --> Minimum: 30.2754%
+ --> Average: 88.2795%
+ --> Maximum: 130.727%
+
+Letter: c
+ - Success: 729/3525 (20.6809% success rate)
+ - Error: 2796/3525 (79.3191% error rate)
+ - Most of the time confused with: w (38.4681% of the time)
+ - Trust rate when success: 
+ --> Minimum: 22.7148%
+ --> Average: 82.4369%
+ --> Maximum: 130.507%
+
+Letter: d
+ - Success: 1/1570 (0.0636943% success rate)
+ - Error: 1569/1570 (99.9363% error rate)
+ - Most of the time confused with: a (26.4968% of the time)
+ - Trust rate when success: 
+ --> Minimum: 57.4623%
+ --> Average: 57.4623%
+ --> Maximum: 57.4623%
+
+Letter: e
+ - Success: 12/1084 (1.10701% success rate)
+ - Error: 1072/1084 (98.893% error rate)
+ - Most of the time confused with: i (21.8635% of the time)
+ - Trust rate when success: 
+ --> Minimum: 34.1486%
+ --> Average: 50.0462%
+ --> Maximum: 66.6154%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_32_32_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.171338 s)
+Testing model (11044 samples)... done! 
+Test result: 32.3615% success
+
+Letter: a
+ - Success: 2024/2844 (71.1674% success rate)
+ - Error: 820/2844 (28.8326% error rate)
+ - Most of the time confused with: i (12.5879% of the time)
+ - Trust rate when success: 
+ --> Minimum: 21.6007%
+ --> Average: 82.6868%
+ --> Maximum: 126.464%
+
+Letter: b
+ - Success: 806/2021 (39.8812% success rate)
+ - Error: 1215/2021 (60.1188% error rate)
+ - Most of the time confused with: c (46.3632% of the time)
+ - Trust rate when success: 
+ --> Minimum: 29.511%
+ --> Average: 82.8291%
+ --> Maximum: 123.441%
+
+Letter: c
+ - Success: 739/3525 (20.9645% success rate)
+ - Error: 2786/3525 (79.0355% error rate)
+ - Most of the time confused with: w (38.4113% of the time)
+ - Trust rate when success: 
+ --> Minimum: 19.9025%
+ --> Average: 75.6384%
+ --> Maximum: 124.93%
+
+Letter: d
+ - Success: 0/1570 (0% success rate)
+ - Error: 1570/1570 (100% error rate)
+ - Most of the time confused with: a (25.5414% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 5/1084 (0.461255% success rate)
+ - Error: 1079/1084 (99.5387% error rate)
+ - Most of the time confused with: i (25% of the time)
+ - Trust rate when success: 
+ --> Minimum: 38.5685%
+ --> Average: 46.9965%
+ --> Maximum: 55.4612%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_32_32_32_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.169284 s)
+Testing model (11044 samples)... done! 
+Test result: 37.4502% success
+
+Letter: a
+ - Success: 2265/2844 (79.6414% success rate)
+ - Error: 579/2844 (20.3586% error rate)
+ - Most of the time confused with: m (11.6034% of the time)
+ - Trust rate when success: 
+ --> Minimum: 17.3975%
+ --> Average: 77.4172%
+ --> Maximum: 120.578%
+
+Letter: b
+ - Success: 948/2021 (46.9075% success rate)
+ - Error: 1073/2021 (53.0925% error rate)
+ - Most of the time confused with: c (43.4933% of the time)
+ - Trust rate when success: 
+ --> Minimum: 20.0569%
+ --> Average: 78.6166%
+ --> Maximum: 119.685%
+
+Letter: c
+ - Success: 923/3525 (26.1844% success rate)
+ - Error: 2602/3525 (73.8156% error rate)
+ - Most of the time confused with: w (41.3901% of the time)
+ - Trust rate when success: 
+ --> Minimum: 15.2249%
+ --> Average: 70.505%
+ --> Maximum: 116.785%
+
+Letter: d
+ - Success: 0/1570 (0% success rate)
+ - Error: 1570/1570 (100% error rate)
+ - Most of the time confused with: a (30.5732% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 0/1084 (0% success rate)
+ - Error: 1084/1084 (100% error rate)
+ - Most of the time confused with: b (30.4428% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Loading classifier...
+Classifier ./generated_models/model_others_but_thomas_64_64_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.168489 s)
+Testing model (11044 samples)... done! 
+Test result: 31.8997% success
+
+Letter: a
+ - Success: 2060/2844 (72.4332% success rate)
+ - Error: 784/2844 (27.5668% error rate)
+ - Most of the time confused with: i (11.9198% of the time)
+ - Trust rate when success: 
+ --> Minimum: 19.8363%
+ --> Average: 85.7303%
+ --> Maximum: 134.82%
+
+Letter: b
+ - Success: 759/2021 (37.5557% success rate)
+ - Error: 1262/2021 (62.4443% error rate)
+ - Most of the time confused with: c (44.4829% of the time)
+ - Trust rate when success: 
+ --> Minimum: 30.8574%
+ --> Average: 90.2277%
+ --> Maximum: 133.241%
+
+Letter: c
+ - Success: 682/3525 (19.3475% success rate)
+ - Error: 2843/3525 (80.6525% error rate)
+ - Most of the time confused with: w (40.3972% of the time)
+ - Trust rate when success: 
+ --> Minimum: 25.3924%
+ --> Average: 84.163%
+ --> Maximum: 131.528%
+
+Letter: d
+ - Success: 0/1570 (0% success rate)
+ - Error: 1570/1570 (100% error rate)
+ - Most of the time confused with: a (25.2866% of the time)
+ - Trust rate when success: 
+ --> Minimum: 0%
+ --> Average: 0%
+ --> Maximum: 0%
+
+Letter: e
+ - Success: 22/1084 (2.02952% success rate)
+ - Error: 1062/1084 (97.9705% error rate)
+ - Most of the time confused with: i (20.203% of the time)
+ - Trust rate when success: 
+ --> Minimum: 17.781%
+ --> Average: 48.2877%
+ --> Maximum: 80.5036%
+

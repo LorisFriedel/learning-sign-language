@@ -1,0 +1,385 @@
+Start training process..
+Loading data... done! (7.0489 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 199
+ - b * 163
+ - c * 166
+ - d * 36
+ - e * 75
+ - f * 37
+ - g * 12
+ - h * 44
+ - i * 109
+ - j * 11
+ - k * 46
+ - l * 80
+ - m * 63
+ - n * 11
+ - o * 83
+ - p * 15
+ - q * 11
+ - r * 42
+ - s * 43
+ - t * 20
+ - u * 23
+ - v * 54
+ - w * 95
+ - x * 16
+ - y * 41
+ - z * 10
+
+Training the classifier (1505 samples) - layer pattern: [32400:4:4:4:26] (may take a few minutes)...
+Training done! (60.0309 s)
+Exporting model to ./generated_models/model_others_4_4_4_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (6.55207 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 199
+ - b * 163
+ - c * 166
+ - d * 36
+ - e * 75
+ - f * 37
+ - g * 12
+ - h * 44
+ - i * 109
+ - j * 11
+ - k * 46
+ - l * 80
+ - m * 63
+ - n * 11
+ - o * 83
+ - p * 15
+ - q * 11
+ - r * 42
+ - s * 43
+ - t * 20
+ - u * 23
+ - v * 54
+ - w * 95
+ - x * 16
+ - y * 41
+ - z * 10
+
+Training the classifier (1505 samples) - layer pattern: [32400:4:4:4:4:26] (may take a few minutes)...
+Training done! (59.5671 s)
+Exporting model to ./generated_models/model_others_4_4_4_4_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (6.96373 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 199
+ - b * 163
+ - c * 166
+ - d * 36
+ - e * 75
+ - f * 37
+ - g * 12
+ - h * 44
+ - i * 109
+ - j * 11
+ - k * 46
+ - l * 80
+ - m * 63
+ - n * 11
+ - o * 83
+ - p * 15
+ - q * 11
+ - r * 42
+ - s * 43
+ - t * 20
+ - u * 23
+ - v * 54
+ - w * 95
+ - x * 16
+ - y * 41
+ - z * 10
+
+Training the classifier (1505 samples) - layer pattern: [32400:8:8:26] (may take a few minutes)...
+Training done! (105.702 s)
+Exporting model to ./generated_models/model_others_8_8_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (6.46318 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 199
+ - b * 163
+ - c * 166
+ - d * 36
+ - e * 75
+ - f * 37
+ - g * 12
+ - h * 44
+ - i * 109
+ - j * 11
+ - k * 46
+ - l * 80
+ - m * 63
+ - n * 11
+ - o * 83
+ - p * 15
+ - q * 11
+ - r * 42
+ - s * 43
+ - t * 20
+ - u * 23
+ - v * 54
+ - w * 95
+ - x * 16
+ - y * 41
+ - z * 10
+
+Training the classifier (1505 samples) - layer pattern: [32400:8:8:8:26] (may take a few minutes)...
+Training done! (103.37 s)
+Exporting model to ./generated_models/model_others_8_8_8_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (6.45694 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 199
+ - b * 163
+ - c * 166
+ - d * 36
+ - e * 75
+ - f * 37
+ - g * 12
+ - h * 44
+ - i * 109
+ - j * 11
+ - k * 46
+ - l * 80
+ - m * 63
+ - n * 11
+ - o * 83
+ - p * 15
+ - q * 11
+ - r * 42
+ - s * 43
+ - t * 20
+ - u * 23
+ - v * 54
+ - w * 95
+ - x * 16
+ - y * 41
+ - z * 10
+
+Training the classifier (1505 samples) - layer pattern: [32400:16:16:26] (may take a few minutes)...
+Training done! (224.688 s)
+Exporting model to ./generated_models/model_others_16_16_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (6.58744 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 199
+ - b * 163
+ - c * 166
+ - d * 36
+ - e * 75
+ - f * 37
+ - g * 12
+ - h * 44
+ - i * 109
+ - j * 11
+ - k * 46
+ - l * 80
+ - m * 63
+ - n * 11
+ - o * 83
+ - p * 15
+ - q * 11
+ - r * 42
+ - s * 43
+ - t * 20
+ - u * 23
+ - v * 54
+ - w * 95
+ - x * 16
+ - y * 41
+ - z * 10
+
+Training the classifier (1505 samples) - layer pattern: [32400:8:16:32:26] (may take a few minutes)...
+Training done! (107.462 s)
+Exporting model to ./generated_models/model_others_8_16_32_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (6.5059 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 199
+ - b * 163
+ - c * 166
+ - d * 36
+ - e * 75
+ - f * 37
+ - g * 12
+ - h * 44
+ - i * 109
+ - j * 11
+ - k * 46
+ - l * 80
+ - m * 63
+ - n * 11
+ - o * 83
+ - p * 15
+ - q * 11
+ - r * 42
+ - s * 43
+ - t * 20
+ - u * 23
+ - v * 54
+ - w * 95
+ - x * 16
+ - y * 41
+ - z * 10
+
+Training the classifier (1505 samples) - layer pattern: [32400:32:16:8:26] (may take a few minutes)...
+Training done! (521.265 s)
+Exporting model to ./generated_models/model_others_32_16_8_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (6.76876 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 199
+ - b * 163
+ - c * 166
+ - d * 36
+ - e * 75
+ - f * 37
+ - g * 12
+ - h * 44
+ - i * 109
+ - j * 11
+ - k * 46
+ - l * 80
+ - m * 63
+ - n * 11
+ - o * 83
+ - p * 15
+ - q * 11
+ - r * 42
+ - s * 43
+ - t * 20
+ - u * 23
+ - v * 54
+ - w * 95
+ - x * 16
+ - y * 41
+ - z * 10
+
+Training the classifier (1505 samples) - layer pattern: [32400:32:26] (may take a few minutes)...
+Training done! (517.803 s)
+Exporting model to ./generated_models/model_others_32_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (6.41417 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 199
+ - b * 163
+ - c * 166
+ - d * 36
+ - e * 75
+ - f * 37
+ - g * 12
+ - h * 44
+ - i * 109
+ - j * 11
+ - k * 46
+ - l * 80
+ - m * 63
+ - n * 11
+ - o * 83
+ - p * 15
+ - q * 11
+ - r * 42
+ - s * 43
+ - t * 20
+ - u * 23
+ - v * 54
+ - w * 95
+ - x * 16
+ - y * 41
+ - z * 10
+
+Training the classifier (1505 samples) - layer pattern: [32400:32:32:26] (may take a few minutes)...
+Training done! (484.334 s)
+Exporting model to ./generated_models/model_others_32_32_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (6.52136 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 199
+ - b * 163
+ - c * 166
+ - d * 36
+ - e * 75
+ - f * 37
+ - g * 12
+ - h * 44
+ - i * 109
+ - j * 11
+ - k * 46
+ - l * 80
+ - m * 63
+ - n * 11
+ - o * 83
+ - p * 15
+ - q * 11
+ - r * 42
+ - s * 43
+ - t * 20
+ - u * 23
+ - v * 54
+ - w * 95
+ - x * 16
+ - y * 41
+ - z * 10
+
+Training the classifier (1505 samples) - layer pattern: [32400:32:32:32:26] (may take a few minutes)...
+Training done! (469.765 s)
+Exporting model to ./generated_models/model_others_32_32_32_HOG.xml
+Model successfully exported
+Start training process..
+Loading data... done! (6.46514 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 199
+ - b * 163
+ - c * 166
+ - d * 36
+ - e * 75
+ - f * 37
+ - g * 12
+ - h * 44
+ - i * 109
+ - j * 11
+ - k * 46
+ - l * 80
+ - m * 63
+ - n * 11
+ - o * 83
+ - p * 15
+ - q * 11
+ - r * 42
+ - s * 43
+ - t * 20
+ - u * 23
+ - v * 54
+ - w * 95
+ - x * 16
+ - y * 41
+ - z * 10
+
+Training the classifier (1505 samples) - layer pattern: [32400:64:64:26] (may take a few minutes)...
+Training done! (974.033 s)
+Exporting model to ./generated_models/model_others_64_64_HOG.xml
+Model successfully exported

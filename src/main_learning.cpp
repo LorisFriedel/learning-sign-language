@@ -6,6 +6,7 @@
 #include <cv.hpp>
 #include <dirent.h>
 #include <regex>
+#include <random>
 #include "../inc/code.h"
 #include "../inc/log.h"
 #include "../inc/constant.h"
@@ -232,27 +233,40 @@ int testModel(MLPHand &model, std::string inputDir) {
 }
 
 int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matResponses) {
-    std::cout << "Loading data...";
-    std::cout.flush();
+    std::cout << "Loading data..."; std::cout.flush();
     Timer timer;
 
     timer.start();
     DirectoryReader dirReader(directory);
-    int result = dirReader.foreachFile([&matData, &matResponses](std::string filePath, std::string fileName) {
-        int letterTmp;
-        cv::Mat letterDataRow;
-
-        // If no error while reading data
-        DataYmlReader reader(filePath);
-        if (reader.read(letterDataRow, letterTmp) != Code::SUCCESS) {
-            letterDataRow.convertTo(letterDataRow, CV_32FC1);
-
-            matResponses.push_back(letterTmp);
-            matData.push_back(letterDataRow);
-        }
+    std::vector<std::string> dataPathList;
+    int dirReadSuccess = dirReader.foreachFile([&dataPathList](std::string filePath, std::string fileName) {
+        dataPathList.push_back(filePath);
     });
+
+    if(dirReadSuccess) {
+        auto engine = std::default_random_engine{};
+        std::shuffle(std::begin(dataPathList), std::end(dataPathList), engine);
+        for(std::string path : dataPathList) {
+            int letterTmp;
+            cv::Mat letterDataRow;
+
+            // If no error while reading data
+            DataYmlReader reader(path);
+            if (reader.read(letterDataRow, letterTmp) != Code::SUCCESS) {
+                letterDataRow.convertTo(letterDataRow, CV_32FC1);
+
+                matResponses.push_back(letterTmp);
+                matData.push_back(letterDataRow);
+            } else {
+                LOG_E("ERROR: can't load: " << path);
+            }
+        }
+    } else {
+        LOG_I(" finished with errors.");
+        return Code::ERROR;
+    }
     timer.stop();
 
     LOG_I(" done! (" << timer.getDurationS() << " s)");
-    return result;
+    return Code::SUCCESS;
 }

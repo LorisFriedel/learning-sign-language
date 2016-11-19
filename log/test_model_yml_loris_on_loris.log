@@ -1,0 +1,671 @@
+Loading classifier...
+Classifier ./generated_models/model_loris_4_4_4_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.0156648 s)
+Testing model (1005 samples)... done! 
+Test result: 95.0249% success
+
+Letter: a
+ - Success: 200/200 (100% success rate)
+ - Error: 0/200 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 37.7777%
+ --> Average: 89.3871%
+ --> Maximum: 111.758%
+
+Letter: b
+ - Success: 164/164 (100% success rate)
+ - Error: 0/164 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 33.3773%
+ --> Average: 84.0415%
+ --> Maximum: 104.045%
+
+Letter: c
+ - Success: 159/162 (98.1481% success rate)
+ - Error: 3/162 (1.85185% error rate)
+ - Most of the time confused with: b (1.23457% of the time)
+ - Trust rate when success: 
+ --> Minimum: 33.8553%
+ --> Average: 88.2264%
+ --> Maximum: 105.507%
+
+Letter: d
+ - Success: 173/183 (94.5355% success rate)
+ - Error: 10/183 (5.46448% error rate)
+ - Most of the time confused with: b (2.18579% of the time)
+ - Trust rate when success: 
+ --> Minimum: 20.6341%
+ --> Average: 38.9903%
+ --> Maximum: 47.2726%
+
+Letter: e
+ - Success: 87/124 (70.1613% success rate)
+ - Error: 37/124 (29.8387% error rate)
+ - Most of the time confused with: a (12.0968% of the time)
+ - Trust rate when success: 
+ --> Minimum: 17.9278%
+ --> Average: 28.7846%
+ --> Maximum: 33.2915%
+
+Letter: f
+ - Success: 172/172 (100% success rate)
+ - Error: 0/172 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 41.7974%
+ --> Average: 87.9778%
+ --> Maximum: 113.64%
+
+Loading classifier...
+Classifier ./generated_models/model_loris_4_4_4_4_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.0157607 s)
+Testing model (1005 samples)... done! 
+Test result: 83.0846% success
+
+Letter: a
+ - Success: 152/200 (76% success rate)
+ - Error: 48/200 (24% error rate)
+ - Most of the time confused with: e (15% of the time)
+ - Trust rate when success: 
+ --> Minimum: 19.6922%
+ --> Average: 22.9773%
+ --> Maximum: 25.5082%
+
+Letter: b
+ - Success: 164/164 (100% success rate)
+ - Error: 0/164 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 56.6452%
+ --> Average: 87.3995%
+ --> Maximum: 112.376%
+
+Letter: c
+ - Success: 161/162 (99.3827% success rate)
+ - Error: 1/162 (0.617284% error rate)
+ - Most of the time confused with: e (0.617284% of the time)
+ - Trust rate when success: 
+ --> Minimum: 24.8325%
+ --> Average: 85.4952%
+ --> Maximum: 102.333%
+
+Letter: d
+ - Success: 63/183 (34.4262% success rate)
+ - Error: 120/183 (65.5738% error rate)
+ - Most of the time confused with: a (36.612% of the time)
+ - Trust rate when success: 
+ --> Minimum: 18.4993%
+ --> Average: 19.147%
+ --> Maximum: 20.1464%
+
+Letter: e
+ - Success: 123/124 (99.1935% success rate)
+ - Error: 1/124 (0.806452% error rate)
+ - Most of the time confused with: a (0.806452% of the time)
+ - Trust rate when success: 
+ --> Minimum: 27.5125%
+ --> Average: 75.539%
+ --> Maximum: 99.3212%
+
+Letter: f
+ - Success: 172/172 (100% success rate)
+ - Error: 0/172 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 42.4223%
+ --> Average: 86.79%
+ --> Maximum: 103.714%
+
+Loading classifier...
+Classifier ./generated_models/model_loris_8_8_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.0154251 s)
+Testing model (1005 samples)... done! 
+Test result: 99.9005% success
+
+Letter: a
+ - Success: 200/200 (100% success rate)
+ - Error: 0/200 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 53.7852%
+ --> Average: 95.2624%
+ --> Maximum: 116.732%
+
+Letter: b
+ - Success: 164/164 (100% success rate)
+ - Error: 0/164 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 45.0722%
+ --> Average: 94.1837%
+ --> Maximum: 120.316%
+
+Letter: c
+ - Success: 162/162 (100% success rate)
+ - Error: 0/162 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 38.0541%
+ --> Average: 95.3934%
+ --> Maximum: 113.337%
+
+Letter: d
+ - Success: 183/183 (100% success rate)
+ - Error: 0/183 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 29.8467%
+ --> Average: 92.6404%
+ --> Maximum: 122.717%
+
+Letter: e
+ - Success: 123/124 (99.1935% success rate)
+ - Error: 1/124 (0.806452% error rate)
+ - Most of the time confused with: d (0.806452% of the time)
+ - Trust rate when success: 
+ --> Minimum: 52.9078%
+ --> Average: 92.2587%
+ --> Maximum: 121.141%
+
+Letter: f
+ - Success: 172/172 (100% success rate)
+ - Error: 0/172 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 46.5094%
+ --> Average: 94.773%
+ --> Maximum: 124.98%
+
+Loading classifier...
+Classifier ./generated_models/model_loris_8_8_8_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.015797 s)
+Testing model (1005 samples)... done! 
+Test result: 99.7015% success
+
+Letter: a
+ - Success: 200/200 (100% success rate)
+ - Error: 0/200 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 57.6363%
+ --> Average: 92.6544%
+ --> Maximum: 110.897%
+
+Letter: b
+ - Success: 164/164 (100% success rate)
+ - Error: 0/164 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 49.1718%
+ --> Average: 92.5899%
+ --> Maximum: 117.41%
+
+Letter: c
+ - Success: 160/162 (98.7654% success rate)
+ - Error: 2/162 (1.23457% error rate)
+ - Most of the time confused with: d (0.617284% of the time)
+ - Trust rate when success: 
+ --> Minimum: 40.9888%
+ --> Average: 91.2066%
+ --> Maximum: 107.785%
+
+Letter: d
+ - Success: 183/183 (100% success rate)
+ - Error: 0/183 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 39.0242%
+ --> Average: 94.0494%
+ --> Maximum: 116.709%
+
+Letter: e
+ - Success: 123/124 (99.1935% success rate)
+ - Error: 1/124 (0.806452% error rate)
+ - Most of the time confused with: a (0.806452% of the time)
+ - Trust rate when success: 
+ --> Minimum: 36.041%
+ --> Average: 84.0486%
+ --> Maximum: 109.036%
+
+Letter: f
+ - Success: 172/172 (100% success rate)
+ - Error: 0/172 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 52.5502%
+ --> Average: 93.373%
+ --> Maximum: 114.877%
+
+Loading classifier...
+Classifier ./generated_models/model_loris_16_16_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.0153813 s)
+Testing model (1005 samples)... done! 
+Test result: 99.9005% success
+
+Letter: a
+ - Success: 200/200 (100% success rate)
+ - Error: 0/200 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 61.3354%
+ --> Average: 96.3093%
+ --> Maximum: 123.298%
+
+Letter: b
+ - Success: 164/164 (100% success rate)
+ - Error: 0/164 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 46.2527%
+ --> Average: 92.876%
+ --> Maximum: 124.766%
+
+Letter: c
+ - Success: 162/162 (100% success rate)
+ - Error: 0/162 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 42.3973%
+ --> Average: 95.8367%
+ --> Maximum: 113.955%
+
+Letter: d
+ - Success: 183/183 (100% success rate)
+ - Error: 0/183 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 28.9889%
+ --> Average: 92.6459%
+ --> Maximum: 125.109%
+
+Letter: e
+ - Success: 123/124 (99.1935% success rate)
+ - Error: 1/124 (0.806452% error rate)
+ - Most of the time confused with: d (0.806452% of the time)
+ - Trust rate when success: 
+ --> Minimum: 57.0103%
+ --> Average: 91.0643%
+ --> Maximum: 123.478%
+
+Letter: f
+ - Success: 172/172 (100% success rate)
+ - Error: 0/172 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 56.1206%
+ --> Average: 94.2017%
+ --> Maximum: 125.368%
+
+Loading classifier...
+Classifier ./generated_models/model_loris_8_16_32_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.015699 s)
+Testing model (1005 samples)... done! 
+Test result: 99.801% success
+
+Letter: a
+ - Success: 200/200 (100% success rate)
+ - Error: 0/200 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 59.4544%
+ --> Average: 96.1628%
+ --> Maximum: 114.795%
+
+Letter: b
+ - Success: 164/164 (100% success rate)
+ - Error: 0/164 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 51.6542%
+ --> Average: 94.8065%
+ --> Maximum: 118.756%
+
+Letter: c
+ - Success: 160/162 (98.7654% success rate)
+ - Error: 2/162 (1.23457% error rate)
+ - Most of the time confused with: a (0.617284% of the time)
+ - Trust rate when success: 
+ --> Minimum: 42.9763%
+ --> Average: 96.3187%
+ --> Maximum: 112.448%
+
+Letter: d
+ - Success: 183/183 (100% success rate)
+ - Error: 0/183 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 49.1084%
+ --> Average: 97.6193%
+ --> Maximum: 122.849%
+
+Letter: e
+ - Success: 124/124 (100% success rate)
+ - Error: 0/124 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 49.9916%
+ --> Average: 93.8182%
+ --> Maximum: 119.75%
+
+Letter: f
+ - Success: 172/172 (100% success rate)
+ - Error: 0/172 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 55.1138%
+ --> Average: 95.8774%
+ --> Maximum: 119.011%
+
+Loading classifier...
+Classifier ./generated_models/model_loris_32_16_8_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.0156005 s)
+Testing model (1005 samples)... done! 
+Test result: 98.806% success
+
+Letter: a
+ - Success: 197/200 (98.5% success rate)
+ - Error: 3/200 (1.5% error rate)
+ - Most of the time confused with: e (1% of the time)
+ - Trust rate when success: 
+ --> Minimum: 38.0622%
+ --> Average: 88.1978%
+ --> Maximum: 111.561%
+
+Letter: b
+ - Success: 163/164 (99.3902% success rate)
+ - Error: 1/164 (0.609756% error rate)
+ - Most of the time confused with: f (0.609756% of the time)
+ - Trust rate when success: 
+ --> Minimum: 30.9866%
+ --> Average: 82.269%
+ --> Maximum: 108.063%
+
+Letter: c
+ - Success: 161/162 (99.3827% success rate)
+ - Error: 1/162 (0.617284% error rate)
+ - Most of the time confused with: b (0.617284% of the time)
+ - Trust rate when success: 
+ --> Minimum: 27.0508%
+ --> Average: 95.1583%
+ --> Maximum: 116.372%
+
+Letter: d
+ - Success: 181/183 (98.9071% success rate)
+ - Error: 2/183 (1.0929% error rate)
+ - Most of the time confused with: b (1.0929% of the time)
+ - Trust rate when success: 
+ --> Minimum: 25.1471%
+ --> Average: 86.823%
+ --> Maximum: 117.084%
+
+Letter: e
+ - Success: 120/124 (96.7742% success rate)
+ - Error: 4/124 (3.22581% error rate)
+ - Most of the time confused with: a (2.41935% of the time)
+ - Trust rate when success: 
+ --> Minimum: 25.7442%
+ --> Average: 77.4606%
+ --> Maximum: 110.315%
+
+Letter: f
+ - Success: 171/172 (99.4186% success rate)
+ - Error: 1/172 (0.581395% error rate)
+ - Most of the time confused with: b (0.581395% of the time)
+ - Trust rate when success: 
+ --> Minimum: 56.588%
+ --> Average: 93.5477%
+ --> Maximum: 123.698%
+
+Loading classifier...
+Classifier ./generated_models/model_loris_32_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.0154003 s)
+Testing model (1005 samples)... done! 
+Test result: 99.602% success
+
+Letter: a
+ - Success: 199/200 (99.5% success rate)
+ - Error: 1/200 (0.5% error rate)
+ - Most of the time confused with: e (0.5% of the time)
+ - Trust rate when success: 
+ --> Minimum: 49.2595%
+ --> Average: 96.4405%
+ --> Maximum: 132.661%
+
+Letter: b
+ - Success: 163/164 (99.3902% success rate)
+ - Error: 1/164 (0.609756% error rate)
+ - Most of the time confused with: f (0.609756% of the time)
+ - Trust rate when success: 
+ --> Minimum: 40.7447%
+ --> Average: 91.7897%
+ --> Maximum: 129.216%
+
+Letter: c
+ - Success: 162/162 (100% success rate)
+ - Error: 0/162 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 39.3603%
+ --> Average: 93.7746%
+ --> Maximum: 117.47%
+
+Letter: d
+ - Success: 182/183 (99.4536% success rate)
+ - Error: 1/183 (0.546448% error rate)
+ - Most of the time confused with: f (0.546448% of the time)
+ - Trust rate when success: 
+ --> Minimum: 36.7924%
+ --> Average: 88.8411%
+ --> Maximum: 126.047%
+
+Letter: e
+ - Success: 123/124 (99.1935% success rate)
+ - Error: 1/124 (0.806452% error rate)
+ - Most of the time confused with: d (0.806452% of the time)
+ - Trust rate when success: 
+ --> Minimum: 55.2284%
+ --> Average: 90.683%
+ --> Maximum: 129.557%
+
+Letter: f
+ - Success: 172/172 (100% success rate)
+ - Error: 0/172 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 52.3021%
+ --> Average: 92.8407%
+ --> Maximum: 132.968%
+
+Loading classifier...
+Classifier ./generated_models/model_loris_32_32_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.0154457 s)
+Testing model (1005 samples)... done! 
+Test result: 99.9005% success
+
+Letter: a
+ - Success: 200/200 (100% success rate)
+ - Error: 0/200 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 52.4747%
+ --> Average: 95.4563%
+ --> Maximum: 128.979%
+
+Letter: b
+ - Success: 164/164 (100% success rate)
+ - Error: 0/164 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 45.0572%
+ --> Average: 93.2523%
+ --> Maximum: 128.586%
+
+Letter: c
+ - Success: 162/162 (100% success rate)
+ - Error: 0/162 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 39.8134%
+ --> Average: 96.1988%
+ --> Maximum: 115.053%
+
+Letter: d
+ - Success: 183/183 (100% success rate)
+ - Error: 0/183 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 32.7957%
+ --> Average: 91.3456%
+ --> Maximum: 124.982%
+
+Letter: e
+ - Success: 123/124 (99.1935% success rate)
+ - Error: 1/124 (0.806452% error rate)
+ - Most of the time confused with: d (0.806452% of the time)
+ - Trust rate when success: 
+ --> Minimum: 54.9192%
+ --> Average: 90.6759%
+ --> Maximum: 126.469%
+
+Letter: f
+ - Success: 172/172 (100% success rate)
+ - Error: 0/172 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 54.5315%
+ --> Average: 94.105%
+ --> Maximum: 128.614%
+
+Loading classifier...
+Classifier ./generated_models/model_loris_32_32_32_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.0153307 s)
+Testing model (1005 samples)... done! 
+Test result: 99.9005% success
+
+Letter: a
+ - Success: 200/200 (100% success rate)
+ - Error: 0/200 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 48.5865%
+ --> Average: 94.3526%
+ --> Maximum: 123.39%
+
+Letter: b
+ - Success: 163/164 (99.3902% success rate)
+ - Error: 1/164 (0.609756% error rate)
+ - Most of the time confused with: f (0.609756% of the time)
+ - Trust rate when success: 
+ --> Minimum: 42.2161%
+ --> Average: 93.7208%
+ --> Maximum: 125.872%
+
+Letter: c
+ - Success: 162/162 (100% success rate)
+ - Error: 0/162 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 39.4654%
+ --> Average: 95.6604%
+ --> Maximum: 115.253%
+
+Letter: d
+ - Success: 183/183 (100% success rate)
+ - Error: 0/183 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 32.6836%
+ --> Average: 94.5903%
+ --> Maximum: 126.428%
+
+Letter: e
+ - Success: 124/124 (100% success rate)
+ - Error: 0/124 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 38.2585%
+ --> Average: 90.7175%
+ --> Maximum: 126.466%
+
+Letter: f
+ - Success: 172/172 (100% success rate)
+ - Error: 0/172 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 55.738%
+ --> Average: 94.3511%
+ --> Maximum: 128.513%
+
+Loading classifier...
+Classifier ./generated_models/model_loris_64_64_yml.xml successfully loaded!
+Start testing process..
+Loading data... done! (0.0156235 s)
+Testing model (1005 samples)... done! 
+Test result: 99.801% success
+
+Letter: a
+ - Success: 200/200 (100% success rate)
+ - Error: 0/200 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 50.8381%
+ --> Average: 95.4763%
+ --> Maximum: 132.044%
+
+Letter: b
+ - Success: 164/164 (100% success rate)
+ - Error: 0/164 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 42.2844%
+ --> Average: 91.1924%
+ --> Maximum: 130.97%
+
+Letter: c
+ - Success: 162/162 (100% success rate)
+ - Error: 0/162 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 40.5644%
+ --> Average: 95.0521%
+ --> Maximum: 116.179%
+
+Letter: d
+ - Success: 182/183 (99.4536% success rate)
+ - Error: 1/183 (0.546448% error rate)
+ - Most of the time confused with: f (0.546448% of the time)
+ - Trust rate when success: 
+ --> Minimum: 37.7652%
+ --> Average: 91.2825%
+ --> Maximum: 128.805%
+
+Letter: e
+ - Success: 123/124 (99.1935% success rate)
+ - Error: 1/124 (0.806452% error rate)
+ - Most of the time confused with: d (0.806452% of the time)
+ - Trust rate when success: 
+ --> Minimum: 56.8669%
+ --> Average: 91.885%
+ --> Maximum: 129.92%
+
+Letter: f
+ - Success: 172/172 (100% success rate)
+ - Error: 0/172 (0% error rate)
+ - No confusion with other letters
+ - Trust rate when success: 
+ --> Minimum: 53.1076%
+ --> Average: 93.4029%
+ --> Maximum: 129.316%
+
