@@ -1,14 +1,16 @@
 #!/bin/sh
 
 BIN_PATH=./build/bin
+GEN_MODEL_DIR=./generated_models
 
 PREFIXE=$1 # prefixe placé avant le pattern dans le nom du fichier .xml généré
-INPUT_DIR=$2 # dossier contenant les fichiers d'entrainement
+SUFFIXE=$2 # suffixe placé après le pattern dans le nom du fichier .xml généré
+INPUT_DIR=$3 # dossier contenant les fichiers d'entrainement
 
 # $1 sera le pattern format 8_16_32
 function generate_model {
 	PATTERN=$(echo $1 | sed 's/_/ /g')
-	./run_learning.sh --no-test -i $INPUT_DIR -p "${PATTERN}" -o ./generated_models/model_${PREFIXE}_$1.xml
+	./run_learning.sh --no-test -i $INPUT_DIR -p "${PATTERN}" -o $GEN_MODEL_DIR/model_${PREFIXE}_$1_${SUFFIXE}.xml
 }
 
 generate_model "4_4_4"
