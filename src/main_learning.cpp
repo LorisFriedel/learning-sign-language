@@ -239,11 +239,11 @@ int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matRespo
     timer.start();
     DirectoryReader dirReader(directory);
     std::vector<std::string> dataPathList;
-    int dirReadSuccess = dirReader.foreachFile([&dataPathList](std::string filePath, std::string fileName) {
+    int dirReadState = dirReader.foreachFile([&dataPathList](std::string filePath, std::string fileName) {
         dataPathList.push_back(filePath);
     });
 
-    if(dirReadSuccess) {
+    if(dirReadState == Code::SUCCESS) {
         auto engine = std::default_random_engine{};
         std::shuffle(std::begin(dataPathList), std::end(dataPathList), engine);
         for(std::string path : dataPathList) {
