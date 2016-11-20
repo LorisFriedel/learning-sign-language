@@ -1,5 +1,5 @@
 Start training process..
-Loading data... done! (0.0183795 s)
+Loading data... done! (0.0879293 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 200
@@ -10,11 +10,11 @@ Training samples composition:
  - f * 172
 
 Training the classifier (1005 samples) - layer pattern: [256:4:4:4:26] (may take a few minutes)...
-Training done! (0.813318 s)
+Training done! (0.8226 s)
 Exporting model to ./generated_models/model_loris_4_4_4_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0154164 s)
+Loading data... done! (0.014839 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 200
@@ -25,11 +25,11 @@ Training samples composition:
  - f * 172
 
 Training the classifier (1005 samples) - layer pattern: [256:4:4:4:4:26] (may take a few minutes)...
-Training done! (0.929428 s)
+Training done! (0.924868 s)
 Exporting model to ./generated_models/model_loris_4_4_4_4_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0150696 s)
+Loading data... done! (0.0148951 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 200
@@ -40,11 +40,11 @@ Training samples composition:
  - f * 172
 
 Training the classifier (1005 samples) - layer pattern: [256:8:8:26] (may take a few minutes)...
-Training done! (1.01313 s)
+Training done! (1.00177 s)
 Exporting model to ./generated_models/model_loris_8_8_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0209177 s)
+Loading data... done! (0.0153044 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 200
@@ -55,11 +55,11 @@ Training samples composition:
  - f * 172
 
 Training the classifier (1005 samples) - layer pattern: [256:8:8:8:26] (may take a few minutes)...
-Training done! (1.20683 s)
+Training done! (1.14604 s)
 Exporting model to ./generated_models/model_loris_8_8_8_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0152235 s)
+Loading data... done! (0.0221371 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 200
@@ -70,11 +70,11 @@ Training samples composition:
  - f * 172
 
 Training the classifier (1005 samples) - layer pattern: [256:16:16:26] (may take a few minutes)...
-Training done! (1.78899 s)
+Training done! (1.66393 s)
 Exporting model to ./generated_models/model_loris_16_16_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0153628 s)
+Loading data... done! (0.015565 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 200
@@ -85,11 +85,11 @@ Training samples composition:
  - f * 172
 
 Training the classifier (1005 samples) - layer pattern: [256:8:16:32:26] (may take a few minutes)...
-Training done! (1.69674 s)
+Training done! (1.62659 s)
 Exporting model to ./generated_models/model_loris_8_16_32_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0156865 s)
+Loading data... done! (0.0176037 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 200
@@ -100,11 +100,11 @@ Training samples composition:
  - f * 172
 
 Training the classifier (1005 samples) - layer pattern: [256:32:16:8:26] (may take a few minutes)...
-Training done! (2.91915 s)
+Training done! (2.8262 s)
 Exporting model to ./generated_models/model_loris_32_16_8_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0156213 s)
+Loading data... done! (0.0148668 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 200
@@ -115,11 +115,11 @@ Training samples composition:
  - f * 172
 
 Training the classifier (1005 samples) - layer pattern: [256:32:26] (may take a few minutes)...
-Training done! (2.71775 s)
+Training done! (2.58581 s)
 Exporting model to ./generated_models/model_loris_32_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.019059 s)
+Loading data... done! (0.0147726 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 200
@@ -130,11 +130,11 @@ Training samples composition:
  - f * 172
 
 Training the classifier (1005 samples) - layer pattern: [256:32:32:26] (may take a few minutes)...
-Training done! (3.24737 s)
+Training done! (3.13022 s)
 Exporting model to ./generated_models/model_loris_32_32_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0155822 s)
+Loading data... done! (0.0150113 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 200
@@ -145,11 +145,11 @@ Training samples composition:
  - f * 172
 
 Training the classifier (1005 samples) - layer pattern: [256:32:32:32:26] (may take a few minutes)...
-Training done! (3.67741 s)
+Training done! (3.6694 s)
 Exporting model to ./generated_models/model_loris_32_32_32_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0152462 s)
+Loading data... done! (0.0149387 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 200
@@ -160,6 +160,6 @@ Training samples composition:
  - f * 172
 
 Training the classifier (1005 samples) - layer pattern: [256:64:64:26] (may take a few minutes)...
-Training done! (7.00282 s)
+Training done! (6.71862 s)
 Exporting model to ./generated_models/model_loris_64_64_yml.xml
 Model successfully exported

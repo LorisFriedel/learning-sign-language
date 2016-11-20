@@ -1,0 +1,154 @@
+Start training process..
+Loading data... done! (1.31985 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 1778
+ - b * 1044
+ - c * 2110
+ - d * 1592
+ - e * 1091
+
+Training the classifier (7615 samples) - layer pattern: [576:4:4:4:26] (may take a few minutes)...
+Training done! (8.96368 s)
+Exporting model to ./generated_models/model_thomas_4_4_4_HOG_small.xml
+Model successfully exported
+Start training process..
+Loading data... done! (0.631332 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 1778
+ - b * 1044
+ - c * 2110
+ - d * 1592
+ - e * 1091
+
+Training the classifier (7615 samples) - layer pattern: [576:4:4:4:4:26] (may take a few minutes)...
+Training done! (9.86033 s)
+Exporting model to ./generated_models/model_thomas_4_4_4_4_HOG_small.xml
+Model successfully exported
+Start training process..
+Loading data... done! (0.633454 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 1778
+ - b * 1044
+ - c * 2110
+ - d * 1592
+ - e * 1091
+
+Training the classifier (7615 samples) - layer pattern: [576:8:8:26] (may take a few minutes)...
+Training done! (12.7426 s)
+Exporting model to ./generated_models/model_thomas_8_8_HOG_small.xml
+Model successfully exported
+Start training process..
+Loading data... done! (0.630724 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 1778
+ - b * 1044
+ - c * 2110
+ - d * 1592
+ - e * 1091
+
+Training the classifier (7615 samples) - layer pattern: [576:8:8:8:26] (may take a few minutes)...
+Training done! (13.7573 s)
+Exporting model to ./generated_models/model_thomas_8_8_8_HOG_small.xml
+Model successfully exported
+Start training process..
+Loading data... done! (0.638677 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 1778
+ - b * 1044
+ - c * 2110
+ - d * 1592
+ - e * 1091
+
+Training the classifier (7615 samples) - layer pattern: [576:16:16:26] (may take a few minutes)...
+Training done! (22.2711 s)
+Exporting model to ./generated_models/model_thomas_16_16_HOG_small.xml
+Model successfully exported
+Start training process..
+Loading data... done! (0.635699 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 1778
+ - b * 1044
+ - c * 2110
+ - d * 1592
+ - e * 1091
+
+Training the classifier (7615 samples) - layer pattern: [576:8:16:32:26] (may take a few minutes)...
+Training done! (17.4578 s)
+Exporting model to ./generated_models/model_thomas_8_16_32_HOG_small.xml
+Model successfully exported
+Start training process..
+Loading data... done! (0.634271 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 1778
+ - b * 1044
+ - c * 2110
+ - d * 1592
+ - e * 1091
+
+Training the classifier (7615 samples) - layer pattern: [576:32:16:8:26] (may take a few minutes)...
+Training done! (40.3917 s)
+Exporting model to ./generated_models/model_thomas_32_16_8_HOG_small.xml
+Model successfully exported
+Start training process..
+Loading data... done! (0.632454 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 1778
+ - b * 1044
+ - c * 2110
+ - d * 1592
+ - e * 1091
+
+Training the classifier (7615 samples) - layer pattern: [576:32:26] (may take a few minutes)...
+Training done! (38.7143 s)
+Exporting model to ./generated_models/model_thomas_32_HOG_small.xml
+Model successfully exported
+Start training process..
+Loading data... done! (0.635053 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 1778
+ - b * 1044
+ - c * 2110
+ - d * 1592
+ - e * 1091
+
+Training the classifier (7615 samples) - layer pattern: [576:32:32:26] (may take a few minutes)...
+Training done! (42.8639 s)
+Exporting model to ./generated_models/model_thomas_32_32_HOG_small.xml
+Model successfully exported
+Start training process..
+Loading data... done! (0.64447 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 1778
+ - b * 1044
+ - c * 2110
+ - d * 1592
+ - e * 1091
+
+Training the classifier (7615 samples) - layer pattern: [576:32:32:32:26] (may take a few minutes)...
+Training done! (47.0788 s)
+Exporting model to ./generated_models/model_thomas_32_32_32_HOG_small.xml
+Model successfully exported
+Start training process..
+Loading data... done! (0.645448 s)
+Formatting responses... done!
+Training samples composition: 
+ - a * 1778
+ - b * 1044
+ - c * 2110
+ - d * 1592
+ - e * 1091
+
+Training the classifier (7615 samples) - layer pattern: [576:64:64:26] (may take a few minutes)...
+Training done! (89.1426 s)
+Exporting model to ./generated_models/model_thomas_64_64_HOG_small.xml
+Model successfully exported

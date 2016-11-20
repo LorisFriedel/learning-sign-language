@@ -1,5 +1,5 @@
 Start training process..
-Loading data... done! (0.0118651 s)
+Loading data... done! (0.0641452 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 88
@@ -30,11 +30,11 @@ Training samples composition:
  - z * 2
 
 Training the classifier (739 samples) - layer pattern: [256:4:4:4:26] (may take a few minutes)...
-Training done! (0.60968 s)
+Training done! (0.609374 s)
 Exporting model to ./generated_models/model_others_4_4_4_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0117585 s)
+Loading data... done! (0.0116124 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 88
@@ -65,11 +65,11 @@ Training samples composition:
  - z * 2
 
 Training the classifier (739 samples) - layer pattern: [256:4:4:4:4:26] (may take a few minutes)...
-Training done! (0.693043 s)
+Training done! (0.703181 s)
 Exporting model to ./generated_models/model_others_4_4_4_4_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0118528 s)
+Loading data... done! (0.0116074 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 88
@@ -100,11 +100,11 @@ Training samples composition:
  - z * 2
 
 Training the classifier (739 samples) - layer pattern: [256:8:8:26] (may take a few minutes)...
-Training done! (0.754168 s)
+Training done! (0.753874 s)
 Exporting model to ./generated_models/model_others_8_8_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0120982 s)
+Loading data... done! (0.0115857 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 88
@@ -135,11 +135,11 @@ Training samples composition:
  - z * 2
 
 Training the classifier (739 samples) - layer pattern: [256:8:8:8:26] (may take a few minutes)...
-Training done! (0.859098 s)
+Training done! (0.853321 s)
 Exporting model to ./generated_models/model_others_8_8_8_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0117161 s)
+Loading data... done! (0.0119297 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 88
@@ -170,11 +170,11 @@ Training samples composition:
  - z * 2
 
 Training the classifier (739 samples) - layer pattern: [256:16:16:26] (may take a few minutes)...
-Training done! (1.2463 s)
+Training done! (1.24945 s)
 Exporting model to ./generated_models/model_others_16_16_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0118576 s)
+Loading data... done! (0.0116011 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 88
@@ -205,11 +205,11 @@ Training samples composition:
  - z * 2
 
 Training the classifier (739 samples) - layer pattern: [256:8:16:32:26] (may take a few minutes)...
-Training done! (1.22624 s)
+Training done! (1.21826 s)
 Exporting model to ./generated_models/model_others_8_16_32_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0117125 s)
+Loading data... done! (0.0114995 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 88
@@ -240,11 +240,11 @@ Training samples composition:
  - z * 2
 
 Training the classifier (739 samples) - layer pattern: [256:32:16:8:26] (may take a few minutes)...
-Training done! (2.12249 s)
+Training done! (2.11474 s)
 Exporting model to ./generated_models/model_others_32_16_8_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0120927 s)
+Loading data... done! (0.0115349 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 88
@@ -275,11 +275,11 @@ Training samples composition:
  - z * 2
 
 Training the classifier (739 samples) - layer pattern: [256:32:26] (may take a few minutes)...
-Training done! (1.93483 s)
+Training done! (1.93514 s)
 Exporting model to ./generated_models/model_others_32_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0119744 s)
+Loading data... done! (0.0115362 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 88
@@ -310,11 +310,11 @@ Training samples composition:
  - z * 2
 
 Training the classifier (739 samples) - layer pattern: [256:32:32:26] (may take a few minutes)...
-Training done! (2.35098 s)
+Training done! (2.34192 s)
 Exporting model to ./generated_models/model_others_32_32_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0119381 s)
+Loading data... done! (0.01158 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 88
@@ -345,11 +345,11 @@ Training samples composition:
  - z * 2
 
 Training the classifier (739 samples) - layer pattern: [256:32:32:32:26] (may take a few minutes)...
-Training done! (2.76981 s)
+Training done! (2.74725 s)
 Exporting model to ./generated_models/model_others_32_32_32_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.0119179 s)
+Loading data... done! (0.0115861 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 88
@@ -380,6 +380,6 @@ Training samples composition:
  - z * 2
 
 Training the classifier (739 samples) - layer pattern: [256:64:64:26] (may take a few minutes)...
-Training done! (4.98932 s)
+Training done! (5.03016 s)
 Exporting model to ./generated_models/model_others_64_64_yml.xml
 Model successfully exported
