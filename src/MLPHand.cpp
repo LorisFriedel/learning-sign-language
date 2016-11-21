@@ -13,7 +13,7 @@ namespace {
     const int BASE_LETTER = 'a';
 }
 
-MLPHand::MLPHand(int nbOfHiddenLayer, int nbOfNeuron) : networkPattern() {
+MLPHand::MLPHand(int nbOfHiddenLayer, int nbOfNeuron) {
     for (int i = 0; i < nbOfHiddenLayer; i++) {
         networkPattern.push_back(nbOfNeuron);
     }
@@ -21,6 +21,17 @@ MLPHand::MLPHand(int nbOfHiddenLayer, int nbOfNeuron) : networkPattern() {
 
 MLPHand::MLPHand(const std::vector<int> networkPattern)
         : networkPattern(networkPattern) {}
+
+MLPHand::MLPHand(const std::string networkPatternStr) {
+    std::stringstream ss(networkPatternStr);
+    std::string tok;
+
+    char delimiter = networkPatternStr.find('_') != std::string::npos ? '_' : ' ';
+
+    while (getline(ss, tok, delimiter)) {
+        networkPattern.push_back(std::stoi(tok));
+    }
+}
 
 int MLPHand::learnFrom(const std::string classifier_file_name) {
     model = cv::ml::StatModel::load<cv::ml::ANN_MLP>(classifier_file_name);

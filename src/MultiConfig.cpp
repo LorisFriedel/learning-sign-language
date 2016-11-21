@@ -6,22 +6,24 @@
 #include "../inc/MultiConfig.hpp"
 #include "../inc/log.h"
 
-MultiConfig::MultiConfig(std::string configPath) throw(JsonParsingException) {
+MultiConfig::MultiConfig(std::string configPath) throw(ParsingException) {
     using namespace cv;
     FileStorage fs(configPath, FileStorage::READ);
 
     if (fs.isOpened()) {
         fs["trainDir"] >> trainDir;
         fs["testDir"] >> testDir;
+        fs["modelDir"] >> modelDir;
+        fs["logDir"] >> logDir;
 
         FileNode fsNames = fs["names"];
         for (FileNodeIterator it = fsNames.begin(); it != fsNames.end(); ++it) {
             names.push_back(*it);
         }
 
-        FileNode fsSuffixes = fs["suffixes"];
-        for (FileNodeIterator it = fsSuffixes.begin(); it != fsSuffixes.end(); ++it) {
-            suffixes.push_back(*it);
+        FileNode fsTypes = fs["types"];
+        for (FileNodeIterator it = fsTypes.begin(); it != fsTypes.end(); ++it) {
+            types.push_back(*it);
         }
 
         FileNode fsTopologies = fs["topologies"];
@@ -31,6 +33,6 @@ MultiConfig::MultiConfig(std::string configPath) throw(JsonParsingException) {
 
         fs.release();
     } else {
-        throw JsonParsingException(configPath);;
+        throw ParsingException(configPath);;
     }
 }

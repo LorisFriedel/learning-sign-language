@@ -28,6 +28,14 @@ public:
      */
     MLPHand(const std::vector<int> networkPattern);
 
+    /**
+     * Instantiate a MLP hand learner.
+     *
+     * @param networkPattern Pattern (string representation) for layer and neuron configuration (e.g. "8 32 8")
+     * @return
+     */
+    MLPHand(const std::string networkPatternStr);
+
 
     /**
      * Teach the model from an existing classifier.
@@ -62,7 +70,7 @@ public:
      * @return The average of success between [0, 1]. 0 mean no prediction success, 1 mean no prediction error,
      * plus a map with details about the test and prediction
      */
-    std::pair<double, std::map<int, StatPredict*>> testOn(const cv::Mat &testData, const cv::Mat &testResponses);
+    std::pair<double, std::map<int, StatPredict *>> testOn(const cv::Mat &testData, const cv::Mat &testResponses);
 
     /**
      * Export the current model to a file.
