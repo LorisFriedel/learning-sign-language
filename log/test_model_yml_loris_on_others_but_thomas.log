@@ -1,7 +1,7 @@
 Loading classifier...
 Classifier ./generated_models/model_loris_4_4_4_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0114909 s)
+Loading data... done! (0.0111667 s)
 Testing model (739 samples)... done! 
 Test result: 15.8322% success
 
@@ -242,7 +242,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_4_4_4_4_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0114625 s)
+Loading data... done! (0.01123 s)
 Testing model (739 samples)... done! 
 Test result: 11.3667% success
 
@@ -483,7 +483,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_8_8_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0115574 s)
+Loading data... done! (0.0110539 s)
 Testing model (739 samples)... done! 
 Test result: 15.9675% success
 
@@ -724,7 +724,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_8_8_8_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0114525 s)
+Loading data... done! (0.0111631 s)
 Testing model (739 samples)... done! 
 Test result: 15.8322% success
 
@@ -965,7 +965,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_16_16_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0115795 s)
+Loading data... done! (0.0112054 s)
 Testing model (739 samples)... done! 
 Test result: 15.1556% success
 
@@ -1206,7 +1206,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_8_16_32_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0115885 s)
+Loading data... done! (0.0111236 s)
 Testing model (739 samples)... done! 
 Test result: 15.9675% success
 
@@ -1447,7 +1447,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_32_16_8_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.011717 s)
+Loading data... done! (0.0111376 s)
 Testing model (739 samples)... done! 
 Test result: 14.6143% success
 
@@ -1688,7 +1688,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_32_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0115675 s)
+Loading data... done! (0.0112635 s)
 Testing model (739 samples)... done! 
 Test result: 12.5846% success
 
@@ -1929,7 +1929,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_32_32_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0115215 s)
+Loading data... done! (0.0111551 s)
 Testing model (739 samples)... done! 
 Test result: 13.9378% success
 
@@ -2170,7 +2170,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_32_32_32_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0113929 s)
+Loading data... done! (0.0111534 s)
 Testing model (739 samples)... done! 
 Test result: 14.2084% success
 
@@ -2411,7 +2411,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_64_64_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0114948 s)
+Loading data... done! (0.0109442 s)
 Testing model (739 samples)... done! 
 Test result: 12.5846% success
 

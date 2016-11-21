@@ -1,7 +1,7 @@
 Loading classifier...
 Classifier ./generated_models/model_loris_4_4_4_HOG.xml successfully loaded!
 Start testing process..
-Loading data... done! (4.35499 s)
+Loading data... done! (4.58794 s)
 Testing model (1013 samples)... done! 
 Test result: 100% success
 
@@ -62,7 +62,7 @@ Letter: f
 Loading classifier...
 Classifier ./generated_models/model_loris_4_4_4_4_HOG.xml successfully loaded!
 Start testing process..
-Loading data... done! (4.35802 s)
+Loading data... done! (4.36616 s)
 Testing model (1013 samples)... done! 
 Test result: 97.9269% success
 
@@ -123,7 +123,7 @@ Letter: f
 Loading classifier...
 Classifier ./generated_models/model_loris_8_8_HOG.xml successfully loaded!
 Start testing process..
-Loading data... done! (4.44684 s)
+Loading data... done! (4.3519 s)
 Testing model (1013 samples)... done! 
 Test result: 100% success
 
@@ -184,7 +184,7 @@ Letter: f
 Loading classifier...
 Classifier ./generated_models/model_loris_8_8_8_HOG.xml successfully loaded!
 Start testing process..
-Loading data... done! (4.3673 s)
+Loading data... done! (4.37702 s)
 Testing model (1013 samples)... done! 
 Test result: 100% success
 
@@ -245,7 +245,7 @@ Letter: f
 Loading classifier...
 Classifier ./generated_models/model_loris_16_16_HOG.xml successfully loaded!
 Start testing process..
-Loading data... done! (4.35295 s)
+Loading data... done! (4.34621 s)
 Testing model (1013 samples)... done! 
 Test result: 100% success
 
@@ -306,7 +306,7 @@ Letter: f
 Loading classifier...
 Classifier ./generated_models/model_loris_8_16_32_HOG.xml successfully loaded!
 Start testing process..
-Loading data... done! (4.38779 s)
+Loading data... done! (4.35591 s)
 Testing model (1013 samples)... done! 
 Test result: 100% success
 
@@ -367,7 +367,7 @@ Letter: f
 Loading classifier...
 Classifier ./generated_models/model_loris_32_16_8_HOG.xml successfully loaded!
 Start testing process..
-Loading data... done! (4.35951 s)
+Loading data... done! (4.36698 s)
 Testing model (1013 samples)... done! 
 Test result: 100% success
 
@@ -428,7 +428,7 @@ Letter: f
 Loading classifier...
 Classifier ./generated_models/model_loris_32_HOG.xml successfully loaded!
 Start testing process..
-Loading data... done! (4.35115 s)
+Loading data... done! (4.3854 s)
 Testing model (1013 samples)... done! 
 Test result: 100% success
 
@@ -489,7 +489,7 @@ Letter: f
 Loading classifier...
 Classifier ./generated_models/model_loris_32_32_HOG.xml successfully loaded!
 Start testing process..
-Loading data... done! (4.39791 s)
+Loading data... done! (4.41224 s)
 Testing model (1013 samples)... done! 
 Test result: 100% success
 
@@ -550,7 +550,7 @@ Letter: f
 Loading classifier...
 Classifier ./generated_models/model_loris_32_32_32_HOG.xml successfully loaded!
 Start testing process..
-Loading data... done! (4.35855 s)
+Loading data... done! (4.33951 s)
 Testing model (1013 samples)... done! 
 Test result: 100% success
 
@@ -611,7 +611,7 @@ Letter: f
 Loading classifier...
 Classifier ./generated_models/model_loris_64_64_HOG.xml successfully loaded!
 Start testing process..
-Loading data... done! (4.35259 s)
+Loading data... done! (4.34496 s)
 Testing model (1013 samples)... done! 
 Test result: 100% success
 

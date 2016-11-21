@@ -1,7 +1,7 @@
 Loading classifier...
 Classifier ./generated_models/model_loris_4_4_4_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.127607 s)
+Loading data... done! (0.28985 s)
 Testing model (1505 samples)... done! 
 Test result: 16.8771% success
 
@@ -242,7 +242,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_4_4_4_4_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.126608 s)
+Loading data... done! (0.125848 s)
 Testing model (1505 samples)... done! 
 Test result: 19.2027% success
 
@@ -483,7 +483,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_8_8_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.126795 s)
+Loading data... done! (0.125258 s)
 Testing model (1505 samples)... done! 
 Test result: 19.0033% success
 
@@ -724,7 +724,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_8_8_8_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.126872 s)
+Loading data... done! (0.124877 s)
 Testing model (1505 samples)... done! 
 Test result: 21.9269% success
 
@@ -965,7 +965,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_16_16_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.126745 s)
+Loading data... done! (0.125665 s)
 Testing model (1505 samples)... done! 
 Test result: 20.7973% success
 
@@ -1206,7 +1206,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_8_16_32_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.126512 s)
+Loading data... done! (0.124355 s)
 Testing model (1505 samples)... done! 
 Test result: 21.0631% success
 
@@ -1447,7 +1447,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_32_16_8_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.1269 s)
+Loading data... done! (0.124608 s)
 Testing model (1505 samples)... done! 
 Test result: 19.4684% success
 
@@ -1688,7 +1688,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_32_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.127571 s)
+Loading data... done! (0.124855 s)
 Testing model (1505 samples)... done! 
 Test result: 19.8671% success
 
@@ -1929,7 +1929,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_32_32_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.127176 s)
+Loading data... done! (0.126169 s)
 Testing model (1505 samples)... done! 
 Test result: 21.3953% success
 
@@ -2170,7 +2170,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_32_32_32_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.127139 s)
+Loading data... done! (0.125464 s)
 Testing model (1505 samples)... done! 
 Test result: 21.6611% success
 
@@ -2411,7 +2411,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_loris_64_64_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.127412 s)
+Loading data... done! (0.129748 s)
 Testing model (1505 samples)... done! 
 Test result: 20.3987% success
 

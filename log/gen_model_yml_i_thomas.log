@@ -1,5 +1,5 @@
 Start training process..
-Loading data... done! (0.924542 s)
+Loading data... done! (0.233071 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 2844
@@ -7,13 +7,25 @@ Training samples composition:
  - c * 3525
  - d * 1570
  - e * 1084
+ - f * 349
+ - g * 278
+ - h * 148
+ - i * 445
+ - k * 248
+ - l * 398
+ - m * 150
+ - n * 143
+ - o * 398
+ - p * 149
+ - q * 196
+ - r * 348
 
-Training the classifier (11044 samples) - layer pattern: [256:4:4:4:26] (may take a few minutes)...
-Training done! (8.99835 s)
+Training the classifier (14294 samples) - layer pattern: [256:4:4:4:26] (may take a few minutes)...
+Training done! (12.0502 s)
 Exporting model to ./generated_models/model_thomas_4_4_4_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.159726 s)
+Loading data... done! (0.230893 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 2844
@@ -21,13 +33,25 @@ Training samples composition:
  - c * 3525
  - d * 1570
  - e * 1084
+ - f * 349
+ - g * 278
+ - h * 148
+ - i * 445
+ - k * 248
+ - l * 398
+ - m * 150
+ - n * 143
+ - o * 398
+ - p * 149
+ - q * 196
+ - r * 348
 
-Training the classifier (11044 samples) - layer pattern: [256:4:4:4:4:26] (may take a few minutes)...
-Training done! (10.8506 s)
+Training the classifier (14294 samples) - layer pattern: [256:4:4:4:4:26] (may take a few minutes)...
+Training done! (13.513 s)
 Exporting model to ./generated_models/model_thomas_4_4_4_4_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.181124 s)
+Loading data... done! (0.250092 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 2844
@@ -35,13 +59,25 @@ Training samples composition:
  - c * 3525
  - d * 1570
  - e * 1084
+ - f * 349
+ - g * 278
+ - h * 148
+ - i * 445
+ - k * 248
+ - l * 398
+ - m * 150
+ - n * 143
+ - o * 398
+ - p * 149
+ - q * 196
+ - r * 348
 
-Training the classifier (11044 samples) - layer pattern: [256:8:8:26] (may take a few minutes)...
-Training done! (11.1272 s)
+Training the classifier (14294 samples) - layer pattern: [256:8:8:26] (may take a few minutes)...
+Training done! (14.4843 s)
 Exporting model to ./generated_models/model_thomas_8_8_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.158753 s)
+Loading data... done! (0.21758 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 2844
@@ -49,13 +85,25 @@ Training samples composition:
  - c * 3525
  - d * 1570
  - e * 1084
+ - f * 349
+ - g * 278
+ - h * 148
+ - i * 445
+ - k * 248
+ - l * 398
+ - m * 150
+ - n * 143
+ - o * 398
+ - p * 149
+ - q * 196
+ - r * 348
 
-Training the classifier (11044 samples) - layer pattern: [256:8:8:8:26] (may take a few minutes)...
-Training done! (12.5942 s)
+Training the classifier (14294 samples) - layer pattern: [256:8:8:8:26] (may take a few minutes)...
+Training done! (16.3082 s)
 Exporting model to ./generated_models/model_thomas_8_8_8_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.159822 s)
+Loading data... done! (0.223646 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 2844
@@ -63,13 +111,25 @@ Training samples composition:
  - c * 3525
  - d * 1570
  - e * 1084
+ - f * 349
+ - g * 278
+ - h * 148
+ - i * 445
+ - k * 248
+ - l * 398
+ - m * 150
+ - n * 143
+ - o * 398
+ - p * 149
+ - q * 196
+ - r * 348
 
-Training the classifier (11044 samples) - layer pattern: [256:16:16:26] (may take a few minutes)...
-Training done! (18.3765 s)
+Training the classifier (14294 samples) - layer pattern: [256:16:16:26] (may take a few minutes)...
+Training done! (23.923 s)
 Exporting model to ./generated_models/model_thomas_16_16_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.159364 s)
+Loading data... done! (0.233935 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 2844
@@ -77,13 +137,25 @@ Training samples composition:
  - c * 3525
  - d * 1570
  - e * 1084
+ - f * 349
+ - g * 278
+ - h * 148
+ - i * 445
+ - k * 248
+ - l * 398
+ - m * 150
+ - n * 143
+ - o * 398
+ - p * 149
+ - q * 196
+ - r * 348
 
-Training the classifier (11044 samples) - layer pattern: [256:8:16:32:26] (may take a few minutes)...
-Training done! (18.0074 s)
+Training the classifier (14294 samples) - layer pattern: [256:8:16:32:26] (may take a few minutes)...
+Training done! (23.7466 s)
 Exporting model to ./generated_models/model_thomas_8_16_32_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.160673 s)
+Loading data... done! (0.243734 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 2844
@@ -91,13 +163,25 @@ Training samples composition:
  - c * 3525
  - d * 1570
  - e * 1084
+ - f * 349
+ - g * 278
+ - h * 148
+ - i * 445
+ - k * 248
+ - l * 398
+ - m * 150
+ - n * 143
+ - o * 398
+ - p * 149
+ - q * 196
+ - r * 348
 
-Training the classifier (11044 samples) - layer pattern: [256:32:16:8:26] (may take a few minutes)...
-Training done! (31.1829 s)
+Training the classifier (14294 samples) - layer pattern: [256:32:16:8:26] (may take a few minutes)...
+Training done! (40.4243 s)
 Exporting model to ./generated_models/model_thomas_32_16_8_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.159761 s)
+Loading data... done! (0.245652 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 2844
@@ -105,13 +189,25 @@ Training samples composition:
  - c * 3525
  - d * 1570
  - e * 1084
+ - f * 349
+ - g * 278
+ - h * 148
+ - i * 445
+ - k * 248
+ - l * 398
+ - m * 150
+ - n * 143
+ - o * 398
+ - p * 149
+ - q * 196
+ - r * 348
 
-Training the classifier (11044 samples) - layer pattern: [256:32:26] (may take a few minutes)...
-Training done! (28.6229 s)
+Training the classifier (14294 samples) - layer pattern: [256:32:26] (may take a few minutes)...
+Training done! (37.36 s)
 Exporting model to ./generated_models/model_thomas_32_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.158952 s)
+Loading data... done! (0.267094 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 2844
@@ -119,13 +215,25 @@ Training samples composition:
  - c * 3525
  - d * 1570
  - e * 1084
+ - f * 349
+ - g * 278
+ - h * 148
+ - i * 445
+ - k * 248
+ - l * 398
+ - m * 150
+ - n * 143
+ - o * 398
+ - p * 149
+ - q * 196
+ - r * 348
 
-Training the classifier (11044 samples) - layer pattern: [256:32:32:26] (may take a few minutes)...
-Training done! (34.5829 s)
+Training the classifier (14294 samples) - layer pattern: [256:32:32:26] (may take a few minutes)...
+Training done! (44.9824 s)
 Exporting model to ./generated_models/model_thomas_32_32_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.161672 s)
+Loading data... done! (0.228731 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 2844
@@ -133,13 +241,25 @@ Training samples composition:
  - c * 3525
  - d * 1570
  - e * 1084
+ - f * 349
+ - g * 278
+ - h * 148
+ - i * 445
+ - k * 248
+ - l * 398
+ - m * 150
+ - n * 143
+ - o * 398
+ - p * 149
+ - q * 196
+ - r * 348
 
-Training the classifier (11044 samples) - layer pattern: [256:32:32:32:26] (may take a few minutes)...
-Training done! (40.8113 s)
+Training the classifier (14294 samples) - layer pattern: [256:32:32:32:26] (may take a few minutes)...
+Training done! (52.2118 s)
 Exporting model to ./generated_models/model_thomas_32_32_32_yml.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.161807 s)
+Loading data... done! (0.225111 s)
 Formatting responses... done!
 Training samples composition: 
  - a * 2844
@@ -147,8 +267,20 @@ Training samples composition:
  - c * 3525
  - d * 1570
  - e * 1084
+ - f * 349
+ - g * 278
+ - h * 148
+ - i * 445
+ - k * 248
+ - l * 398
+ - m * 150
+ - n * 143
+ - o * 398
+ - p * 149
+ - q * 196
+ - r * 348
 
-Training the classifier (11044 samples) - layer pattern: [256:64:64:26] (may take a few minutes)...
-Training done! (74.5329 s)
+Training the classifier (14294 samples) - layer pattern: [256:64:64:26] (may take a few minutes)...
+Training done! (95.5131 s)
 Exporting model to ./generated_models/model_thomas_64_64_yml.xml
 Model successfully exported

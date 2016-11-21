@@ -1,12 +1,12 @@
 Start training process..
-Loading data... done! (0.261911 s)
+Loading data... done! (1.68804 s)
 Formatting responses... done!
 Training samples composition: 
- - a * 199
- - b * 163
- - c * 166
- - d * 36
- - e * 75
+ - a * 1977
+ - b * 1207
+ - c * 2276
+ - d * 1628
+ - e * 1166
  - f * 37
  - g * 12
  - h * 44
@@ -29,19 +29,19 @@ Training samples composition:
  - y * 41
  - z * 10
 
-Training the classifier (1505 samples) - layer pattern: [576:4:4:4:26] (may take a few minutes)...
-Training done! (1.76646 s)
+Training the classifier (9120 samples) - layer pattern: [576:4:4:4:26] (may take a few minutes)...
+Training done! (10.6907 s)
 Exporting model to ./generated_models/model_others_4_4_4_HOG_small.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.12647 s)
+Loading data... done! (0.758651 s)
 Formatting responses... done!
 Training samples composition: 
- - a * 199
- - b * 163
- - c * 166
- - d * 36
- - e * 75
+ - a * 1977
+ - b * 1207
+ - c * 2276
+ - d * 1628
+ - e * 1166
  - f * 37
  - g * 12
  - h * 44
@@ -64,19 +64,19 @@ Training samples composition:
  - y * 41
  - z * 10
 
-Training the classifier (1505 samples) - layer pattern: [576:4:4:4:4:26] (may take a few minutes)...
-Training done! (1.92436 s)
+Training the classifier (9120 samples) - layer pattern: [576:4:4:4:4:26] (may take a few minutes)...
+Training done! (11.6785 s)
 Exporting model to ./generated_models/model_others_4_4_4_4_HOG_small.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.128769 s)
+Loading data... done! (0.754667 s)
 Formatting responses... done!
 Training samples composition: 
- - a * 199
- - b * 163
- - c * 166
- - d * 36
- - e * 75
+ - a * 1977
+ - b * 1207
+ - c * 2276
+ - d * 1628
+ - e * 1166
  - f * 37
  - g * 12
  - h * 44
@@ -99,19 +99,19 @@ Training samples composition:
  - y * 41
  - z * 10
 
-Training the classifier (1505 samples) - layer pattern: [576:8:8:26] (may take a few minutes)...
-Training done! (2.50717 s)
+Training the classifier (9120 samples) - layer pattern: [576:8:8:26] (may take a few minutes)...
+Training done! (15.1422 s)
 Exporting model to ./generated_models/model_others_8_8_HOG_small.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.126487 s)
+Loading data... done! (0.755053 s)
 Formatting responses... done!
 Training samples composition: 
- - a * 199
- - b * 163
- - c * 166
- - d * 36
- - e * 75
+ - a * 1977
+ - b * 1207
+ - c * 2276
+ - d * 1628
+ - e * 1166
  - f * 37
  - g * 12
  - h * 44
@@ -134,19 +134,19 @@ Training samples composition:
  - y * 41
  - z * 10
 
-Training the classifier (1505 samples) - layer pattern: [576:8:8:8:26] (may take a few minutes)...
-Training done! (2.70066 s)
+Training the classifier (9120 samples) - layer pattern: [576:8:8:8:26] (may take a few minutes)...
+Training done! (16.3173 s)
 Exporting model to ./generated_models/model_others_8_8_8_HOG_small.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.126389 s)
+Loading data... done! (0.75318 s)
 Formatting responses... done!
 Training samples composition: 
- - a * 199
- - b * 163
- - c * 166
- - d * 36
- - e * 75
+ - a * 1977
+ - b * 1207
+ - c * 2276
+ - d * 1628
+ - e * 1166
  - f * 37
  - g * 12
  - h * 44
@@ -169,19 +169,19 @@ Training samples composition:
  - y * 41
  - z * 10
 
-Training the classifier (1505 samples) - layer pattern: [576:16:16:26] (may take a few minutes)...
-Training done! (4.39992 s)
+Training the classifier (9120 samples) - layer pattern: [576:16:16:26] (may take a few minutes)...
+Training done! (26.5959 s)
 Exporting model to ./generated_models/model_others_16_16_HOG_small.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.125974 s)
+Loading data... done! (0.753781 s)
 Formatting responses... done!
 Training samples composition: 
- - a * 199
- - b * 163
- - c * 166
- - d * 36
- - e * 75
+ - a * 1977
+ - b * 1207
+ - c * 2276
+ - d * 1628
+ - e * 1166
  - f * 37
  - g * 12
  - h * 44
@@ -204,19 +204,19 @@ Training samples composition:
  - y * 41
  - z * 10
 
-Training the classifier (1505 samples) - layer pattern: [576:8:16:32:26] (may take a few minutes)...
-Training done! (3.43411 s)
+Training the classifier (9120 samples) - layer pattern: [576:8:16:32:26] (may take a few minutes)...
+Training done! (20.7926 s)
 Exporting model to ./generated_models/model_others_8_16_32_HOG_small.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.12661 s)
+Loading data... done! (0.75497 s)
 Formatting responses... done!
 Training samples composition: 
- - a * 199
- - b * 163
- - c * 166
- - d * 36
- - e * 75
+ - a * 1977
+ - b * 1207
+ - c * 2276
+ - d * 1628
+ - e * 1166
  - f * 37
  - g * 12
  - h * 44
@@ -239,19 +239,19 @@ Training samples composition:
  - y * 41
  - z * 10
 
-Training the classifier (1505 samples) - layer pattern: [576:32:16:8:26] (may take a few minutes)...
-Training done! (7.99648 s)
+Training the classifier (9120 samples) - layer pattern: [576:32:16:8:26] (may take a few minutes)...
+Training done! (48.2452 s)
 Exporting model to ./generated_models/model_others_32_16_8_HOG_small.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.12558 s)
+Loading data... done! (0.758903 s)
 Formatting responses... done!
 Training samples composition: 
- - a * 199
- - b * 163
- - c * 166
- - d * 36
- - e * 75
+ - a * 1977
+ - b * 1207
+ - c * 2276
+ - d * 1628
+ - e * 1166
  - f * 37
  - g * 12
  - h * 44
@@ -274,19 +274,19 @@ Training samples composition:
  - y * 41
  - z * 10
 
-Training the classifier (1505 samples) - layer pattern: [576:32:26] (may take a few minutes)...
-Training done! (7.62248 s)
+Training the classifier (9120 samples) - layer pattern: [576:32:26] (may take a few minutes)...
+Training done! (46.2563 s)
 Exporting model to ./generated_models/model_others_32_HOG_small.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.126875 s)
+Loading data... done! (0.75343 s)
 Formatting responses... done!
 Training samples composition: 
- - a * 199
- - b * 163
- - c * 166
- - d * 36
- - e * 75
+ - a * 1977
+ - b * 1207
+ - c * 2276
+ - d * 1628
+ - e * 1166
  - f * 37
  - g * 12
  - h * 44
@@ -309,19 +309,19 @@ Training samples composition:
  - y * 41
  - z * 10
 
-Training the classifier (1505 samples) - layer pattern: [576:32:32:26] (may take a few minutes)...
-Training done! (8.4438 s)
+Training the classifier (9120 samples) - layer pattern: [576:32:32:26] (may take a few minutes)...
+Training done! (51.0622 s)
 Exporting model to ./generated_models/model_others_32_32_HOG_small.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.126818 s)
+Loading data... done! (0.753374 s)
 Formatting responses... done!
 Training samples composition: 
- - a * 199
- - b * 163
- - c * 166
- - d * 36
- - e * 75
+ - a * 1977
+ - b * 1207
+ - c * 2276
+ - d * 1628
+ - e * 1166
  - f * 37
  - g * 12
  - h * 44
@@ -344,19 +344,19 @@ Training samples composition:
  - y * 41
  - z * 10
 
-Training the classifier (1505 samples) - layer pattern: [576:32:32:32:26] (may take a few minutes)...
-Training done! (9.24871 s)
+Training the classifier (9120 samples) - layer pattern: [576:32:32:32:26] (may take a few minutes)...
+Training done! (55.7493 s)
 Exporting model to ./generated_models/model_others_32_32_32_HOG_small.xml
 Model successfully exported
 Start training process..
-Loading data... done! (0.128763 s)
+Loading data... done! (0.754052 s)
 Formatting responses... done!
 Training samples composition: 
- - a * 199
- - b * 163
- - c * 166
- - d * 36
- - e * 75
+ - a * 1977
+ - b * 1207
+ - c * 2276
+ - d * 1628
+ - e * 1166
  - f * 37
  - g * 12
  - h * 44
@@ -379,7 +379,7 @@ Training samples composition:
  - y * 41
  - z * 10
 
-Training the classifier (1505 samples) - layer pattern: [576:64:64:26] (may take a few minutes)...
-Training done! (17.5702 s)
+Training the classifier (9120 samples) - layer pattern: [576:64:64:26] (may take a few minutes)...
+Training done! (106.506 s)
 Exporting model to ./generated_models/model_others_64_64_HOG_small.xml
 Model successfully exported

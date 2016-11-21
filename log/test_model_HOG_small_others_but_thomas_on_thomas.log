@@ -1,7 +1,7 @@
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_4_4_4_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.638444 s)
+Loading data... done! (0.632073 s)
 Testing model (7615 samples)... done! 
 Test result: 40.9586% success
 
@@ -53,7 +53,7 @@ Letter: e
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_4_4_4_4_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.642307 s)
+Loading data... done! (0.628246 s)
 Testing model (7615 samples)... done! 
 Test result: 45.1346% success
 
@@ -105,7 +105,7 @@ Letter: e
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_8_8_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.638372 s)
+Loading data... done! (0.628087 s)
 Testing model (7615 samples)... done! 
 Test result: 40.3677% success
 
@@ -157,7 +157,7 @@ Letter: e
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_8_8_8_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.641931 s)
+Loading data... done! (0.63236 s)
 Testing model (7615 samples)... done! 
 Test result: 43.7951% success
 
@@ -209,7 +209,7 @@ Letter: e
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_16_16_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.638321 s)
+Loading data... done! (0.629654 s)
 Testing model (7615 samples)... done! 
 Test result: 42.6921% success
 
@@ -261,7 +261,7 @@ Letter: e
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_8_16_32_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.639286 s)
+Loading data... done! (0.633176 s)
 Testing model (7615 samples)... done! 
 Test result: 47.3014% success
 
@@ -313,7 +313,7 @@ Letter: e
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_32_16_8_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.640418 s)
+Loading data... done! (0.62878 s)
 Testing model (7615 samples)... done! 
 Test result: 41.6678% success
 
@@ -365,7 +365,7 @@ Letter: e
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_32_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.639103 s)
+Loading data... done! (0.629972 s)
 Testing model (7615 samples)... done! 
 Test result: 39.9475% success
 
@@ -417,7 +417,7 @@ Letter: e
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_32_32_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.640596 s)
+Loading data... done! (0.628594 s)
 Testing model (7615 samples)... done! 
 Test result: 47.4984% success
 
@@ -469,7 +469,7 @@ Letter: e
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_32_32_32_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.676532 s)
+Loading data... done! (0.629436 s)
 Testing model (7615 samples)... done! 
 Test result: 48.9035% success
 
@@ -521,7 +521,7 @@ Letter: e
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_64_64_HOG_small.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.638643 s)
+Loading data... done! (0.62999 s)
 Testing model (7615 samples)... done! 
 Test result: 46.1064% success
 

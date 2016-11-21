@@ -1,7 +1,7 @@
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_4_4_4_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0112064 s)
+Loading data... done! (0.0112863 s)
 Testing model (739 samples)... done! 
 Test result: 31.5291% success
 
@@ -242,7 +242,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_4_4_4_4_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0112546 s)
+Loading data... done! (0.0112642 s)
 Testing model (739 samples)... done! 
 Test result: 21.7862% success
 
@@ -483,7 +483,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_8_8_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0111224 s)
+Loading data... done! (0.0111641 s)
 Testing model (739 samples)... done! 
 Test result: 66.1705% success
 
@@ -724,7 +724,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_8_8_8_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0112474 s)
+Loading data... done! (0.0113375 s)
 Testing model (739 samples)... done! 
 Test result: 51.1502% success
 
@@ -965,7 +965,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_16_16_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0112965 s)
+Loading data... done! (0.0112404 s)
 Testing model (739 samples)... done! 
 Test result: 83.3559% success
 
@@ -1206,7 +1206,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_8_16_32_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.011313 s)
+Loading data... done! (0.0112415 s)
 Testing model (739 samples)... done! 
 Test result: 66.3058% success
 
@@ -1447,7 +1447,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_32_16_8_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0112107 s)
+Loading data... done! (0.0111983 s)
 Testing model (739 samples)... done! 
 Test result: 46.1434% success
 
@@ -1688,7 +1688,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_32_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0111588 s)
+Loading data... done! (0.011301 s)
 Testing model (739 samples)... done! 
 Test result: 93.2341% success
 
@@ -1929,7 +1929,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_32_32_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0111114 s)
+Loading data... done! (0.0112143 s)
 Testing model (739 samples)... done! 
 Test result: 92.2869% success
 
@@ -2170,7 +2170,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_32_32_32_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0112427 s)
+Loading data... done! (0.011183 s)
 Testing model (739 samples)... done! 
 Test result: 63.3288% success
 
@@ -2411,7 +2411,7 @@ Letter: z
 Loading classifier...
 Classifier ./generated_models/model_others_but_thomas_64_64_yml.xml successfully loaded!
 Start testing process..
-Loading data... done! (0.0111607 s)
+Loading data... done! (0.0111461 s)
 Testing model (739 samples)... done! 
 Test result: 91.6103% success
 
