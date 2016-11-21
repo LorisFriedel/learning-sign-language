@@ -1,0 +1,24 @@
+%YAML:1.0
+trainDir: "../Document/ml"
+testDir: "../Document/ml"
+names: [ "loris", "thomas", "others_but_thomas", "others" ]
+suffixes: [ "yml", "HOG", "HOG_small" ]
+topologies: [
+    "2_2",
+    "2_2_2_2",
+    "4_4_4",
+    "4_4_4_4",
+    "8_8",
+    "8_8_8",
+    "16_16",
+    "8_16_32",
+    "4_8_4",
+    "26_4_26",
+    "32_16_8",
+    "26",
+    "32",
+    "32_32",
+    "32_32_32",
+    "64_64",
+    "128"
+  ]
