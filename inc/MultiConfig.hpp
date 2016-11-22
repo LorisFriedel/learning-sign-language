@@ -25,7 +25,6 @@ public:
 
     std::string dataDir;
     std::string modelDir;
-    std::string logDir;
     std::vector<std::string> names;
     std::vector<std::string> types;
     std::vector<std::string> topologies;

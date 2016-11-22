@@ -1,9 +1,8 @@
 %YAML:1.0
 dataDir: "../Documents/ml"
-modelDir: "../Documents/ml/gen_models_v2"
-logDir: "./log"
-names: [ "loris" ]
-types: [ "yml" ]
+modelDir: "./generated_models"
+names: [ "loris", "thomas", "others_but_thomas", "others" ]
+types: [ "yml", "HOG", "HOG_small" ]
 topologies: [
     "2_2",
     "2_2_2_2",
@@ -16,5 +15,10 @@ topologies: [
     "4_8_4",
     "26_4_26",
     "32_16_8",
-    "26"
+    "26",
+    "32",
+    "32_32",
+    "32_32_32",
+    "64_64",
+    "128"
   ]

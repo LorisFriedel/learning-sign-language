@@ -8,7 +8,6 @@
 #include "../inc/code.h"
 #include "../inc/log.h"
 #include "../inc/MLPHand.hpp"
-#include "../inc/time.h"
 #include "../inc/MultiConfig.hpp"
 #include "../inc/Learning.hpp"
 
@@ -32,7 +31,7 @@ int main(int argc, const char **argv) {
         std::string configPath = configFileArg.getValue();
         MultiConfig config(configPath);
 
-        // TODO add log redirection !
+        // TODO Add log redirection
 
         // For each data type
         std::vector<std::thread> learningThreads;
@@ -42,13 +41,12 @@ int main(int argc, const char **argv) {
             using namespace cv;
 
             map<string, pair<Mat *, Mat *> *> datasetMap;
-            map<string, map<string, MLPHand *> *> modelMap;
 
             // For each dataset
             for (string name : config.names) {
                 LOG_I("Start thread for " << name << " data");
                 learningThreads.push_back(std::thread(
-                        [name, type, &datasetMap, &modelMap, &config]() {
+                        [name, type, &datasetMap, &config]() {
                             // ON ANOTHER THREAD
                             using namespace std;
                             using namespace cv;
@@ -73,15 +71,10 @@ int main(int argc, const char **argv) {
                                 for (string topology : config.topologies) {
                                     // ON ANOTHER THREAD
                                     topoThreads.push_back(
-                                            thread([topology, name, &modelMap, &data, &responses, &config, &type]() {
+                                            thread([topology, name, &data, &responses, &config, &type]() {
                                                 MLPHand *model = new MLPHand(topology);
-                                                LOGP_I(model, "Start thread for training " << topology << " on " << name << " data");
-
-                                                if (modelMap.find(name) == modelMap.end()) {
-                                                    modelMap[name] = new std::map<std::string, MLPHand *>();
-                                                }
-                                                std::map<std::string, MLPHand *> &modelMapName = *modelMap[name];
-                                                modelMapName[topology] = model;
+                                                LOGP_I(model, "Start thread for training " << topology << " on " << name
+                                                                                           << " data");
 
                                                 int learningCode = model->learnFrom(*data, *responses);
                                                 if (learningCode == Code::SUCCESS) {
@@ -94,13 +87,14 @@ int main(int argc, const char **argv) {
 
                                                     int exportCode = model->exportModelTo(modelDir.str());
                                                     if (exportCode != Code::SUCCESS) {
-                                                        LOGP_E(model, "ERROR: exporting " << modelDir.str() << " failed.");
+                                                        LOGP_E(model,
+                                                               "ERROR: exporting " << modelDir.str() << " failed.");
                                                     }
                                                 } else {
                                                     LOGP_E(model, "ERROR: training " << topology << " on " << name
-                                                                             << " data of type "
-                                                                             << type
-                                                                             << " failed.");
+                                                                                     << " data of type "
+                                                                                     << type
+                                                                                     << " failed.");
                                                 }
                                             }));
                                     // END: ON ANOTHER THREAD
@@ -119,45 +113,11 @@ int main(int argc, const char **argv) {
                 t.join();
             };
 
-
-            // Test each topology of model 'modelTest' on 'testData' dataset
-            std::vector<std::thread> testThreads;
-            for (std::string modelTest : config.names) {
-                for (std::string testData : config.names) {
-                    // ON ANOTHER THREAD
-                    testThreads.push_back(std::thread([type, modelTest, testData, &modelMap, &datasetMap, &config]() {
-                        for (std::string topology : config.topologies) {
-                            std::map<std::string, MLPHand *> &modelMapModelTest = *modelMap[modelTest];
-                            std::pair<cv::Mat *, cv::Mat *> &dataset = *datasetMap[testData];
-                            MLPHand *model = modelMapModelTest[topology];
-
-                            int testCode = testModel(*model, *dataset.first, *dataset.second);
-                            if (testCode != Code::SUCCESS) {
-                                LOG_E("ERROR: error while testing model " << modelTest << "_" << topology
-                                                                          << " on \"" << testData << "\" dataset");
-                            }
-                        }
-                    }));
-                    // END: ON ANOTHER THREAD
-                }
-            }
-
-            for (std::thread &t : testThreads) {
-                t.join();
-            };
-
             // Delete everything
-            for (auto& entry : datasetMap) {
+            for (auto &entry : datasetMap) {
                 delete entry.second->first; // Delete input data
                 delete entry.second->second; // Delete responses
                 delete entry.second; // Delete pair
-            }
-
-            for (auto& entry : modelMap) {
-                for (auto& e : *entry.second) {
-                    delete e.second; // Delete models
-                }
-                delete entry.second; // Delete map "topo -> models"
             }
         }
 

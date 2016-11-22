@@ -13,7 +13,6 @@ MultiConfig::MultiConfig(std::string configPath) throw(ParsingException) {
     if (fs.isOpened()) {
         fs["dataDir"] >> dataDir;
         fs["modelDir"] >> modelDir;
-        fs["logDir"] >> logDir;
 
         FileNode fsNames = fs["names"];
         for (FileNodeIterator it = fsNames.begin(); it != fsNames.end(); ++it) {
