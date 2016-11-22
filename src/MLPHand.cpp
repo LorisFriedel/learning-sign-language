@@ -36,9 +36,9 @@ MLPHand::MLPHand(const std::string networkPatternStr) {
 int MLPHand::learnFrom(const std::string classifier_file_name) {
     model = cv::ml::StatModel::load<cv::ml::ANN_MLP>(classifier_file_name);
 
-    LOG_I("Loading classifier...");
+    LOGP_I(this, "Loading classifier...");
     if (model.empty()) {
-        LOG_E("ERROR: Could not read the classifier : " << classifier_file_name);
+        LOGP_E(this, "ERROR: Could not read the classifier : " << classifier_file_name);
         return Code::CASCADE_LOAD_ERROR;
     } else {
         cv::Mat layers = model.get()->getLayerSizes();
@@ -47,7 +47,7 @@ int MLPHand::learnFrom(const std::string classifier_file_name) {
             networkPattern.push_back(model.get()->getLayerSizes().row(i).at<int>(0));
         }
 
-        LOG_I("Classifier " << classifier_file_name << " successfully loaded!");
+        LOGP_I(this, "Classifier " << classifier_file_name << " successfully loaded!");
         return Code::SUCCESS;
     }
 }
@@ -68,7 +68,7 @@ int MLPHand::learnFrom(const cv::Mat &trainingData, const cv::Mat &trainingRespo
     cv::Mat formattedResponses = cv::Mat::zeros(nbOfSamples, nbOfLetters, CV_32FC1);
 
     // Unrolling the responses
-    std::cout << "Formatting responses..."; std::cout.flush();
+    LOGP_I(this, "Formatting responses...");
     std::map<int, int> lettersCountMap;
     for (int i = 0; i < nbOfSamples; i++) {
         int responseLetter = trainingResponses.at<int>(i);
@@ -80,13 +80,13 @@ int MLPHand::learnFrom(const cv::Mat &trainingData, const cv::Mat &trainingRespo
         }
         lettersCountMap[responseLetter]++;
     }
-    LOG_I(" done!");
+    LOGP_I(this, "Formatting responses done!");
 
-    LOG_I("Training samples composition: ");
+    LOGP_I(this, "Training samples composition: ");
     for (auto it = lettersCountMap.begin(); it != lettersCountMap.end(); ++it) {
-        LOG_I(" - " << std::string(1, it->first) << " * " << it->second);
+        LOGP_I(this, " - " << std::string(1, it->first) << " * " << it->second);
     }
-    LOG_I("");
+    LOGP_I(this, "");
 
     // Create and configure layers
     std::vector<int> layerSizes;
@@ -109,7 +109,7 @@ int MLPHand::learnFrom(const cv::Mat &trainingData, const cv::Mat &trainingRespo
     patternStr << "[";
     std::copy(layerSizes.begin(), layerSizes.end() - 1, std::ostream_iterator<int>(patternStr, ":"));
     patternStr << layerSizes.back() << "]";
-    LOG_I("Training the classifier (" << nbOfSamples << " samples) - layer pattern: " << patternStr.str()
+    LOGP_I(this, "Training the classifier (" << nbOfSamples << " samples) - layer pattern: " << patternStr.str()
                                       << " (may take a few minutes)...");
 
     model = cv::ml::ANN_MLP::create();
@@ -122,7 +122,7 @@ int MLPHand::learnFrom(const cv::Mat &trainingData, const cv::Mat &trainingRespo
     // End timer
     timeMonitor.stop();
 
-    LOG_I("Training done! (" << timeMonitor.getDurationS() << " s)");
+    LOGP_I(this, "Training done! (" << timeMonitor.getDurationS() << " s)");
 
     return Code::SUCCESS;
 }
@@ -139,13 +139,13 @@ int MLPHand::exportModelTo(const std::string xmlFileName) {
     assert(model->isTrained());
 
     if (!xmlFileName.empty()) {
-        LOG_I("Exporting model to " + xmlFileName);
+        LOGP_I(this, "Exporting model to " + xmlFileName);
         model->save(xmlFileName);
-        LOG_I("Model successfully exported");
+        LOGP_I(this, "Model successfully exported");
         return Code::SUCCESS;
     }
 
-    LOG_E("ERROR: model not exported");
+    LOGP_E(this, "ERROR: model not exported");
     return Code::ERROR;
 }
 

@@ -1,6 +1,4 @@
-//
 // @author Loris Friedel
-//
 
 #include <tclap/CmdLine.h>
 #include <cv.hpp>
@@ -34,13 +32,7 @@ int main(int argc, const char **argv) {
         std::string configPath = configFileArg.getValue();
         MultiConfig config(configPath);
 
-        // TODO add log redirection !!!!!!
-
-         // TODO !!!!!!
-
-        // TODO rewrite !!!!
-
-        // TODO !!!!
+        // TODO add log redirection !
 
         // For each data type
         std::vector<std::thread> learningThreads;
@@ -52,20 +44,20 @@ int main(int argc, const char **argv) {
             map<string, pair<Mat *, Mat *> *> datasetMap;
             map<string, map<string, MLPHand *> *> modelMap;
 
-
-
             // For each dataset
             for (string name : config.names) {
+                LOG_I("Start thread for " << name << " data");
                 learningThreads.push_back(std::thread(
-                        [&]() {
+                        [name, type, &datasetMap, &modelMap, &config]() {
                             // ON ANOTHER THREAD
                             using namespace std;
                             using namespace cv;
+
                             Mat *data = new Mat();
                             Mat *responses = new Mat();
 
                             stringstream trainDir;
-                            trainDir << config.trainDir << "/" << name << "_" << type;
+                            trainDir << config.dataDir << "/" << name << "_" << type;
 
                             // Load data just in time
                             int loadDataCode = aggregateDataFrom(trainDir.str(), *data, *responses);
@@ -79,36 +71,38 @@ int main(int argc, const char **argv) {
                                 vector<thread> topoThreads;
                                 // For each topology, train a model
                                 for (string topology : config.topologies) {
-                                    MLPHand *model = new MLPHand(topology);
-
-                                    if (modelMap.find(name) == modelMap.end()) {
-                                        modelMap[name] = new map<string, MLPHand *>();
-                                    }
-                                    map<string, MLPHand *> &modelMapName = *modelMap[name];
-                                    modelMapName[topology] = model;
-
-                                    LOG_I("Start training process..");
-
                                     // ON ANOTHER THREAD
-                                    topoThreads.push_back(thread([&]() {
-                                        int learningCode = model->learnFrom(*data, *responses);
-                                        if (learningCode == Code::SUCCESS) {
+                                    topoThreads.push_back(
+                                            thread([topology, name, &modelMap, &data, &responses, &config, &type]() {
+                                                MLPHand *model = new MLPHand(topology);
+                                                LOGP_I(model, "Start thread for training " << topology << " on " << name << " data");
 
-                                            std::stringstream modelDir;
-                                            modelDir << config.modelDir << "/model_" << name << "_" << topology << "_"
-                                                     << type
-                                                     << ".xml";
+                                                if (modelMap.find(name) == modelMap.end()) {
+                                                    modelMap[name] = new std::map<std::string, MLPHand *>();
+                                                }
+                                                std::map<std::string, MLPHand *> &modelMapName = *modelMap[name];
+                                                modelMapName[topology] = model;
 
-                                            int exportCode = model->exportModelTo(modelDir.str());
-                                            if (exportCode != Code::SUCCESS) {
-                                                LOG_E("ERROR: exporting " << modelDir.str() << " failed.");
-                                            }
-                                        } else {
-                                            LOG_E("ERROR: training " << topology << " on " << name << " data of type "
-                                                                     << type
-                                                                     << " failed.");
-                                        }
-                                    }));
+                                                int learningCode = model->learnFrom(*data, *responses);
+                                                if (learningCode == Code::SUCCESS) {
+
+                                                    std::stringstream modelDir;
+                                                    modelDir << config.modelDir << "/model_" << name << "_" << topology
+                                                             << "_"
+                                                             << type
+                                                             << ".xml";
+
+                                                    int exportCode = model->exportModelTo(modelDir.str());
+                                                    if (exportCode != Code::SUCCESS) {
+                                                        LOGP_E(model, "ERROR: exporting " << modelDir.str() << " failed.");
+                                                    }
+                                                } else {
+                                                    LOGP_E(model, "ERROR: training " << topology << " on " << name
+                                                                             << " data of type "
+                                                                             << type
+                                                                             << " failed.");
+                                                }
+                                            }));
                                     // END: ON ANOTHER THREAD
                                 }
 
@@ -126,23 +120,21 @@ int main(int argc, const char **argv) {
             };
 
 
+            // Test each topology of model 'modelTest' on 'testData' dataset
             std::vector<std::thread> testThreads;
-            // test each topology of model 'modelTest' on testData dataset
             for (std::string modelTest : config.names) {
                 for (std::string testData : config.names) {
                     // ON ANOTHER THREAD
-                    testThreads.push_back(std::thread([&]() {
+                    testThreads.push_back(std::thread([type, modelTest, testData, &modelMap, &datasetMap, &config]() {
                         for (std::string topology : config.topologies) {
                             std::map<std::string, MLPHand *> &modelMapModelTest = *modelMap[modelTest];
+                            std::pair<cv::Mat *, cv::Mat *> &dataset = *datasetMap[testData];
                             MLPHand *model = modelMapModelTest[topology];
 
-                            std::stringstream testDir;
-                            testDir << config.testDir << "/" << testData << "_" << type;
-
-                            int testCode = testModel(*model, testDir.str()); // TODO use dataset already loaded !
+                            int testCode = testModel(*model, *dataset.first, *dataset.second);
                             if (testCode != Code::SUCCESS) {
                                 LOG_E("ERROR: error while testing model " << modelTest << "_" << topology
-                                                                          << " on \"" << testDir.str() << "\" dataset");
+                                                                          << " on \"" << testData << "\" dataset");
                             }
                         }
                     }));
@@ -153,6 +145,20 @@ int main(int argc, const char **argv) {
             for (std::thread &t : testThreads) {
                 t.join();
             };
+
+            // Delete everything
+            for (auto& entry : datasetMap) {
+                delete entry.second->first; // Delete input data
+                delete entry.second->second; // Delete responses
+                delete entry.second; // Delete pair
+            }
+
+            for (auto& entry : modelMap) {
+                for (auto& e : *entry.second) {
+                    delete e.second; // Delete models
+                }
+                delete entry.second; // Delete map "topo -> models"
+            }
         }
 
         return Code::SUCCESS;

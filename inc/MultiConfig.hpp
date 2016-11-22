@@ -23,8 +23,7 @@ public:
 
     MultiConfig(std::string configPath) throw(ParsingException);
 
-    std::string trainDir;
-    std::string testDir;
+    std::string dataDir;
     std::string modelDir;
     std::string logDir;
     std::vector<std::string> names;

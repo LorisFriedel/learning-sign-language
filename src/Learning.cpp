@@ -10,16 +10,8 @@
 #include "../inc/DirectoryReader.hpp"
 #include "../inc/DataYmlReader.hpp"
 
-int trainMLPModel(const std::string dataDir, const std::string testDir,
-                  MLPHand &model, const bool noTest) {
-    cv::Mat data;
-    cv::Mat responses;
-
-    LOG_I("Start training process..");
-    if (aggregateDataFrom(dataDir, data, responses) != Code::SUCCESS) {
-        LOG_E("Could not load training data");
-        return Code::ERROR;
-    };
+int trainMLPModel(cv::Mat &data, cv::Mat &responses,
+                  MLPHand &model, const bool noTest, std::string testDir) {
 
     if (model.learnFrom(data, responses) == Code::SUCCESS) {
         if (!noTest) {
@@ -27,9 +19,23 @@ int trainMLPModel(const std::string dataDir, const std::string testDir,
         }
         return Code::SUCCESS;
     } else {
-        LOG_E("ERROR: model training failed");
+        LOGP_E(&model, "ERROR: model training failed");
         return Code::ERROR;
     }
+}
+
+int trainMLPModel(const std::string dataDir, const std::string testDir,
+                  MLPHand &model, const bool noTest) {
+    cv::Mat data;
+    cv::Mat responses;
+
+    LOGP_I(&model, "Start training process..");
+    if (aggregateDataFrom(dataDir, data, responses) != Code::SUCCESS) {
+        LOGP_E(&model, "Could not load training data");
+        return Code::ERROR;
+    };
+
+    return trainMLPModel(data, responses, model, noTest, testDir);
 }
 
 int executeTestModel(std::string modelPath, std::string testDir) {
@@ -39,21 +45,10 @@ int executeTestModel(std::string modelPath, std::string testDir) {
     return testModel(model, testDir);
 }
 
-int testModel(MLPHand &model, std::string inputDir) {
-    LOG_I("Start testing process..");
-
-    cv::Mat dataTest;
-    cv::Mat responsesTest;
-
-    if (aggregateDataFrom(inputDir, dataTest, responsesTest) != Code::SUCCESS) {
-        LOG_E("Could not load test data");
-        return Code::ERROR;
-    };
-
-    std::cout << "Testing model (" << dataTest.rows << " samples)...";
-    std::cout.flush();
+int testModel(MLPHand &model, cv::Mat &dataTest, cv::Mat &responsesTest) {
+    LOGP_I(&model, "Testing model (" << dataTest.rows << " samples)...");
     std::pair<double, std::map<int, StatPredict *>> result = model.testOn(dataTest, responsesTest);
-    LOG_I(" done! " << std::endl << "Test result: " << result.first * 100 << "% success" << std::endl);
+    LOGP_I(&model, "Testing done! " << std::endl << "Test result: " << result.first * 100 << "% success" << std::endl);
 
     for (auto it = result.second.begin(); it != result.second.end(); ++it) {
         int letterCode = it->first;
@@ -62,35 +57,50 @@ int testModel(MLPHand &model, std::string inputDir) {
         std::pair<int, int> successFailure = stat.successAndFailure();
         std::pair<int, int> confuseLetter = stat.confuseLetter();
         std::tuple<double, double, double> trustValues = stat.trustWhenSuccess();
-        LOG_I("Letter: " << std::string(1, letterCode));
-        LOG_I(" - Success: " << successFailure.first << "/" << stat.stats.size()
+        LOGP_I(&model, "Letter: " << std::string(1, letterCode));
+        LOGP_I(&model, " - Success: " << successFailure.first << "/" << stat.stats.size()
                              << " (" << (((double) successFailure.first / (double) stat.stats.size()) * 100)
                              << "% success rate)");
-        LOG_I(" - Error: " << successFailure.second << "/" << stat.stats.size()
+        LOGP_I(&model, " - Error: " << successFailure.second << "/" << stat.stats.size()
                            << " (" << (((double) successFailure.second / (double) stat.stats.size()) * 100)
                            << "% error rate)");
-        if(confuseLetter.first != 0) {
-            LOG_I(" - Most of the time confused with: " << std::string(1, confuseLetter.first)
+        if (confuseLetter.first != 0) {
+            LOGP_I(&model, " - Most of the time confused with: " << std::string(1, confuseLetter.first)
                                                         << " ("
-                                                        << (((double) confuseLetter.second / (double) stat.stats.size()) * 100)
+                                                        << (((double) confuseLetter.second /
+                                                             (double) stat.stats.size()) * 100)
                                                         << "% of the time)");
         } else {
-            LOG_I(" - No confusion with other letters");
+            LOGP_I(&model, " - No confusion with other letters");
         }
 
-        LOG_I(" - Trust rate when success: ");
-        LOG_I(" --> Minimum: " << std::get<0>(trustValues)*100 << "%");
-        LOG_I(" --> Average: " << std::get<1>(trustValues)*100 << "%");
-        LOG_I(" --> Maximum: " << std::get<2>(trustValues)*100 << "%");
-        LOG_I("");
+        LOGP_I(&model, " - Trust rate when success: ");
+        LOGP_I(&model, " --> Minimum: " << std::get<0>(trustValues) * 100 << "%");
+        LOGP_I(&model, " --> Average: " << std::get<1>(trustValues) * 100 << "%");
+        LOGP_I(&model, " --> Maximum: " << std::get<2>(trustValues) * 100 << "%");
+        LOGP_I(&model, "");
 
         delete it->second;
     }
     return Code::SUCCESS;
 }
 
+int testModel(MLPHand &model, std::string inputDir) {
+    LOGP_I(&model, "Start testing process..");
+
+    cv::Mat dataTest;
+    cv::Mat responsesTest;
+
+    if (aggregateDataFrom(inputDir, dataTest, responsesTest) != Code::SUCCESS) {
+        LOGP_E(&model, "Could not load test data");
+        return Code::ERROR;
+    };
+
+    return testModel(model, dataTest, responsesTest);
+}
+
 int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matResponses) {
-    std::cout << "Loading data..."; std::cout.flush();
+    LOG_I("Loading data...");
     Timer timer;
 
     timer.start();
@@ -100,10 +110,10 @@ int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matRespo
         dataPathList.push_back(filePath);
     });
 
-    if(dirReadCode == Code::SUCCESS) {
+    if (dirReadCode == Code::SUCCESS) {
         auto engine = std::default_random_engine{};
         std::shuffle(std::begin(dataPathList), std::end(dataPathList), engine);
-        for(std::string path : dataPathList) {
+        for (std::string path : dataPathList) {
             int letterTmp;
             cv::Mat letterDataRow;
 
@@ -119,11 +129,11 @@ int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matRespo
             }
         }
     } else {
-        LOG_I(" finished with errors.");
+        LOG_I("Loading data finished with errors.");
         return Code::ERROR;
     }
     timer.stop();
 
-    LOG_I(" done! (" << timer.getDurationS() << " s)");
+    LOG_I("Loading data done! (" << timer.getDurationS() << " s)");
     return Code::SUCCESS;
 }

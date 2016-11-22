@@ -1,10 +1,9 @@
 %YAML:1.0
-trainDir: "../Documents/ml"
-testDir: "../Documents/ml"
-modelDir: "./generated_models"
+dataDir: "../Documents/ml"
+modelDir: "../Documents/ml/gen_models_v2"
 logDir: "./log"
-names: [ "loris", "thomas" ]
-types: [ "yml", "HOG" ]
+names: [ "loris" ]
+types: [ "yml" ]
 topologies: [
     "2_2",
     "2_2_2_2",

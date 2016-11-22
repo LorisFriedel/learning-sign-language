@@ -11,8 +11,7 @@ MultiConfig::MultiConfig(std::string configPath) throw(ParsingException) {
     FileStorage fs(configPath, FileStorage::READ);
 
     if (fs.isOpened()) {
-        fs["trainDir"] >> trainDir;
-        fs["testDir"] >> testDir;
+        fs["dataDir"] >> dataDir;
         fs["modelDir"] >> modelDir;
         fs["logDir"] >> logDir;
 
