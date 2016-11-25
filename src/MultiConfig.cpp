@@ -31,6 +31,6 @@ MultiConfig::MultiConfig(std::string configPath) throw(ParsingException) {
 
         fs.release();
     } else {
-        throw ParsingException(configPath);;
+        throw ParsingException(configPath);
     }
 }
