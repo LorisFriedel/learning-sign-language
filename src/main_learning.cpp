@@ -72,7 +72,7 @@ int main(int argc, const char **argv) {
 
         //// Get the value parsed by each arg and handle them
 
-        std::string testDir = testDirArg.getValue();
+        std::string &testDir = testDirArg.getValue();
 
         // Test mode
         if (testOnlyArg.isSet() || modelInputArg.isSet()) {
@@ -85,19 +85,19 @@ int main(int argc, const char **argv) {
                 return Code::ERROR;
             }
 
-            std::string model_to_test = modelInputArg.getValue();
+            std::string &model_to_test = modelInputArg.getValue();
 
             return executeTestModel(model_to_test, testDir);
 
         } else { // Learning mode
-            std::string modelOutPath = modelOutputArg.getValue();
-            std::string dataDir = dataDirArg.getValue();
+            std::string &modelOutPath = modelOutputArg.getValue();
+            std::string &dataDir = dataDirArg.getValue();
             bool noTest = noTestArg.getValue();
 
             MLPHand model;
 
             if (networkPatternArg.isSet()) {
-                std::string pattern = networkPatternArg.getValue();
+                std::string &pattern = networkPatternArg.getValue();
                 model = MLPHand(pattern);
             } else {
                 int nbOfLayer = nbLayerArg.getValue();

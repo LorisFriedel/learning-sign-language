@@ -61,8 +61,8 @@ int main(int argc, const char **argv) {
         cmd.parse(argc, argv);
 
         //// Get the value parsed by each arg and handle them
-        std::string input = inputDirArg.getValue();
-        std::string output = outputDirArg.getValue();
+        std::string &input = inputDirArg.getValue();
+        std::string &output = outputDirArg.getValue();
         int imgSize = imgSizeArg.getValue();
         int blockSize = blockSizeArg.getValue();
         int blockStrideSize = blockStrideSizeArg.getValue();

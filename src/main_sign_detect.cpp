@@ -71,9 +71,9 @@ int main(int argc, const char **argv) {
         cmd.parse(argc, argv);
 
         //// Get the value parsed by each arg
-        std::string modelPath = modelArg.getValue();
-        std::string imageOutputPath = imageOutputArg.getValue();
-        std::string backprojOutputPath = imageBackprojOutputArg.getValue();
+        std::string &modelPath = modelArg.getValue();
+        std::string &imageOutputPath = imageOutputArg.getValue();
+        std::string &backprojOutputPath = imageBackprojOutputArg.getValue();
 
         // Load pre-trained cascade data
         std::string cascadeName = Default::CASCADE_PATH;
@@ -84,7 +84,7 @@ int main(int argc, const char **argv) {
         }
 
         // Get file to read image from for image detection
-        std::string inputFilename = inputArg.getValue();
+        std::string &inputFilename = inputArg.getValue();
         int webcamId;
         bool isWebcam = false;
         if (inputFilename.empty() || (isdigit(inputFilename[0]) && inputFilename.size() == 1)) {

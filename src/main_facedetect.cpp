@@ -29,7 +29,7 @@ int main(int argc, const char **argv) {
 
         //// Get the value parsed by each arg
         // Load pre-trained cascade data
-        std::string cascadeName = cascadeArg.getValue();
+        std::string &cascadeName = cascadeArg.getValue();
         cv::CascadeClassifier cascade;
         if (!cascade.load(cascadeName)) {
             LOG_E("ERROR: Could not load classifier cascade");
@@ -37,7 +37,7 @@ int main(int argc, const char **argv) {
         }
 
         // Get file to read image from for image detection
-        std::string inputFilename = inputArg.getValue();
+        std::string &inputFilename = inputArg.getValue();
         int webcamId;
         bool isWebcam = false;
         if (inputFilename.empty() || (isdigit(inputFilename[0]) && inputFilename.size() == 1)) {
