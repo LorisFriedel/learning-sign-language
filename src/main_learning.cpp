@@ -57,14 +57,14 @@ int main(int argc, const char **argv) {
 
         TCLAP::ValueArg<std::string> networkPatternArg("p", "network-pattern",
                                                        "Define the network pattern. Example: '4 2 4' define a 3 layers network, with 4 neurons for the first one, 2 for the second and 3 for the last one.",
-                                                       false, "64 64", "pattern", cmd);
+                                                       false, Default::PATTTERN, "pattern", cmd);
 
-        TCLAP::SwitchArg noTestArg("s", "no-test",
+        TCLAP::SwitchArg noTestArg("s", "skip-test",
                                    "Skip the model test.",
                                    cmd, false);
 
         TCLAP::SwitchArg testOnlyArg("y", "test-only",
-                                     "If this arg is present, the program will only test the model specified by the '--model-to-test' arg. If '--model-to-test' is not specified, the program exit.",
+                                     "If this argument is present, the program will only test the model specified by the '--model-to-test' arg. If '--model-to-test' is not specified, the program exit.",
                                      cmd, false);
 
         //// Parse the argv array

@@ -36,6 +36,8 @@ public:
      */
     MLPHand(const std::string networkPatternStr);
 
+    // TODO setOutputJson(File *jsonFile);
+    // TODO add an out file attribute to be used instead (or in parralel) of logging data in a json or yml file ?
 
     /**
      * Teach the model from an existing classifier.
