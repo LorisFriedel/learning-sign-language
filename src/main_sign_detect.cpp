@@ -14,7 +14,7 @@
 #include "../inc/colors.h"
 #include "../inc/constant.h"
 #include "../inc/HandTracker.hpp"
-#include "../inc/MLPHand.hpp"
+#include "../inc/MLPModel.hpp"
 #include "../inc/time.h"
 
 int runCamshiftTrackHand(VideoStreamReader &vsr, const cv::CascadeClassifier &cascade,
@@ -135,7 +135,7 @@ runCamshiftTrackHand(VideoStreamReader &vsr, const cv::CascadeClassifier &cascad
     HandTracker hTracker;
 
     // Load model
-    MLPHand mlpHand;
+    MLPModel mlpHand;
     mlpHand.learnFrom(modelPath);
 
     // Variables for hand tracking

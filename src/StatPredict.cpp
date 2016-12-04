@@ -4,7 +4,7 @@
 
 #include "../inc/StatPredict.hpp"
 
-StatPredict::StatPredict(int letterCode) : letterCode(letterCode) {}
+StatPredict::StatPredict(int label) : label(label) {}
 
 StatPredict::~StatPredict() {
     for (TupleStat *stat : stats) {
@@ -12,9 +12,9 @@ StatPredict::~StatPredict() {
     }
 }
 
-void StatPredict::pushStat(const bool success, const int predictedLetter,
+void StatPredict::pushStat(const bool success, const int predictedLabel,
                            const float trustPercentage, const std::vector<float> predictOutput) {
-    stats.push_back(new TupleStat(success, predictedLetter, trustPercentage, predictOutput));
+    stats.push_back(new TupleStat(success, predictedLabel, trustPercentage, predictOutput));
 }
 
 const std::pair<int, int> StatPredict::successAndFailure() const {
@@ -26,31 +26,31 @@ const std::pair<int, int> StatPredict::successAndFailure() const {
     return {success, failure};
 }
 
-const std::pair<int, int> StatPredict::confuseLetter() const {
-    // key: letter that we thought it was and number of time confused as value
+const std::pair<int, int> StatPredict::confusedLabel() const {
+    // key: label that we thought it was and number of time confused as value
     std::map<int, int> confuseMap;
     for (TupleStat *stat : stats) {
         if (!stat->success) {
             // Check if already in the stat map
-            if (confuseMap.find(stat->predictedLetter) == confuseMap.end()) {
-                confuseMap[stat->predictedLetter] = 0;
+            if (confuseMap.find(stat->predictedLabel) == confuseMap.end()) {
+                confuseMap[stat->predictedLabel] = 0;
             }
-            confuseMap[stat->predictedLetter]++;
+            confuseMap[stat->predictedLabel]++;
         }
     }
 
-    // Find the maximum confusion letter in the sub-map
+    // Find the maximum confusion label in the sub-map
     int maxNbOfConfusion = 0;
-    int maxLetterConfused = 0;
+    int maxLabelConfused = 0;
     for (auto it = confuseMap.begin(); it != confuseMap.end(); ++it) {
         if (it->second > maxNbOfConfusion) {
             maxNbOfConfusion = it->second;
-            maxLetterConfused = it->first;
+            maxLabelConfused = it->first;
         }
     }
-    // total number of time we saw this letter = stats.size();
+    // total number of time we saw this label = stats.size();
 
-    return {maxLetterConfused, maxNbOfConfusion};
+    return {maxLabelConfused, maxNbOfConfusion};
 }
 
 const std::tuple<double, double, double> StatPredict::trustWhenSuccess() const {

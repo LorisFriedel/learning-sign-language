@@ -7,7 +7,7 @@
 #include <thread>
 #include "../inc/code.h"
 #include "../inc/log.h"
-#include "../inc/MLPHand.hpp"
+#include "../inc/MLPModel.hpp"
 #include "../inc/MultiConfig.hpp"
 #include "../inc/Learning.hpp"
 
@@ -72,7 +72,7 @@ int main(int argc, const char **argv) {
                                     // ON ANOTHER THREAD
                                     topoThreads.push_back(
                                             thread([topology, name, &data, &responses, &config, &type]() {
-                                                MLPHand *model = new MLPHand(topology);
+                                                MLPModel *model = new MLPModel(topology);
                                                 LOGP_I(model, "Start thread for training " << topology << " on " << name
                                                                                            << " data");
 

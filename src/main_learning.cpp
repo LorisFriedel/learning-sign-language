@@ -9,7 +9,7 @@
 #include "../inc/code.h"
 #include "../inc/log.h"
 #include "../inc/constant.h"
-#include "../inc/MLPHand.hpp"
+#include "../inc/MLPModel.hpp"
 #include "../inc/time.h"
 #include "../inc/Learning.hpp"
 
@@ -41,7 +41,7 @@ int main(int argc, const char **argv) {
                                                 false, Default::LETTERS_DATA_PATH, "DIRECTORY_PATH", cmd);
 
         TCLAP::ValueArg<std::string> testDirArg("t", "test_dir",
-                                                "Specify a directory where .yml file are located. Those files will be used to test the model. Defaul value is " +
+                                                "Specify a directory where .yml file are located. Those files will be used to test the model. Default value is " +
                                                 Default::LETTERS_DATA_PATH,
                                                 false, Default::LETTERS_DATA_PATH, "DIRECTORY_PATH", cmd);
 
@@ -55,9 +55,9 @@ int main(int argc, const char **argv) {
                                          std::to_string(Default::NB_OF_NEURON),
                                          false, Default::NB_OF_NEURON, "POSITIVE_INTEGER", cmd);
 
-        TCLAP::ValueArg<std::string> networkPatternArg("p", "network-pattern",
-                                                       "Define the network pattern. Example: '4 2 4' define a 3 layers network, with 4 neurons for the first one, 2 for the second and 3 for the last one.",
-                                                       false, Default::PATTTERN, "pattern", cmd);
+        TCLAP::ValueArg<std::string> topologyArg("p", "intern-topology",
+                                                       "Define the network pattern (hidden layers topology). Example: '4 2 4' define a 3 layers network, with 4 neurons for the first one, 2 for the second and 3 for the last one.",
+                                                       false, Default::TOPOLOGY, "topology", cmd);
 
         TCLAP::SwitchArg noTestArg("s", "skip-test",
                                    "Skip the model test.",
@@ -67,12 +67,19 @@ int main(int argc, const char **argv) {
                                      "If this argument is present, the program will only test the model specified by the '--model-to-test' arg. If '--model-to-test' is not specified, the program exit.",
                                      cmd, false);
 
+        TCLAP::ValueArg<std::string> jsonDistribArg("d", "distribution-output",
+                                                "Specify the path to a JSON file where to write label distribution of training data (create it if not exists).",
+                                                false, "", "pathToJsonFile", cmd);
+
+        // TODO add an input file in args for label mapping
+
         //// Parse the argv array
         cmd.parse(argc, argv);
 
         //// Get the value parsed by each arg and handle them
 
         std::string &testDir = testDirArg.getValue();
+        std::string &jsonDistribPath = jsonDistribArg.getValue();
 
         // Test mode
         if (testOnlyArg.isSet() || modelInputArg.isSet()) {
@@ -94,18 +101,19 @@ int main(int argc, const char **argv) {
             std::string &dataDir = dataDirArg.getValue();
             bool noTest = noTestArg.getValue();
 
-            MLPHand model;
+            MLPModel model;
 
-            if (networkPatternArg.isSet()) {
-                std::string &pattern = networkPatternArg.getValue();
-                model = MLPHand(pattern);
+            if (topologyArg.isSet()) {
+                std::string &topology = topologyArg.getValue();
+                model = MLPModel(topology);
             } else {
                 int nbOfLayer = nbLayerArg.getValue();
                 int nbOfNeuron = nbNeuronArg.getValue();
-                model = MLPHand(nbOfLayer, nbOfNeuron);
+                model = MLPModel(nbOfLayer, nbOfNeuron);
             }
 
             if (trainMLPModel(dataDir, testDir, model, noTest) == Code::SUCCESS) {
+                model.exportTrainDataDistribution(jsonDistribPath);
                 return model.exportModelTo(modelOutPath);
             } else {
                 return Code::ERROR;

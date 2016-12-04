@@ -9,11 +9,12 @@
 DataYmlWriter::DataYmlWriter(std::string filePath)
         : filePath(filePath) {}
 
-int DataYmlWriter::write(cv::Mat &dataInput, int letterInput) {
+int DataYmlWriter::write(cv::Mat &dataInput, int labelInput) {
     cv::FileStorage fs(filePath, cv::FileStorage::WRITE);
 
     if (fs.isOpened()) {
-        fs << Default::KEY_LETTER << letterInput;
+        // TODO replacec letter with label to generalize
+        fs << Default::KEY_LETTER << labelInput;
         fs << Default::KEY_MAT << dataInput;
         fs.release();
         return true;
@@ -23,10 +24,10 @@ int DataYmlWriter::write(cv::Mat &dataInput, int letterInput) {
     }
 }
 
-int DataYmlWriter::write(std::vector<float> &dataInput, int letterInput) {
+int DataYmlWriter::write(std::vector<float> &dataInput, int labelInput) {
     cv::Mat matData(cv::Size((int) dataInput.size(), 1), CV_32FC1);
     for(int i = 0; i < dataInput.size(); i++) {
         matData.at<float>(i) = dataInput[i];
     }
-    return write(matData, letterInput);
+    return write(matData, labelInput);
 }

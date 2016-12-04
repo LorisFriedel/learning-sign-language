@@ -13,7 +13,7 @@ public:
               const float trustPercentage, const std::vector<float> &predictOutput);
 
     const bool success;
-    const int predictedLetter;
+    const int predictedLabel;
     const float trustPercentage;
     const std::vector<float> predictOutput;
 };
