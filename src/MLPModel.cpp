@@ -42,7 +42,7 @@ void MLPModel::setMethodEpsilon(double epsilon) {
     this->methodEpsilon = epsilon;
 }
 
-void MLPModel::setLabelMapping(std::map<int, std::string> labelMap) {
+void MLPModel::setLabelMap(LabelMap labelMap) {
     this->labelMap = labelMap;
 }
 
@@ -64,7 +64,7 @@ void MLPModel::exportTrainDataDistribution(const std::string jsonFilePath) {
         finalIter--;
         jsonFile << "{\n";
         for (auto it = classesCountMap.begin(); it != finalIter; ++it) {
-            std::string key = (labelMap.empty()) ? std::to_string(it->first) : labelMap[it->first];
+            std::string key = labelMap.get(it->first);
             jsonFile << "\"" << key << "\" : " << it->second << ",\n";
         }
         jsonFile << "\"" << std::to_string(finalIter->first) << "\" : "
@@ -135,7 +135,7 @@ int MLPModel::learnFrom(const cv::Mat &trainingData, const cv::Mat &trainingResp
 
     LOGP_I(this, "Training samples composition: ");
     for (auto it = classesCountMap.begin(); it != classesCountMap.end(); ++it) {
-        std::string key = (labelMap.empty()) ? std::to_string(it->first) : labelMap[it->first];
+        std::string key = labelMap.get(it->first);
         LOGP_I(this, " - " << key << " * " << it->second);
     }
     LOGP_I(this, "");
@@ -243,5 +243,9 @@ std::string MLPModel::getTopologyStr() {
 }
 
 std::string MLPModel::convertLabel(int label) {
-    return (labelMap.empty()) ? std::to_string(label) : labelMap[label];
+    return labelMap.get(label);
+}
+
+const LabelMap &MLPModel::getLabelMap() const {
+    return labelMap;
 }

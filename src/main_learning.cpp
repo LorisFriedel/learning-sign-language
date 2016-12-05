@@ -12,6 +12,7 @@
 #include "../inc/MLPModel.hpp"
 #include "../inc/time.h"
 #include "../inc/Learning.hpp"
+#include "../inc/LabelMap.hpp"
 
 int main(int argc, const char **argv) {
     try {
@@ -71,12 +72,26 @@ int main(int argc, const char **argv) {
                                                 "Specify the path to a JSON file where to write label distribution of training data (create it if not exists).",
                                                 false, "", "pathToJsonFile", cmd);
 
-        // TODO add an input file in args for label mapping
+        TCLAP::ValueArg<std::string> labelMapArg("e", "label-map",
+                                                    "Specify the path to a YML file that contains a mapping for label (string -> label (int))",
+                                                    false, "", "pathToYmlFile", cmd);
+
 
         //// Parse the argv array
         cmd.parse(argc, argv);
 
         //// Get the value parsed by each arg and handle them
+
+        LabelMap labelMap;
+        if(labelMapArg.isSet()) {
+            cv::FileStorage fs(labelMapArg.getValue(), cv::FileStorage::READ);
+            if (fs.isOpened()) {
+                fs[Default::KEY_MAP] >> labelMap;
+            } else {
+                LOG_E("ERROR: Coulnd not read label map .yml file: " << labelMapArg.getValue());
+            }
+            fs.release();
+        }
 
         std::string &testDir = testDirArg.getValue();
         std::string &jsonDistribPath = jsonDistribArg.getValue();
@@ -94,7 +109,7 @@ int main(int argc, const char **argv) {
 
             std::string &model_to_test = modelInputArg.getValue();
 
-            return executeTestModel(model_to_test, testDir);
+            return executeTestModel(model_to_test, testDir, labelMap);
 
         } else { // Learning mode
             std::string &modelOutPath = modelOutputArg.getValue();
@@ -111,6 +126,8 @@ int main(int argc, const char **argv) {
                 int nbOfNeuron = nbNeuronArg.getValue();
                 model = MLPModel(nbOfLayer, nbOfNeuron);
             }
+
+            model.setLabelMap(labelMap);
 
             if (trainMLPModel(dataDir, testDir, model, noTest) == Code::SUCCESS) {
                 model.exportTrainDataDistribution(jsonDistribPath);

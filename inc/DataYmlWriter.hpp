@@ -12,13 +12,15 @@ public:
     DataYmlWriter(std::string filePath);
 
     /**
-     * Read an yml file containing data for training.
+     * Write in an yml file given data and label.
      *
-     * @param dataInput Write data into the file. Must be an array.
-     * @param labelInput Write the letter into the file. Must be the ASCII code.
+     * @param dataInput Data to be written into the file.
+     * @param labelInput Label to be written into the file.
      * @return true if writing succeed, false otherwise.
      */
     int write(cv::Mat &dataInput, int labelInput);
+
+    int writeLetter(cv::Mat &dataInput, int letterInput);
 
     int write(std::vector<float> &dataInput, int labelInput);
 

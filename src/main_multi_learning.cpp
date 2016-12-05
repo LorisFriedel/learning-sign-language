@@ -23,7 +23,6 @@ int main(int argc, const char **argv) {
                                                    false, "./multi_learning_config_example.yml",
                                                    "PATH_TO_JSON_CONFIG_FILE", cmd);
 
-
         //// Parse the argv array
         cmd.parse(argc, argv);
 

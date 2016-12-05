@@ -7,6 +7,7 @@
 #include <opencv2/core/mat.hpp>
 #include <ml.h>
 #include "StatPredict.hpp"
+#include "LabelMap.hpp"
 
 class MLPModel {
 
@@ -58,7 +59,9 @@ public:
      *
      * @param labelMap
      */
-    void setLabelMapping(std::map<int, std::string> labelMap);
+    void setLabelMap(LabelMap labelMap);
+
+    const LabelMap &getLabelMap() const;
 
     /**
      * Export the training data distribution to the specified json file.
@@ -136,7 +139,7 @@ private:
 
     std::map<int, int> classesCountMap;
     std::string jsonDistribFilePath;
-    std::map<int, std::string> labelMap;
+    LabelMap labelMap;
 
     int method = cv::ml::ANN_MLP::BACKPROP;
     double methodEpsilon = 0.001;

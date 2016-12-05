@@ -17,6 +17,11 @@ namespace Default {
     const std::string LETTERS_DATA_PATH = "letters_data/";
     const std::string LETTERS_IMAGES_PATH = "letters_images/";
 
+    const std::string KEY_LABEL = "labebl";
+    const std::string KEY_DATA = "data";
+
+    const std::string KEY_MAP = "map";
+
     const std::string KEY_LETTER = "letter";
     const std::string KEY_MAT = "mat";
 

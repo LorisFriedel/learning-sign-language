@@ -12,10 +12,27 @@ int DataYmlReader::read(cv::Mat &dataOutput, int &labelOutput) {
     cv::FileStorage fs(filePath, cv::FileStorage::READ);
 
     if (fs.isOpened()) {
-        fs[Default::KEY_LETTER] >> labelOutput;
-        // TODO remove the next line to have a generalized learning program
-        labelOutput -= 'a'; // TODO this is "sign language" specific, need to be generalized.
-        fs[Default::KEY_MAT] >> dataOutput;
+        // Get label
+        if(!fs[Default::KEY_LETTER].empty()) {
+            fs[Default::KEY_LETTER] >> labelOutput;
+            labelOutput -= 'a';
+        } else if(!fs[Default::KEY_LABEL].empty()) {
+            fs[Default::KEY_LABEL] >> labelOutput;
+        } else {
+            LOG_E("ERROR: Cant find label in yml file");
+            return false;
+        }
+
+        // Get data
+        if(!fs[Default::KEY_MAT].empty()) {
+            fs[Default::KEY_MAT] >> dataOutput;
+        } else if(!fs[Default::KEY_DATA].empty()) {
+            fs[Default::KEY_DATA] >> dataOutput;
+        } else {
+            LOG_E("ERROR: Cant find data in yml file");
+            return false;
+        }
+
         fs.release();
         return true;
     } else {

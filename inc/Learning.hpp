@@ -15,7 +15,7 @@ int trainMLPModel(const std::string dataDir, const std::string testDir,
 
 int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matResponses);
 
-int executeTestModel(std::string modelPath, std::string testDir);
+int executeTestModel(std::string modelPath, std::string testDir, LabelMap &labelMap);
 
 int testModel(MLPModel &model, cv::Mat &dataTest, cv::Mat &responsesTest);
 

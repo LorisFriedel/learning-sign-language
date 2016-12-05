@@ -136,6 +136,7 @@ runCamshiftTrackHand(VideoStreamReader &vsr, const cv::CascadeClassifier &cascad
 
     // Load model
     MLPModel mlpHand;
+    // TODO label map
     mlpHand.learnFrom(modelPath);
 
     // Variables for hand tracking
@@ -281,5 +282,5 @@ void saveImages(const int key, const cv::Mat &img,
     dataFilePath << backprojOutPath << fileName.str() << ".yml";
 
     DataYmlWriter writer(dataFilePath.str());
-    writer.write(smallBackproj, key);
+    writer.writeLetter(smallBackproj, key);
 }

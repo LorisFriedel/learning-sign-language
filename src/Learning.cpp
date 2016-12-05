@@ -38,8 +38,9 @@ int trainMLPModel(const std::string dataDir, const std::string testDir,
     return trainMLPModel(data, responses, model, noTest, testDir);
 }
 
-int executeTestModel(std::string modelPath, std::string testDir) {
+int executeTestModel(std::string modelPath, std::string testDir, LabelMap &labelMap) {
     MLPModel model;
+    model.setLabelMap(labelMap);
     model.learnFrom(modelPath);
 
     return testModel(model, testDir);
@@ -65,7 +66,7 @@ int testModel(MLPModel &model, cv::Mat &dataTest, cv::Mat &responsesTest) {
                            << " (" << (((double) successFailure.second / (double) stat.stats.size()) * 100)
                            << "% error rate)");
         if (confusedLabel.first != 0) {
-            LOGP_I(&model, " - Most of the time confused with: " << std::string(1, confusedLabel.first)
+            LOGP_I(&model, " - Most of the time confused with: " << model.convertLabel(confusedLabel.first)
                                                         << " ("
                                                         << (((double) confusedLabel.second /
                                                              (double) stat.stats.size()) * 100)
@@ -114,16 +115,16 @@ int aggregateDataFrom(std::string directory, cv::Mat &matData, cv::Mat &matRespo
         auto engine = std::default_random_engine{};
         std::shuffle(std::begin(dataPathList), std::end(dataPathList), engine);
         for (std::string path : dataPathList) {
-            int letterTmp;
-            cv::Mat letterDataRow;
+            int labelTmp;
+            cv::Mat labelDataRow;
 
             // If no error while reading data
             DataYmlReader reader(path);
-            if (reader.read(letterDataRow, letterTmp) != Code::SUCCESS) {
-                letterDataRow.convertTo(letterDataRow, CV_32FC1);
+            if (reader.read(labelDataRow, labelTmp) != Code::SUCCESS) {
+                labelDataRow.convertTo(labelDataRow, CV_32FC1);
 
-                matResponses.push_back(letterTmp);
-                matData.push_back(letterDataRow);
+                matResponses.push_back(labelTmp);
+                matData.push_back(labelDataRow);
             } else {
                 LOG_E("ERROR: can't load: " << path);
             }
