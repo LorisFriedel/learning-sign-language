@@ -1,8 +1,18 @@
 %YAML:1.0
+
+# Directory where all training folders and testing folders are
 dataDir: "../Documents/ml"
+
+# Directory where generated models will be stored
 modelDir: "./generated_models"
+
+# Name of all dataset (directories name_XXXX must exist)
 names: [ "loris", "thomas", "others_but_thomas", "others" ]
-types: [ "yml", "HOG", "HOG_small" ]
+
+# Name of the type of data (directories name_TYPE must exist)
+types: [ "backproj", "HOG", "HOG_small" ]
+
+# Topologies to generate
 topologies: [
     "2_2",
     "2_2_2_2",

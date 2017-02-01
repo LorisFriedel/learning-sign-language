@@ -1,0 +1,332 @@
+Classifier ./generated_models/model_loris_32_32_HOG.xml successfully loaded!
+Testing model (ON loris_dataset)... done!
+
+Letter: a
+ - Success: 200/200 (100% success rate)
+ - Error: 0/200 (0% error rate)
+ - No confusion with other letters
+
+Letter: b
+ - Success: 164/164 (100% success rate)
+ - Error: 0/164 (0% error rate)
+ - No confusion with other letters
+
+Letter: c
+ - Success: 168/168 (100% success rate)
+ - Error: 0/168 (0% error rate)
+ - No confusion with other letters
+
+Letter: d
+ - Success: 183/183 (100% success rate)
+ - Error: 0/183 (0% error rate)
+ - No confusion with other letters
+
+Letter: e
+ - Success: 124/124 (100% success rate)
+ - Error: 0/124 (0% error rate)
+ - No confusion with other letters
+
+Letter: f
+ - Success: 174/174 (100% success rate)
+ - Error: 0/174 (0% error rate)
+ - No confusion with other letters
+
+-----
+
+Classifier ./generated_models/model_loris_32_32_HOG.xml successfully loaded!
+Testing model (ON obt_dataset)... done!
+
+Letter: a
+ - Success: 104/199 (52.2613% success rate)
+ - Error: 95/199 (47.7387% error rate)
+ - Most of the time confused with: e (33.6683% of the time)
+
+Letter: b
+ - Success: 90/163 (55.2147% success rate)
+ - Error: 73/163 (44.7853% error rate)
+ - Most of the time confused with: e (19.6319% of the time)
+
+Letter: c
+ - Success: 98/166 (59.0361% success rate)
+ - Error: 68/166 (40.9639% error rate)
+ - Most of the time confused with: e (15.6627% of the time)
+
+Letter: d
+ - Success: 5/36 (13.8889% success rate)
+ - Error: 31/36 (86.1111% error rate)
+ - Most of the time confused with: c (55.5556% of the time)
+
+Letter: e
+ - Success: 41/75 (54.6667% success rate)
+ - Error: 34/75 (45.3333% error rate)
+ - Most of the time confused with: a (22.6667% of the time)
+
+Letter: f
+ - Success: 4/37 (10.8108% success rate)
+ - Error: 33/37 (89.1892% error rate)
+ - Most of the time confused with: a (40.5405% of the time)
+
+Letter: g
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: e (66.6667% of the time)
+
+Letter: h
+ - Success: 0/44 (0% success rate)
+ - Error: 44/44 (100% error rate)
+ - Most of the time confused with: e (59.0909% of the time)
+
+Letter: i
+ - Success: 0/109 (0% success rate)
+ - Error: 109/109 (100% error rate)
+ - Most of the time confused with: b (27.5229% of the time)
+
+Letter: j
+ - Success: 0/11 (0% success rate)
+ - Error: 11/11 (100% error rate)
+ - Most of the time confused with: a (54.5455% of the time)
+
+Letter: k
+ - Success: 0/46 (0% success rate)
+ - Error: 46/46 (100% error rate)
+ - Most of the time confused with: b (47.8261% of the time)
+
+Letter: l
+ - Success: 0/80 (0% success rate)
+ - Error: 80/80 (100% error rate)
+ - Most of the time confused with: b (38.75% of the time)
+
+Letter: m
+ - Success: 0/63 (0% success rate)
+ - Error: 63/63 (100% error rate)
+ - Most of the time confused with: e (87.3016% of the time)
+
+Letter: n
+ - Success: 0/11 (0% success rate)
+ - Error: 11/11 (100% error rate)
+ - Most of the time confused with: d (45.4545% of the time)
+
+Letter: o
+ - Success: 0/83 (0% success rate)
+ - Error: 83/83 (100% error rate)
+ - Most of the time confused with: c (26.506% of the time)
+
+Letter: p
+ - Success: 0/15 (0% success rate)
+ - Error: 15/15 (100% error rate)
+ - Most of the time confused with: e (46.6667% of the time)
+
+Letter: q
+ - Success: 0/11 (0% success rate)
+ - Error: 11/11 (100% error rate)
+ - Most of the time confused with: e (54.5455% of the time)
+
+Letter: r
+ - Success: 0/42 (0% success rate)
+ - Error: 42/42 (100% error rate)
+ - Most of the time confused with: a (47.619% of the time)
+
+Letter: s
+ - Success: 0/43 (0% success rate)
+ - Error: 43/43 (100% error rate)
+ - Most of the time confused with: a (37.2093% of the time)
+
+Letter: t
+ - Success: 0/20 (0% success rate)
+ - Error: 20/20 (100% error rate)
+ - Most of the time confused with: a (65% of the time)
+
+Letter: u
+ - Success: 0/23 (0% success rate)
+ - Error: 23/23 (100% error rate)
+ - Most of the time confused with: a (43.4783% of the time)
+
+Letter: v
+ - Success: 0/54 (0% success rate)
+ - Error: 54/54 (100% error rate)
+ - Most of the time confused with: b (46.2963% of the time)
+
+Letter: w
+ - Success: 0/95 (0% success rate)
+ - Error: 95/95 (100% error rate)
+ - Most of the time confused with: b (66.3158% of the time)
+
+Letter: x
+ - Success: 0/16 (0% success rate)
+ - Error: 16/16 (100% error rate)
+ - Most of the time confused with: e (62.5% of the time)
+
+Letter: y
+ - Success: 0/41 (0% success rate)
+ - Error: 41/41 (100% error rate)
+ - Most of the time confused with: a (73.1707% of the time)
+
+Letter: z
+ - Success: 0/10 (0% success rate)
+ - Error: 10/10 (100% error rate)
+ - Most of the time confused with: e (70% of the time)
+
+-----
+
+Classifier ./generated_models/model_loris_32_32_HOG.xml successfully loaded!
+Testing model (ON others_dataset)... done!
+
+Letter: a
+ - Success: 1632/1977 (82.5493% success rate)
+ - Error: 345/1977 (17.4507% error rate)
+ - Most of the time confused with: e (10.6222% of the time)
+
+Letter: b
+ - Success: 732/1207 (60.6462% success rate)
+ - Error: 475/1207 (39.3538% error rate)
+ - Most of the time confused with: c (34.3828% of the time)
+
+Letter: c
+ - Success: 2073/2276 (91.0808% success rate)
+ - Error: 203/2276 (8.91916% error rate)
+ - Most of the time confused with: d (4.7891% of the time)
+
+Letter: d
+ - Success: 1037/1628 (63.6978% success rate)
+ - Error: 591/1628 (36.3022% error rate)
+ - Most of the time confused with: c (25.5528% of the time)
+
+Letter: e
+ - Success: 943/1166 (80.8748% success rate)
+ - Error: 223/1166 (19.1252% error rate)
+ - Most of the time confused with: b (10.9777% of the time)
+
+Letter: f
+ - Success: 4/37 (10.8108% success rate)
+ - Error: 33/37 (89.1892% error rate)
+ - Most of the time confused with: a (40.5405% of the time)
+
+Letter: g
+ - Success: 0/12 (0% success rate)
+ - Error: 12/12 (100% error rate)
+ - Most of the time confused with: e (66.6667% of the time)
+
+Letter: h
+ - Success: 0/44 (0% success rate)
+ - Error: 44/44 (100% error rate)
+ - Most of the time confused with: e (59.0909% of the time)
+
+Letter: i
+ - Success: 0/109 (0% success rate)
+ - Error: 109/109 (100% error rate)
+ - Most of the time confused with: b (27.5229% of the time)
+
+Letter: j
+ - Success: 0/11 (0% success rate)
+ - Error: 11/11 (100% error rate)
+ - Most of the time confused with: a (54.5455% of the time)
+
+Letter: k
+ - Success: 0/46 (0% success rate)
+ - Error: 46/46 (100% error rate)
+ - Most of the time confused with: b (47.8261% of the time)
+
+Letter: l
+ - Success: 0/80 (0% success rate)
+ - Error: 80/80 (100% error rate)
+ - Most of the time confused with: b (38.75% of the time)
+
+Letter: m
+ - Success: 0/63 (0% success rate)
+ - Error: 63/63 (100% error rate)
+ - Most of the time confused with: e (87.3016% of the time)
+
+Letter: n
+ - Success: 0/11 (0% success rate)
+ - Error: 11/11 (100% error rate)
+ - Most of the time confused with: d (45.4545% of the time)
+
+Letter: o
+ - Success: 0/83 (0% success rate)
+ - Error: 83/83 (100% error rate)
+ - Most of the time confused with: c (26.506% of the time)
+
+Letter: p
+ - Success: 0/15 (0% success rate)
+ - Error: 15/15 (100% error rate)
+ - Most of the time confused with: e (46.6667% of the time)
+
+Letter: q
+ - Success: 0/11 (0% success rate)
+ - Error: 11/11 (100% error rate)
+ - Most of the time confused with: e (54.5455% of the time)
+
+Letter: r
+ - Success: 0/42 (0% success rate)
+ - Error: 42/42 (100% error rate)
+ - Most of the time confused with: a (47.619% of the time)
+
+Letter: s
+ - Success: 0/43 (0% success rate)
+ - Error: 43/43 (100% error rate)
+ - Most of the time confused with: a (37.2093% of the time)
+
+Letter: t
+ - Success: 0/20 (0% success rate)
+ - Error: 20/20 (100% error rate)
+ - Most of the time confused with: a (65% of the time)
+
+Letter: u
+ - Success: 0/23 (0% success rate)
+ - Error: 23/23 (100% error rate)
+ - Most of the time confused with: a (43.4783% of the time)
+
+Letter: v
+ - Success: 0/54 (0% success rate)
+ - Error: 54/54 (100% error rate)
+ - Most of the time confused with: b (46.2963% of the time)
+
+Letter: w
+ - Success: 0/95 (0% success rate)
+ - Error: 95/95 (100% error rate)
+ - Most of the time confused with: b (66.3158% of the time)
+
+Letter: x
+ - Success: 0/16 (0% success rate)
+ - Error: 16/16 (100% error rate)
+ - Most of the time confused with: e (62.5% of the time)
+
+Letter: y
+ - Success: 0/41 (0% success rate)
+ - Error: 41/41 (100% error rate)
+ - Most of the time confused with: a (73.1707% of the time)
+
+Letter: z
+ - Success: 0/10 (0% success rate)
+ - Error: 10/10 (100% error rate)
+ - Most of the time confused with: e (70% of the time)
+
+-----
+
+Classifier ./generated_models/model_loris_32_32_HOG.xml successfully loaded!
+Testing model (ON thomas_dataset)... done!
+
+Letter: a
+ - Success: 1528/1778 (85.9393% success rate)
+ - Error: 250/1778 (14.0607% error rate)
+ - Most of the time confused with: e (8.04274% of the time)
+
+Letter: b
+ - Success: 642/1044 (61.4943% success rate)
+ - Error: 402/1044 (38.5057% error rate)
+ - Most of the time confused with: c (38.2184% of the time)
+
+Letter: c
+ - Success: 1975/2110 (93.6019% success rate)
+ - Error: 135/2110 (6.3981% error rate)
+ - Most of the time confused with: d (5.11848% of the time)
+
+Letter: d
+ - Success: 1032/1592 (64.8241% success rate)
+ - Error: 560/1592 (35.1759% error rate)
+ - Most of the time confused with: c (24.8744% of the time)
+
+Letter: e
+ - Success: 902/1091 (82.6764% success rate)
+ - Error: 189/1091 (17.3236% error rate)
+ - Most of the time confused with: b (11.2741% of the time)

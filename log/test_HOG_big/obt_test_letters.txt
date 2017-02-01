@@ -1,0 +1,332 @@
+Classifier ./generated_models/model_others_but_thomas_32_32_HOG.xml successfully loaded!
+Testing model (ON loris_dataset)... done!
+
+Letter: a
+ - Success: 167/200 (83.5% success rate)
+ - Error: 33/200 (16.5% error rate)
+ - Most of the time confused with: c (5% of the time)
+
+Letter: b
+ - Success: 111/164 (67.6829% success rate)
+ - Error: 53/164 (32.3171% error rate)
+ - Most of the time confused with: w (12.1951% of the time)
+
+Letter: c
+ - Success: 134/168 (79.7619% success rate)
+ - Error: 34/168 (20.2381% error rate)
+ - Most of the time confused with: w (6.54762% of the time)
+
+Letter: d
+ - Success: 1/183 (0.546448% success rate)
+ - Error: 182/183 (99.4536% error rate)
+ - Most of the time confused with: c (53.5519% of the time)
+
+Letter: e
+ - Success: 25/124 (20.1613% success rate)
+ - Error: 99/124 (79.8387% error rate)
+ - Most of the time confused with: a (25% of the time)
+
+Letter: f
+ - Success: 2/174 (1.14943% success rate)
+ - Error: 172/174 (98.8506% error rate)
+ - Most of the time confused with: b (42.5287% of the time)
+
+-----
+
+Classifier ./generated_models/model_others_but_thomas_32_32_HOG.xml successfully loaded!
+Testing model (ON obt_dataset)... done!
+
+Letter: a
+ - Success: 199/199 (100% success rate)
+ - Error: 0/199 (0% error rate)
+ - No confusion with other letters
+
+Letter: b
+ - Success: 163/163 (100% success rate)
+ - Error: 0/163 (0% error rate)
+ - No confusion with other letters
+
+Letter: c
+ - Success: 166/166 (100% success rate)
+ - Error: 0/166 (0% error rate)
+ - No confusion with other letters
+
+Letter: d
+ - Success: 36/36 (100% success rate)
+ - Error: 0/36 (0% error rate)
+ - No confusion with other letters
+
+Letter: e
+ - Success: 75/75 (100% success rate)
+ - Error: 0/75 (0% error rate)
+ - No confusion with other letters
+
+Letter: f
+ - Success: 37/37 (100% success rate)
+ - Error: 0/37 (0% error rate)
+ - No confusion with other letters
+
+Letter: g
+ - Success: 12/12 (100% success rate)
+ - Error: 0/12 (0% error rate)
+ - No confusion with other letters
+
+Letter: h
+ - Success: 44/44 (100% success rate)
+ - Error: 0/44 (0% error rate)
+ - No confusion with other letters
+
+Letter: i
+ - Success: 109/109 (100% success rate)
+ - Error: 0/109 (0% error rate)
+ - No confusion with other letters
+
+Letter: j
+ - Success: 11/11 (100% success rate)
+ - Error: 0/11 (0% error rate)
+ - No confusion with other letters
+
+Letter: k
+ - Success: 46/46 (100% success rate)
+ - Error: 0/46 (0% error rate)
+ - No confusion with other letters
+
+Letter: l
+ - Success: 80/80 (100% success rate)
+ - Error: 0/80 (0% error rate)
+ - No confusion with other letters
+
+Letter: m
+ - Success: 63/63 (100% success rate)
+ - Error: 0/63 (0% error rate)
+ - No confusion with other letters
+
+Letter: n
+ - Success: 11/11 (100% success rate)
+ - Error: 0/11 (0% error rate)
+ - No confusion with other letters
+
+Letter: o
+ - Success: 83/83 (100% success rate)
+ - Error: 0/83 (0% error rate)
+ - No confusion with other letters
+
+Letter: p
+ - Success: 15/15 (100% success rate)
+ - Error: 0/15 (0% error rate)
+ - No confusion with other letters
+
+Letter: q
+ - Success: 11/11 (100% success rate)
+ - Error: 0/11 (0% error rate)
+ - No confusion with other letters
+
+Letter: r
+ - Success: 42/42 (100% success rate)
+ - Error: 0/42 (0% error rate)
+ - No confusion with other letters
+
+Letter: s
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+
+Letter: t
+ - Success: 20/20 (100% success rate)
+ - Error: 0/20 (0% error rate)
+ - No confusion with other letters
+
+Letter: u
+ - Success: 23/23 (100% success rate)
+ - Error: 0/23 (0% error rate)
+ - No confusion with other letters
+
+Letter: v
+ - Success: 54/54 (100% success rate)
+ - Error: 0/54 (0% error rate)
+ - No confusion with other letters
+
+Letter: w
+ - Success: 95/95 (100% success rate)
+ - Error: 0/95 (0% error rate)
+ - No confusion with other letters
+
+Letter: x
+ - Success: 16/16 (100% success rate)
+ - Error: 0/16 (0% error rate)
+ - No confusion with other letters
+
+Letter: y
+ - Success: 41/41 (100% success rate)
+ - Error: 0/41 (0% error rate)
+ - No confusion with other letters
+
+Letter: z
+ - Success: 10/10 (100% success rate)
+ - Error: 0/10 (0% error rate)
+ - No confusion with other letters
+
+-----
+
+Classifier ./generated_models/model_others_but_thomas_32_32_HOG.xml successfully loaded!
+Testing model (ON others_dataset)... done!
+
+Letter: a
+ - Success: 1585/1977 (80.172% success rate)
+ - Error: 392/1977 (19.828% error rate)
+ - Most of the time confused with: c (6.01922% of the time)
+
+Letter: b
+ - Success: 1114/1207 (92.2949% success rate)
+ - Error: 93/1207 (7.70505% error rate)
+ - Most of the time confused with: w (5.71665% of the time)
+
+Letter: c
+ - Success: 1679/2276 (73.7698% success rate)
+ - Error: 597/2276 (26.2302% error rate)
+ - Most of the time confused with: b (16.5202% of the time)
+
+Letter: d
+ - Success: 231/1628 (14.1892% success rate)
+ - Error: 1397/1628 (85.8108% error rate)
+ - Most of the time confused with: b (36.9779% of the time)
+
+Letter: e
+ - Success: 220/1166 (18.8679% success rate)
+ - Error: 946/1166 (81.1321% error rate)
+ - Most of the time confused with: c (40.7376% of the time)
+
+Letter: f
+ - Success: 37/37 (100% success rate)
+ - Error: 0/37 (0% error rate)
+ - No confusion with other letters
+
+Letter: g
+ - Success: 12/12 (100% success rate)
+ - Error: 0/12 (0% error rate)
+ - No confusion with other letters
+
+Letter: h
+ - Success: 44/44 (100% success rate)
+ - Error: 0/44 (0% error rate)
+ - No confusion with other letters
+
+Letter: i
+ - Success: 109/109 (100% success rate)
+ - Error: 0/109 (0% error rate)
+ - No confusion with other letters
+
+Letter: j
+ - Success: 11/11 (100% success rate)
+ - Error: 0/11 (0% error rate)
+ - No confusion with other letters
+
+Letter: k
+ - Success: 46/46 (100% success rate)
+ - Error: 0/46 (0% error rate)
+ - No confusion with other letters
+
+Letter: l
+ - Success: 80/80 (100% success rate)
+ - Error: 0/80 (0% error rate)
+ - No confusion with other letters
+
+Letter: m
+ - Success: 63/63 (100% success rate)
+ - Error: 0/63 (0% error rate)
+ - No confusion with other letters
+
+Letter: n
+ - Success: 11/11 (100% success rate)
+ - Error: 0/11 (0% error rate)
+ - No confusion with other letters
+
+Letter: o
+ - Success: 83/83 (100% success rate)
+ - Error: 0/83 (0% error rate)
+ - No confusion with other letters
+
+Letter: p
+ - Success: 15/15 (100% success rate)
+ - Error: 0/15 (0% error rate)
+ - No confusion with other letters
+
+Letter: q
+ - Success: 11/11 (100% success rate)
+ - Error: 0/11 (0% error rate)
+ - No confusion with other letters
+
+Letter: r
+ - Success: 42/42 (100% success rate)
+ - Error: 0/42 (0% error rate)
+ - No confusion with other letters
+
+Letter: s
+ - Success: 43/43 (100% success rate)
+ - Error: 0/43 (0% error rate)
+ - No confusion with other letters
+
+Letter: t
+ - Success: 20/20 (100% success rate)
+ - Error: 0/20 (0% error rate)
+ - No confusion with other letters
+
+Letter: u
+ - Success: 23/23 (100% success rate)
+ - Error: 0/23 (0% error rate)
+ - No confusion with other letters
+
+Letter: v
+ - Success: 54/54 (100% success rate)
+ - Error: 0/54 (0% error rate)
+ - No confusion with other letters
+
+Letter: w
+ - Success: 95/95 (100% success rate)
+ - Error: 0/95 (0% error rate)
+ - No confusion with other letters
+
+Letter: x
+ - Success: 16/16 (100% success rate)
+ - Error: 0/16 (0% error rate)
+ - No confusion with other letters
+
+Letter: y
+ - Success: 41/41 (100% success rate)
+ - Error: 0/41 (0% error rate)
+ - No confusion with other letters
+
+Letter: z
+ - Success: 10/10 (100% success rate)
+ - Error: 0/10 (0% error rate)
+ - No confusion with other letters
+
+-----
+
+Classifier ./generated_models/model_others_but_thomas_32_32_HOG.xml successfully loaded!
+Testing model (ON thomas_dataset)... done!
+
+Letter: a
+ - Success: 1386/1778 (77.9528% success rate)
+ - Error: 392/1778 (22.0472% error rate)
+ - Most of the time confused with: c (6.69291% of the time)
+
+Letter: b
+ - Success: 951/1044 (91.092% success rate)
+ - Error: 93/1044 (8.90805% error rate)
+ - Most of the time confused with: w (6.6092% of the time)
+
+Letter: c
+ - Success: 1513/2110 (71.7062% success rate)
+ - Error: 597/2110 (28.2938% error rate)
+ - Most of the time confused with: b (17.8199% of the time)
+
+Letter: d
+ - Success: 195/1592 (12.2487% success rate)
+ - Error: 1397/1592 (87.7513% error rate)
+ - Most of the time confused with: b (37.8141% of the time)
+
+Letter: e
+ - Success: 145/1091 (13.2906% success rate)
+ - Error: 946/1091 (86.7094% error rate)
+ - Most of the time confused with: c (43.538% of the time)
